@@ -643,7 +643,17 @@ assign pad_flash_clk = pad_flash_clk_prebuff;
     // indicating that the SPI will read or write a byte on the next SCK
     // transition.
 
-    wire spi_is_enabled = (~gpio_configure[3][INP_DIS]) & (~hkspi_disable);
+    // Update for FPGA version:  SPI is considered always active unless
+    // specifically disabled by setting the disable bit in the SPI.  This
+    // prevents GPIO configuration as an output (which it is for the FPGA,
+    // as it is a monitor of an internal signal) from allowing the GPIO
+    // to be directly controlled from the GPIO state in housekeeping.
+    // Also:  Force SPI to be enabled, overriding the hkspi_disable bit,
+    // if the processor is in reset.
+
+    // wire spi_is_enabled = (~gpio_configure[3][INP_DIS]) & (~hkspi_disable);
+
+    wire spi_is_enabled = ~hkspi_disable | wb_rst_i;
     wire spi_is_active = spi_is_enabled && (mgmt_gpio_in[3] == 1'b0);
     wire spi_is_busy = spi_is_active && (rdstb || wrstb);
 

@@ -2,7 +2,9 @@
 `default_nettype none
 `timescale 1ns/1ns
 
-module gpio_bidir #(parameter WIDTH=1) (
+module gpio_bidir #(
+    parameter WIDTH=1
+) (
     inout  wire [WIDTH-1:0] dio_buf,
     input  wire [WIDTH-1:0] din_i,
     output wire [WIDTH-1:0] dout_o,

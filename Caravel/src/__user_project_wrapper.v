@@ -127,9 +127,6 @@ assign wbs_ack_o = (wbs_adr_i[31:3] == 28'h601FFFF) ? wbs_ack_o_debug : wbs_ack_
 assign wbs_dat_o = (wbs_adr_i[31:3] == 28'h601FFFF) ? wbs_dat_o_debug : wbs_dat_o_user; 
 // `endif
 
-`ifndef GPIO_TESTING
-assign wbs_ack_o_user = 0;
-`endif
 // // reserve the last 4 regs for debugging registers in case of user gpio testing 
 // `ifdef GPIO_TESTING
 // assign wbs_cyc_i_user  = (wbs_adr_i[31:4] != 28'h300FFFF) ? wbs_cyc_i : 0; 
@@ -140,6 +137,37 @@ assign wbs_ack_o_user = 0;
 // assign wbs_ack_o = (wbs_adr_i[31:4] == 28'h300FFFF) ? (wbs_adr_i[3:0]>=4'h8) ? wbs_ack_o_debug : wbs_ack_o_gpio  : wbs_ack_o_debug; 
 // assign wbs_dat_o = (wbs_adr_i[31:4] == 28'h300FFFF) ? (wbs_adr_i[3:0]>=4'h8) ? wbs_dat_o_debug : wbs_dat_o_gpio : wbs_dat_o_user; 
 // `endif
+
+// `define SRAM_EXPANSION
+`ifdef SRAM_EXPANSION
+user_project_sram_example sram_expansion(
+    .wb_clk_i(wb_clk_i),
+    .wb_rst_i(wb_rst_i),
+    .wbs_cyc_i(wbs_cyc_i_user),
+    .wbs_stb_i(wbs_stb_i),
+    .wbs_we_i(wbs_we_i),
+    .wbs_sel_i(wbs_sel_i),
+    .wbs_adr_i(wbs_adr_i),
+    .wbs_dat_i(wbs_dat_i),
+    .wbs_ack_o(wbs_ack_o_user),
+    .wbs_dat_o(wbs_dat_o_user));
+`else
+debug_regs debug(
+    .wb_clk_i(wb_clk_i),
+    .wb_rst_i(wb_rst_i),
+    .wbs_cyc_i(wbs_cyc_i_debug),
+    .wbs_stb_i(wbs_stb_i),
+    .wbs_we_i(wbs_we_i),
+    .wbs_sel_i(wbs_sel_i),
+    .wbs_adr_i(wbs_adr_i),
+    .wbs_dat_i(wbs_dat_i),
+    .wbs_ack_o(wbs_ack_o_debug),
+    .wbs_dat_o(wbs_dat_o_debug)
+);
+`ifndef GPIO_TESTING
+    assign wbs_ack_o_user = 0;
+`endif
+`endif
 
 
 `ifdef GPIO_TESTING
@@ -159,17 +187,5 @@ user_project_gpio_example gpio_testing(
     .io_oeb(io_oeb));
 `endif
 
-debug_regs debug(
-    .wb_clk_i(wb_clk_i),
-    .wb_rst_i(wb_rst_i),
-    .wbs_cyc_i(wbs_cyc_i_debug),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_ack_o(wbs_ack_o_debug),
-    .wbs_dat_o(wbs_dat_o_debug)
-);
 
 endmodule	// user_project_wrapper

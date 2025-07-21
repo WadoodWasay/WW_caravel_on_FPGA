@@ -43,6 +43,7 @@ def FW_RD(A, D):
      out4 = ser.read()
      firstByte = int.from_bytes(out4,'big') & 0xff000000
      secondByte = int.from_bytes(out3,'big') & 0x00ff0000
+
      thirdByte = int.from_bytes(out2,'big') & 0x0000ff00
      fourthByte = int.from_bytes(out1,'big') & 0x000000ff
      D= firstByte | secondByte | thirdByte | fourthByte
@@ -254,11 +255,11 @@ def FLASH_WORD_RD(A):
     
     SPI_OE(0X1)
     SPI_STATRT()
-    SPI_BYTE_WR(0X03)
+    SPI_BYTE_WR(0X0B)
     SPI_BYTE_WR(Third_byte_A)
     SPI_BYTE_WR(Second_byte_A)
     SPI_BYTE_WR(Firs_byte_A)
-
+    SPI_BYTE_WR(0X00)
     
     print(SPI_BYTE_RD())
     print(SPI_BYTE_RD())
@@ -332,29 +333,29 @@ time.sleep(1)
 SPI_OE(0X1)
 SPI_STATRT()
 SPI_BYTE_WR(0X05)
-SR_1= SPI_BYTE_RD()
-SR_2= SPI_BYTE_RD()
+SR= SPI_BYTE_RD()
 SPI_STOP()
-print("Status Register Byte 1",SR_1)
-print("Status Register Byte 2",SR_2)
+print("Status Register",SR)
 #for configuration Register 
-# SPI_OE(0X1)
-# SPI_STATRT()
-# SPI_BYTE_WR(0X35)
-# CR= SPI_BYTE_RD()
-# SPI_STOP()
-# print("configuration Register", CR)
+SPI_OE(0X1)
+SPI_STATRT()
+SPI_BYTE_WR(0X35)
+CR= SPI_BYTE_RD()
+SPI_STOP()
+print("configuration Register", CR)
 
 ####################
 #write the SR & CR 
 ####################
+SR = int(SR,16)
+CR = int(CR,16)
 FLASH_WEN()
 time.sleep(1)
 SPI_OE(0x1)
 SPI_STATRT()
 SPI_BYTE_WR(0x01)
 SPI_BYTE_WR(0x00)  # write SR
-SPI_BYTE_WR(0x00)  #Write Configuration Register 
+SPI_BYTE_WR(0x3e)  #Write Configuration Register 
 SPI_STOP()
 
 ##############################################
@@ -364,48 +365,48 @@ SPI_OE(0X1)
 SPI_STATRT()
 SPI_BYTE_WR(0X05)
 SR= SPI_BYTE_RD()
-SR_1= SPI_BYTE_RD()
-SR_2= SPI_BYTE_RD()
 SPI_STOP()
-print("Status Register after writing Byte 1",SR_1)
-print("Status Register after writing Byte 2",SR_2)
+print("SR after writing",SR)
 #for configuration Register 
-# SPI_OE(0X1)
-# SPI_STATRT()
-# SPI_BYTE_WR(0X35)
-# CR= SPI_BYTE_RD()
-# SPI_STOP()
-# print("CR after writing: ",CR)
+SPI_OE(0X1)
+SPI_STATRT()
+SPI_BYTE_WR(0X35)
+CR= SPI_BYTE_RD()
+SPI_STOP()
+print("CR after writing: ",CR)
 
 
 
 ############################
 # To read the JEDEC ID
 ############################
-print('Reading JEDEC ID')
-SPI_STATRT()
-SPI_BYTE_WR(0x9F)
-D1 =SPI_BYTE_RD()
-D2= SPI_BYTE_RD()
-D3=SPI_BYTE_RD()
-print(D1)
-print(D2)
-print(D3)
-SPI_STOP()
+#print('Reading JEDEC ID')
+#SPI_STATRT()
+#SPI_BYTE_WR(0x9F)
+#D1 =SPI_BYTE_RD()
+#D2= SPI_BYTE_RD()
+#D3=SPI_BYTE_RD()
+#print(D1)
+#print(D2)
+#print(D3)
+#SPI_STOP()
 #############################
 
 ###########################
 #To write and read word
 ###########################
-# FLASH_WEN()
-# time.sleep(10)
-# FLASH_BLOCK_ERASE(0)
-# time.sleep(10)
-# FLASH_WEN()
-# time.sleep(1)
-# FLASH_WORD_PROG(0,0XA1B2C3D4)
-# time.sleep(20)
-# FLASH_WORD_RD(0)
+#FLASH_WEN()
+#FLASH_PORT_UNLK()
+#FLASH_WEN()
+#time.sleep(10)
+#FLASH_BLOCK_ERASE(0)
+#time.sleep(10)
+#FLASH_WEN()
+#time.sleep(1)
+#FLASH_WORD_PROG(0,0X0A0B0C0D)
+#time.sleep(20)
+#FLASH_WDI()
+#FLASH_WORD_RD(0)
 #####################
 
 

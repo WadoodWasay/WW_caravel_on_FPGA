@@ -1,0 +1,6 @@
+Caravel_on_Arty
+nextpnr-xilinx
+Caravel/.Xil
+Caravel/*.jou
+Caravel/*.log
+Caravel/*.str

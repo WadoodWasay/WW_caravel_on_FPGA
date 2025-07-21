@@ -106,13 +106,17 @@ module caravel_core (
 
     // User project direct access to gpio pad connections for analog
     // (all but the lowest-numbered 7 pads)
-    inout [`MPRJ_IO_PADS-10:0] mprj_analog_io
+    inout [`MPRJ_IO_PADS-10:0] mprj_analog_io,
+
+    // Add signal from mgmt_core_wrapper to indicate that the UART has
+    // been turned on.
+    output uart_enabled
 );
 
     //------------------------------------------------------------
     // This value is uniquely defined for each user project.
     //------------------------------------------------------------
-    parameter USER_PROJECT_ID = 32'h00000000;
+    parameter USER_PROJECT_ID = 32'h12345678;
 
     /*
      *--------------------------------------------------------------------
@@ -738,6 +742,11 @@ module caravel_core (
 	.gpio_defaults(gpio_defaults[12:0])
     );
 
+    /* For the FPGA version of Caravel on the Arty A7 board,
+     * the SPI pins are connected internally to a UART-to-SPI
+     * converter, and the mprj_io[4:1] pins are all outputs,
+     * which can be used to monitor the SPI signaling.
+     */
     gpio_defaults_block #(
 	//.GPIO_CONFIG_INIT(13'h1803)
 	.GPIO_CONFIG_INIT(13'h1809)
@@ -750,7 +759,8 @@ module caravel_core (
     );
 
     gpio_defaults_block #(
-	.GPIO_CONFIG_INIT(13'h0403)
+	// .GPIO_CONFIG_INIT(13'h0403)
+	.GPIO_CONFIG_INIT(13'h1809)
     ) gpio_defaults_block_2 (
     	`ifdef USE_POWER_PINS
 	    .VPWR(vccd),
@@ -762,7 +772,8 @@ module caravel_core (
     // CSB pin is set as an internal pull-up
     gpio_defaults_block #(
 	//.GPIO_CONFIG_INIT(13'h0801)
-	.GPIO_CONFIG_INIT(13'h0403)
+	// .GPIO_CONFIG_INIT(13'h0403)
+	.GPIO_CONFIG_INIT(13'h1809)
     ) gpio_defaults_block_3 (
     	`ifdef USE_POWER_PINS
 	    .VPWR(vccd),
@@ -772,7 +783,8 @@ module caravel_core (
     );
 
     gpio_defaults_block #(
-	.GPIO_CONFIG_INIT(13'h0403)
+	// .GPIO_CONFIG_INIT(13'h0403)
+	.GPIO_CONFIG_INIT(13'h1809)
     ) gpio_defaults_block_4 (
     	`ifdef USE_POWER_PINS
 	    .VPWR(vccd),

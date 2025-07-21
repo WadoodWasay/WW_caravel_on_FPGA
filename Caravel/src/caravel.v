@@ -78,12 +78,13 @@ module caravel (
     output flash_clk,
     inout  flash_io0,
     inout  flash_io1,
-    output ser_rx_out,
-    output ser_tx_out,
-    output sdo_out,
-    output sdi_out,
-    output csb_out,
-    output sck_out
+    input  ser_rx_in,
+    output ser_tx_out
+
+    // output sdo_out,
+    // input sdi_in,
+    // input csb_in,
+    // input sck_in
 );
 
       // FPGA button is active high (1 then 0) while caravel is active low (0 then 1), that is why it needs to be inverted 
@@ -165,6 +166,10 @@ module caravel (
   // User Project Control (user-facing)
   wire [`MPRJ_IO_PADS-10:0] user_analog_io;
 
+  // Signal to indicate to the UART-to-SPI interface that the other UART
+  // has been turned on.
+  wire uart_enabled;
+
   // User Project Control management I/O
   // There are two types of GPIO connections:
   // (1) Full Bidirectional: Management connects to in, out, and oeb
@@ -180,22 +185,39 @@ module caravel (
   // ser_tx	= mprj_io[6]		(output)
   // irq		= mprj_io[7]		(input)
 
-  wire ser_rx_out;
+  wire ser_rx_in;
   wire ser_tx_out;
 
-  wire sdo_out;
-  wire sdi_out;
-  wire csb_out;
-  wire sck_out;
+  // wire sdo_out;
+  // wire sdi_in;
+  // wire csb_in;
+  // wire sck_in;
 
-  assign ser_rx_out =  mprj_io[5];
-  assign ser_tx_out =  mprj_io[6];
+  // assign ser_rx_out =  mprj_io[5];
+  // assign ser_tx_out =  mprj_io[6];
 
-  assign sdo_out = mprj_io[1];
-  assign sdi_out = mprj_io[2];
-  assign csb_out = mprj_io[3];
-  assign sck_out = mprj_io[4];
+  // assign sdo_out = mprj_io[1];
+  // assign sdi_out = mprj_io[2];
+  // assign csb_out = mprj_io[3];
+  // assign sck_out = mprj_io[4];
 
+  uart_to_spi uart (
+        .clk(clock),
+        .resetn(porb_h),	// "_h" is only valid for FPGA!
+
+        .ser_tx(ser_tx_out),
+        .ser_rx(ser_rx_in),
+
+        .spi_sck(mprj_io_in[4]),
+        .spi_csb(mprj_io_in[3]),
+        .spi_sdo(mprj_io_out[1]),
+        .spi_sdi(mprj_io_in[2]),
+
+	.mgmt_uart_rx(mprj_io_in[5]),
+	.mgmt_uart_tx(mprj_io_out[6]),
+
+	.mgmt_uart_enabled(uart_enabled)
+  );
 
   wire clock_core;
 
@@ -233,6 +255,8 @@ module caravel (
   wire vccd2_core;
   wire vssd1_core;
   wire vssd2_core;
+ 
+  wire [3:0] noconn;
 
 `ifndef FPGA
   chip_io padframe (
@@ -311,8 +335,12 @@ module caravel (
       .flash_io0_di_core(flash_io0_di),
       .flash_io1_di_core(flash_io1_di),
       //.mprj_io_one(mprj_io_one),
-      .mprj_io_in(mprj_io_in),
-      .mprj_io_out(mprj_io_out),
+      // .mprj_io_in(mprj_io_in),
+      .mprj_io_in({mprj_io_in[`MPRJ_IO_PADS-1:6],noconn[3:0],mprj_io_in[1:0]}),
+      // XXX This is a temporary change, to get the SPI signals out on a pin
+      // to view on a scope.
+      // .mprj_io_out(mprj_io_out),
+      .mprj_io_out({mprj_io_out[`MPRJ_IO_PADS-1:5],mprj_io_in[4:2],mprj_io_out[1:0]}),
       .mprj_io_oeb(mprj_io_oeb),
       .mprj_io_inp_dis(mprj_io_inp_dis),
       .mprj_io_ib_mode_sel(mprj_io_ib_mode_sel),
@@ -390,7 +418,9 @@ module caravel (
 
       // User project direct access to gpio pad connections for analog
       // (all but the lowest-numbered 7 pads)
-      .mprj_analog_io(user_analog_io)
+      .mprj_analog_io(user_analog_io),
+
+      .uart_enabled(uart_enabled)
   );
 
 `ifndef FPGA

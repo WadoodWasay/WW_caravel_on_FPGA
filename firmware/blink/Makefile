@@ -1,12 +1,13 @@
 
 #TOOLCHAIN_PATH=/usr/bin/
-TOOLCHAIN_PATH=/usr/local/bin/
-#TOOLCHAIN_PATH=/opt/riscv32imc/bin/
+#TOOLCHAIN_PATH=/usr/local/bin/
+TOOLCHAIN_PATH=/opt/riscv32imc/bin/
 # TOOLCHAIN_PATH=/ef/apps/bin/
 
 # Set the prefix for `riscvXX-unknown-elf-*`
 # On installations using `multilib`, this will be `riscv64` even for compiling to 32-bit targets
-TOOLCHAIN_PREFIX=riscv64-unknown-elf
+#TOOLCHAIN_PREFIX=riscv64-unknown-elf
+TOOLCHAIN_PREFIX=riscv32-unknown-elf
 #TOOLCHAIN_PREFIX=riscv32
 ARCH=rv32i
 #ARCH=rv32i_zicsr

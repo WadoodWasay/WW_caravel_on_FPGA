@@ -7,6 +7,7 @@
 
 #include <stdarg.h>
 #include <stdint.h>
+#include <stub.h>
 
 extern long time();
 extern long insn();
@@ -50,15 +51,10 @@ char *malloc(int size)
 	return p;
 }
 
-static void printf_c(int c)
-{
-	*((volatile int*)0x10000000) = c;
-}
-
 static void printf_s(char *p)
 {
 	while (*p)
-		*((volatile int*)0x10000000) = *(p++);
+		putchar(*(p++));
 }
 
 static void printf_d(int val)
@@ -66,7 +62,7 @@ static void printf_d(int val)
 	char buffer[32];
 	char *p = buffer;
 	if (val < 0) {
-		printf_c('-');
+		putchar('-');
 		val = -val;
 	}
 	while (val || p == buffer) {
@@ -74,7 +70,7 @@ static void printf_d(int val)
 		val = val / 10;
 	}
 	while (p != buffer)
-		printf_c(*(--p));
+		putchar(*(--p));
 }
 
 int printf(const char *format, ...)
@@ -88,7 +84,7 @@ int printf(const char *format, ...)
 		if (format[i] == '%') {
 			while (format[++i]) {
 				if (format[i] == 'c') {
-					printf_c(va_arg(ap,int));
+					putchar(va_arg(ap,int));
 					break;
 				}
 				if (format[i] == 's') {
@@ -101,7 +97,7 @@ int printf(const char *format, ...)
 				}
 			}
 		} else
-			printf_c(format[i]);
+			putchar(format[i]);
 
 	va_end(ap);
 }

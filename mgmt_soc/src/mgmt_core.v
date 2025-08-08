@@ -4827,7 +4827,9 @@ assign request = {dbg_uart_wishbone_cyc, mgmtsoc_dbus_dbus_cyc, mgmtsoc_ibus_ibu
 always @(*) begin
 	slave_sel = 7'd0;
 	slave_sel[0] = (shared_adr[29:6] == 24'd15732480);
-	slave_sel[1] = (shared_adr[29:8] == 1'd0);
+	/* Setting dff to 14 bits wide */
+	slave_sel[1] = (shared_adr[29:14] == 0);
+	/* Removing dff2 */
 	slave_sel[2] = (shared_adr[29:7] == 2'd2);
 	slave_sel[3] = (shared_adr[29:22] == 5'd16);
 	slave_sel[4] = (shared_adr[29:26] == 2'd3);
@@ -8371,6 +8373,17 @@ always @(posedge sys_clk) begin
 	multiregimpl136_regs1 <= multiregimpl136_regs0;
 end
 
+/* Replace RAM256 with RAM4096 */
+RAM4096 RAM4096(
+	.A0(dff_bus_adr[11:0]),
+	.CLK(sys_clk),
+	.Di0(dff_di),
+	.EN0(dff_en),
+	.WE0(dff_we),
+	.Do0(dff_do)
+);
+
+/*
 RAM256 RAM256(
 	.A0(dff_bus_adr[7:0]),
 	.CLK(sys_clk),
@@ -8379,7 +8392,9 @@ RAM256 RAM256(
 	.WE0(dff_we),
 	.Do0(dff_do)
 );
+*/
 
+/* This still exists but is unused */
 RAM128 RAM128(
 	.A0(dff2_bus_adr[6:0]),
 	.CLK(sys_clk),

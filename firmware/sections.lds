@@ -8,10 +8,13 @@ __DYNAMIC = 0;
 
 /* INCLUDE ../../generated/regions.ld */
 
+/* NOTE:  Memory increased to allow benchmarks to run.  This is
+ * a departure from the existing hardware.
+ */
+
 MEMORY {
 	vexriscv_debug : ORIGIN = 0xf00f0000, LENGTH = 0x00000100
-	dff : ORIGIN = 0x00000000, LENGTH = 0x00000400
-	dff2 : ORIGIN = 0x00000400, LENGTH = 0x00000200
+	dff : ORIGIN = 0x00000000, LENGTH = 0x00010000
 	flash : ORIGIN = 0x10000000, LENGTH = 0x01000000
 	mprj : ORIGIN = 0x30000000, LENGTH = 0x00100000
 	hk : ORIGIN = 0x26000000, LENGTH = 0x00300000

@@ -11,18 +11,26 @@ TOOLCHAIN_PREFIX=riscv32-unknown-elf
 ARCH=rv32i
 #ARCH=rv32i_zicsr
 
-# ---- Test patterns for project raven ----
+# ---- Test patterns for dhrystone benchmarks on the Caravel VexRISC ----
 
 .SUFFIXES:
 
-PATTERN = dhry_1
+PATTERN = dhrystone
+OBJS = dhry_1.o dhry_2.o stdlib.o
+SRCS = ../crt0_vex.S ../isr.c ../stub.c
+CFLAGS = -DUSE_MYSTDLIB -ffreestanding -nostdlib
 
 hex:  ${PATTERN:=.hex}
 
-dhry_1.elf: dhry_1.c dhry_2.c ../sections.lds ../crt0_vex.S
-	#$(TOOLCHAIN_PATH)riscv32-unknown-elf-gcc -O0 -march=rv32i -Wl,-Bstatic,-T,../sections.lds,--strip-debug -ffreestanding -nostdlib -o $@ ../start.s ../print_io.c $<
-	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../generated/ -O0 -mabi=ilp32 -march=$(ARCH) -DRISCV -DTIME -Wl,-Bstatic,-T,../sections.lds,--strip-debug -ffreestanding -nostdlib -o $@ ../crt0_vex.S ../isr.c ../stub.c ../stdlib.c dhry_2.c $<
-	${TOOLCHAIN_PATH}$(TOOLCHAIN_PREFIX)-objdump -D dhry_1.elf > dhry_1.lst
+%.o: %.c
+	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../generated/ -O0 -mabi=ilp32 -march=$(ARCH) -DRISCV -DTIME -c $(CFLAGS) $<
+
+%.o: %.S
+	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../generated/ -O0 -mabi=ilp32 -march=$(ARCH) -DRISCV -DTIME -c $(CFLAGS) $<
+
+$(PATTERN).elf: $(OBJS) $(SRCS)
+	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../generated/ $(CFLAGS) -O0 -mabi=ilp32 -march=$(ARCH) -DRISCV -DTIME -Wl,-Bstatic,-T,../sections.lds,--strip-debug -o $@ $(OBJS) $(SRCS) -lgcc -lc
+	${TOOLCHAIN_PATH}$(TOOLCHAIN_PREFIX)-objdump -D $(PATTERN).elf > $(PATTERN).lst
 
 %.hex: %.elf
 	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-objcopy -O verilog $< $@
@@ -35,11 +43,11 @@ client: client.c
 	#gcc client.c -o client
 	python3 ./client.py
 
-flash: dhry_1.hex
-	python3 ../util/caravel_hkflash.py dhry_1.hex
+flash: $(PATTERN).hex
+	python3 ../util/caravel_hkflash.py $(PATTERN).hex
 
-flash2: dhry_1.hex
-	python3 ../util/caravel_flash.py dhry_1.hex
+flash2: $(PATTERN).hex
+	python3 ../util/caravel_flash.py $(PATTERN).hex
 
 show_projectid:
 	python3 ../util/caravel_projectid.py

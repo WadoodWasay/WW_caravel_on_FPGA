@@ -1,4 +1,4 @@
-module RAM2048 #( parameter COLS=1)
+module RAM4096 #( parameter COLS=1)
 (
 `ifdef USE_POWER_PINS
     VPWR,
@@ -11,7 +11,7 @@ module RAM2048 #( parameter COLS=1)
     Do0,
     A0
 );
-    localparam A_WIDTH = 11+$clog2(COLS);
+    localparam A_WIDTH = 12+$clog2(COLS);
 `ifdef USE_POWER_PINS
     input   wire            VPWR;
     input   wire            VGND;
@@ -23,7 +23,7 @@ module RAM2048 #( parameter COLS=1)
     output  reg     [31:0]  Do0;
     input   wire    [(A_WIDTH - 1): 0]   A0;
 
-    reg [31:0] RAM[(2048*COLS)-1 : 0];
+    reg [31:0] RAM[(4096*COLS)-1 : 0];
 
     always @(posedge CLK)
         if(EN0) begin

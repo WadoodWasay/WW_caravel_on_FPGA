@@ -4826,15 +4826,17 @@ assign dbg_uart_wishbone_err = (shared_err & (grant == 2'd2));
 assign request = {dbg_uart_wishbone_cyc, mgmtsoc_dbus_dbus_cyc, mgmtsoc_ibus_ibus_cyc};
 always @(*) begin
 	slave_sel = 7'd0;
-	slave_sel[0] = (shared_adr[29:6] == 24'd15732480);
-	/* Setting dff to 14 bits wide */
-	slave_sel[1] = (shared_adr[29:14] == 0);
-	/* Removing dff2 */
-	slave_sel[2] = (shared_adr[29:7] == 2'd2);
-	slave_sel[3] = (shared_adr[29:22] == 5'd16);
-	slave_sel[4] = (shared_adr[29:26] == 2'd3);
-	slave_sel[5] = (shared_adr[29:20] == 8'd152);
-	slave_sel[6] = (shared_adr[29:14] == 16'd61440);
+	slave_sel[0] = (shared_adr[29:6] == 'd15732480);
+	/* Setting dff to 12 bits wide */
+	/* slave_sel[1] = (shared_adr[29:8] == 'd0); */
+	slave_sel[1] = (shared_adr[29:12] == 'd0);
+	/* Moving dff2 above dff */
+	/* slave_sel[2] = (shared_adr[29:7] == 'd2); */
+	slave_sel[2] = (shared_adr[29:12] == 'd2);
+	slave_sel[3] = (shared_adr[29:22] == 'd16);
+	slave_sel[4] = (shared_adr[29:26] == 'd3);
+	slave_sel[5] = (shared_adr[29:20] == 'd152);
+	slave_sel[6] = (shared_adr[29:14] == 'd61440);
 end
 assign mgmtsoc_vexriscv_debug_bus_adr = shared_adr;
 assign mgmtsoc_vexriscv_debug_bus_dat_w = shared_dat_w;

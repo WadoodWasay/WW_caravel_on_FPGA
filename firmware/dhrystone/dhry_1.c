@@ -191,7 +191,7 @@ main ()
    reg_uart_enable = 1;
 
   /* Sanity check */
-  printf("Dhyrstone benchmark start.\n");
+  printf("Dhrystone benchmark start.\n");
 
   /* Initializations */
 

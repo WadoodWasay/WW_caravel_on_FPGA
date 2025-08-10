@@ -29,7 +29,7 @@ hex:  ${PATTERN:=.hex}
 	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../generated/ -O0 -mabi=ilp32 -march=$(ARCH) -DRISCV -DTIME -c $(CFLAGS) $<
 
 $(PATTERN).elf: $(OBJS) $(SRCS)
-	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../generated/ $(CFLAGS) -O0 -mabi=ilp32 -march=$(ARCH) -DRISCV -DTIME -Wl,-Bstatic,-T,../sections.lds,--strip-debug -o $@ $(OBJS) $(SRCS) -lgcc -lc
+	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../generated/ $(CFLAGS) -O0 -mabi=ilp32 -march=$(ARCH) -DRISCV -DTIME -Wl,-Bstatic,-T,../sections.lds,--strip-debug -o $@ $(SRCS) $(OBJS) -lgcc -lc
 	${TOOLCHAIN_PATH}$(TOOLCHAIN_PREFIX)-objdump -D $(PATTERN).elf > $(PATTERN).lst
 
 %.hex: %.elf

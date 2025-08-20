@@ -226,7 +226,9 @@ module mgmt_protect (
 	);
 
 `else
-	assign mprj_dat_i_core_bar = ~(mprj_dat_i_user & wb_in_enable);
+	// DEBUG
+	assign mprj_dat_i_core_bar = ~mprj_dat_i_user;
+	// assign mprj_dat_i_core_bar = ~(mprj_dat_i_user & wb_in_enable);
 `endif
 
 	assign mprj_dat_i_core = ~mprj_dat_i_core_bar;
@@ -245,7 +247,9 @@ module mgmt_protect (
 	);
 
 `else
-	assign mprj_ack_i_core_bar = ~(mprj_ack_i_user & wb_in_enable);
+	// DEBUG
+	assign mprj_ack_i_core_bar = ~mprj_ack_i_user;
+	// assign mprj_ack_i_core_bar = ~(mprj_ack_i_user & wb_in_enable);
 `endif
 
 	assign mprj_ack_i_core = ~mprj_ack_i_core_bar;

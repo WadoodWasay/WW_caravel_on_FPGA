@@ -79,7 +79,10 @@ module mgmt_core(
 	input wire por_l_in,
 	output wire por_l_out,
 	input wire porb_h_in,
-	output wire porb_h_out
+	output wire porb_h_out,
+	// Hack!
+	output wire [63:0] mcycle,
+	output wire [63:0] minstret
 );
 
 wire core_rst;
@@ -6943,8 +6946,10 @@ always @(posedge sys_clk) begin
 	if (spi_master_count_spimaster_next_value_ce) begin
 		spi_master_count <= spi_master_count_spimaster_next_value;
 	end
+	/* Replaced 22'd4123168 with 22'd4947780, 96000 -> 11520 */
 	{uart_phy_tx_tick, uart_phy_tx_phase} <= 22'd4123168;
 	if (uart_phy_tx_enable) begin
+		/* Replaced 22'd4123168 with 22'd4123168, 96000 -> 11520 */
 		{uart_phy_tx_tick, uart_phy_tx_phase} <= (uart_phy_tx_phase + 22'd4123168);
 	end
 	rs232phy_rs232phytx_state <= rs232phy_rs232phytx_next_state;
@@ -6960,6 +6965,7 @@ always @(posedge sys_clk) begin
 	uart_phy_rx_rx_d <= uart_phy_rx_rx;
 	{uart_phy_rx_tick, uart_phy_rx_phase} <= 32'd2147483648;
 	if (uart_phy_rx_enable) begin
+		/* Replaced 22'd4123168 with 22'd4123168, 96000 -> 11520 */
 		{uart_phy_rx_tick, uart_phy_rx_phase} <= (uart_phy_rx_phase + 22'd4123168);
 	end
 	rs232phy_rs232phyrx_state <= rs232phy_rs232phyrx_next_state;
@@ -7027,9 +7033,9 @@ always @(posedge sys_clk) begin
 			uart_rx_fifo_level0 <= (uart_rx_fifo_level0 - 1'd1);
 		end
 	end
-	{dbg_uart_tx_tick, dbg_uart_tx_phase} <= 26'd49478023;
+	{dbg_uart_tx_tick, dbg_uart_tx_phase} <= 26'd4123168;
 	if (dbg_uart_tx_enable) begin
-		{dbg_uart_tx_tick, dbg_uart_tx_phase} <= (dbg_uart_tx_phase + 26'd49478023);
+		{dbg_uart_tx_tick, dbg_uart_tx_phase} <= (dbg_uart_tx_phase + 26'd4123168);
 	end
 	uartwishbonebridge_rs232phytx_state <= uartwishbonebridge_rs232phytx_next_state;
 	if (dbg_uart_tx_count_uartwishbonebridge_rs232phytx_next_value_ce0) begin
@@ -7044,7 +7050,7 @@ always @(posedge sys_clk) begin
 	dbg_uart_rx_rx_d <= dbg_uart_rx_rx;
 	{dbg_uart_rx_tick, dbg_uart_rx_phase} <= 32'd2147483648;
 	if (dbg_uart_rx_enable) begin
-		{dbg_uart_rx_tick, dbg_uart_rx_phase} <= (dbg_uart_rx_phase + 26'd49478023);
+		{dbg_uart_rx_tick, dbg_uart_rx_phase} <= (dbg_uart_rx_phase + 26'd4123168);
 	end
 	uartwishbonebridge_rs232phyrx_state <= uartwishbonebridge_rs232phyrx_next_state;
 	if (dbg_uart_rx_count_uartwishbonebridge_rs232phyrx_next_value_ce0) begin
@@ -8476,7 +8482,11 @@ VexRiscv VexRiscv(
 	.iBusWishbone_DAT_MOSI(mgmtsoc_ibus_ibus_dat_w),
 	.iBusWishbone_SEL(mgmtsoc_ibus_ibus_sel),
 	.iBusWishbone_STB(mgmtsoc_ibus_ibus_stb),
-	.iBusWishbone_WE(mgmtsoc_ibus_ibus_we)
+	.iBusWishbone_WE(mgmtsoc_ibus_ibus_we),
+	// Hack!  Added clock and instruction counters as ports
+	.CsrPlugin_mcycle(mcycle),
+	.CsrPlugin_minstret(minstret)
+
 );
 
 endmodule

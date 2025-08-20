@@ -282,6 +282,10 @@ module caravel_core (
     wire [31:0]	hkspi_sram_data;
 `endif
 
+    // Hack!
+    wire [63:0] mprj_mcycle;
+    wire [63:0] mprj_minstret;
+
     // Management processor (wrapper).  Any management core
     // implementation must match this pinout.
 
@@ -331,6 +335,10 @@ module caravel_core (
 	.mprj_ack_i(mprj_ack_i_core),
 	.mprj_dat_i(mprj_dat_i_core),
 
+	// Hack!
+	.mprj_mcycle(mprj_mcycle),
+	.mprj_minstret(mprj_minstret),
+
 	.hk_stb_o(hk_stb_o),
 	.hk_cyc_o(hk_cyc_o),
 	.hk_dat_i(hk_dat_i),
@@ -376,6 +384,7 @@ module caravel_core (
 
 	// Trap status
 	.trap(trap)
+
     );
 
     /* Clock and reset to user space are passed through a tristate	*/
@@ -483,7 +492,11 @@ module caravel_core (
 	.user_clock2(mprj_clock2),
 
 	// IRQ
-	.user_irq(user_irq_core)
+	.user_irq(user_irq_core),
+
+	// Hack!
+	.user_mcycle(mprj_mcycle),
+	.user_minstret(mprj_minstret)
     );
 
     /*------------------------------------------*/

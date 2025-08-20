@@ -8,12 +8,13 @@
 #include <stdarg.h>
 #include <stdint.h>
 #include <stub.h>
+#include <defs.h>
 
-extern long time();
-extern long insn();
+extern long time(long int *reftime);
+extern long insn(long int *refinst);
 
 #ifdef USE_MYSTDLIB
-extern char *malloc();
+extern char *malloc(int);
 extern int printf(const char *format, ...);
 
 extern void *memcpy(void *dest, const void *src, long n);
@@ -24,19 +25,27 @@ char heap_memory[1024];
 int heap_memory_used = 0;
 #endif
 
-long time()
+long time(long int *reftime)	// NOTE:  reftime is unused
 {
-	int cycles;
-	asm volatile ("rdcycle %0" : "=r"(cycles));
+	long cycles;
+	// asm volatile ("rdcycle %0" : "=r"(cycles));
 	// printf("[time() -> %d]", cycles);
+
+	// NOTE:  This only reads the lower 32 bits (can be expanded).
+	cycles = (long)reg_mprj_slave_1;
+
 	return cycles;
 }
 
-long insn()
+long insn(long int *refinst)	// NOTE:  refinst is unused
 {
-	int insns;
-	asm volatile ("rdinstret %0" : "=r"(insns));
+	long insns;
+	// asm volatile ("rdinstret %0" : "=r"(insns));
 	// printf("[insn() -> %d]", insns);
+
+	// NOTE:  This only reads the lower 32 bits (can be expanded).
+	insns = (long)reg_mprj_slave_3;
+
 	return insns;
 }
 
@@ -65,9 +74,25 @@ static void printf_d(int val)
 		putchar('-');
 		val = -val;
 	}
-	while (val || p == buffer) {
-		*(p++) = '0' + val % 10;
-		val = val / 10;
+	while ((val > 0) || (p == buffer)) {
+		*(p++) = '0' + (val % 10);
+		val = (val / 10);
+	}
+	while (p != buffer)
+		putchar(*(--p));
+}
+
+static void printf_l(long val)
+{
+	char buffer[32];
+	char *p = buffer;
+	if (val < 0) {
+		putchar('-');
+		val = -val;
+	}
+	while ((val > 0) || (p == buffer)) {
+		*(p++) = '0' + (val % 10);
+		val = (val / 10);
 	}
 	while (p != buffer)
 		putchar(*(--p));
@@ -93,6 +118,10 @@ int printf(const char *format, ...)
 				}
 				if (format[i] == 'd') {
 					printf_d(va_arg(ap,int));
+					break;
+				}
+				if (format[i] == 'l') {
+					printf_l(va_arg(ap,long));
 					break;
 				}
 			}

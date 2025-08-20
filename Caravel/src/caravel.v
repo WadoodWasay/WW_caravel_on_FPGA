@@ -185,8 +185,10 @@ module caravel (
   // ser_tx	= mprj_io[6]		(output)
   // irq		= mprj_io[7]		(input)
 
+`ifndef SIM
   wire ser_rx_in;
   wire ser_tx_out;
+`endif
 
   // wire sdo_out;
   // wire sdi_in;

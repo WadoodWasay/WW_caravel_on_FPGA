@@ -90,6 +90,10 @@ module mgmt_core_wrapper (
     input     mprj_ack_i,
     input  [31:0] mprj_dat_i,
 
+    // Exported diagnostics
+    output [63:0] mprj_mcycle,
+    output [63:0] mprj_minstret,
+
     output    hk_cyc_o,
     output    hk_stb_o,
     input  [31:0] hk_dat_i,
@@ -208,7 +212,11 @@ module mgmt_core_wrapper (
         .spi_mosi(spi_sdo),
         .debug_in(debug_in),
         .debug_out(debug_out),
-        .debug_oeb(debug_oeb)
+        .debug_oeb(debug_oeb),
+
+	// Hack!
+	.mcycle(mprj_mcycle),
+	.minstret(mprj_minstret)
 
     );
 

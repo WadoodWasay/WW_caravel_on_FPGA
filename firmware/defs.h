@@ -154,6 +154,13 @@ extern uint32_t flashio_worker_end;
 #define reg_mprj_slave        (*(volatile uint32_t*) 0x30000000)
 #define reg_wb_enable	      (*(volatile uint32_t*) CSR_MPRJ_WB_IENA_OUT_ADDR)
 
+// User project first several address locations
+#define reg_mprj_slave_0      (*(volatile uint32_t*) 0x30000000)
+#define reg_mprj_slave_1      (*(volatile uint32_t*) 0x30000004)
+#define reg_mprj_slave_2      (*(volatile uint32_t*) 0x30000008)
+#define reg_mprj_slave_3      (*(volatile uint32_t*) 0x3000000c)
+#define reg_mprj_slave_4      (*(volatile uint32_t*) 0x30000010)
+
 // Counter-Timer 0 Configuration
 #define reg_timer0_config (*(volatile uint32_t*) CSR_TIMER0_EN_ADDR) // this is enable not config
 #define reg_timer0_update  (*(volatile uint32_t*) CSR_TIMER0_UPDATE_VALUE_ADDR)

@@ -83,7 +83,11 @@ module VexRiscv (
   output     [1:0]    dBusWishbone_BTE,
   input               clk,
   input               reset,
-  input               debugReset
+  input               debugReset,
+  // Hack---Cannot figure out how to enable in LiteX/Migen, so
+  // am pulling the mcycle and mistret registers out as ports.
+  output reg [63:0]   CsrPlugin_mcycle,
+  output reg [63:0]   CsrPlugin_minstret
 );
   wire                IBusCachedPlugin_cache_io_flush;
   wire                IBusCachedPlugin_cache_io_cpu_prefetch_isValid;
@@ -746,8 +750,8 @@ module VexRiscv (
   reg                 CsrPlugin_mcause_interrupt;
   reg        [3:0]    CsrPlugin_mcause_exceptionCode;
   reg        [31:0]   CsrPlugin_mtval;
-  reg        [63:0]   CsrPlugin_mcycle = 64'b0000000000000000000000000000000000000000000000000000000000000000;
-  reg        [63:0]   CsrPlugin_minstret = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+  // reg        [63:0]   CsrPlugin_mcycle = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+  // reg        [63:0]   CsrPlugin_minstret = 64'b0000000000000000000000000000000000000000000000000000000000000000;
   wire                _zz_when_CsrPlugin_l952;
   wire                _zz_when_CsrPlugin_l952_1;
   wire                _zz_when_CsrPlugin_l952_2;
@@ -3648,6 +3652,15 @@ module VexRiscv (
     end
   end
 
+  // Hack---Initialize mcycle and minstret registers, which were moved into
+  // the input/output list
+  // always @(posedge clk) begin
+  //   if(reset) begin
+  //	CsrPlugin_mcycle <= 64'd0;
+  //	CsrPlugin_minstret <= 64'd0;
+  //  end
+  // end
+
   assign when_DBusSimplePlugin_l189 = (! dBus_cmd_halfPipe_payload_wr);
   assign dBusWishbone_WE = dBus_cmd_halfPipe_payload_wr;
   assign dBusWishbone_DAT_MOSI = dBus_cmd_halfPipe_payload_data;
@@ -3979,9 +3992,15 @@ module VexRiscv (
     CsrPlugin_mip_MEIP <= externalInterrupt;
     CsrPlugin_mip_MTIP <= timerInterrupt;
     CsrPlugin_mip_MSIP <= softwareInterrupt;
-    CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
-    if(writeBack_arbitration_isFiring) begin
-      CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
+    // Hack---Moved mcycle and minstret to input/output list, so have to handle reset
+    if (reset) begin 
+       CsrPlugin_mcycle <= 64'h0000000000000000;
+       CsrPlugin_minstret <= 64'h0000000000000000;
+    end else begin
+       CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
+       if(writeBack_arbitration_isFiring) begin
+         CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
+       end
     end
     if(_zz_when) begin
       CsrPlugin_exceptionPortCtrl_exceptionContext_code <= (_zz_CsrPlugin_exceptionPortCtrl_exceptionContext_code_1 ? IBusCachedPlugin_decodeExceptionPort_payload_code : decodeExceptionPort_payload_code);

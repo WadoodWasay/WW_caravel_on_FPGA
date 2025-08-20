@@ -20,7 +20,7 @@
 #include "dhry.h"
 
 #ifdef USE_MYSTDLIB
-extern char     *malloc ();
+extern char     *malloc (int);
 #else
 #  include <stdlib.h>
 #  include <string.h>
@@ -39,7 +39,7 @@ char            Ch_1_Glob,
 int             Arr_1_Glob [50];
 int             Arr_2_Glob [50] [50];
 
-Enumeration     Func_1 ();
+Enumeration     Func_1 (char, char);
   /* forward declaration necessary since Enumeration may not simply be int */
 
 #ifndef REG
@@ -61,9 +61,9 @@ extern  int     times ();
                 /* Measurements should last at least about 2 seconds */
 #endif
 #ifdef TIME
-extern long     time();
+extern long     time(long *);
 #ifdef RISCV
-extern long     insn();
+extern long     insn(long *);
 #endif
                 /* see library function "time"  */
 #define Too_Small_Time 2
@@ -179,6 +179,7 @@ main ()
         Str_30          Str_2_Loc;
   REG   int             Run_Index;
   REG   int             Number_Of_Runs;
+	uint32_t	test_value;
 
    /* Caravel chip initialization (configure all GPIO pins and enable UART) */
    reg_gpio_mode1 = 1;
@@ -188,10 +189,21 @@ main ()
 
    configure_io();
 
-   reg_uart_enable = 1;
+   reg_uart_enable = 1;		/* Enable the UART */
+   reg_wb_enable = 1;		/* Enable wishbone access to the user project */
 
   /* Sanity check */
-  printf("Dhrystone benchmark start.\n");
+   printf("Dhrystone benchmark start at timer = %l.\n", (long) time( (long *) 0 ));
+   test_value = reg_mprj_slave_0;
+   printf("User project address 0x0 = %d.\n", test_value);
+   test_value = reg_mprj_slave_1;
+   printf("User project address 0x4 = %d.\n", test_value);
+   test_value = reg_mprj_slave_2;
+   printf("User project address 0x8 = %d.\n", test_value);
+   test_value = reg_mprj_slave_3;
+   printf("User project address 0xc = %d.\n", test_value);
+   test_value = reg_mprj_slave_4;
+   printf("User project address 0x10 = %d.\n", test_value);
 
   /* Initializations */
 

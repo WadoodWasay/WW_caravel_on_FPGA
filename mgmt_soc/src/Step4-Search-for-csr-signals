@@ -1,0 +1,833 @@
+VexRiscv_FullDebug.v:383:  wire       [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_24;
+VexRiscv_FullDebug.v:679:  wire       [31:0]   CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_FullDebug.v:680:  wire       [31:0]   CsrPlugin_csrMapping_readDataInit;
+VexRiscv_FullDebug.v:681:  wire       [31:0]   CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_FullDebug.v:682:  reg                 CsrPlugin_csrMapping_allowCsrSignal;
+VexRiscv_FullDebug.v:683:  wire                CsrPlugin_csrMapping_hazardFree;
+VexRiscv_FullDebug.v:684:  wire                CsrPlugin_csrMapping_doForceFailCsr;
+VexRiscv_FullDebug.v:979:  reg        [63:0]   CsrPlugin_mcycle;
+VexRiscv_FullDebug.v:980:  reg        [63:0]   CsrPlugin_minstret;
+VexRiscv_FullDebug.v:1051:  reg        [31:0]   _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_FullDebug.v:1054:  wire       [11:0]   execute_CsrPlugin_csrAddress;
+VexRiscv_FullDebug.v:1099:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_FullDebug.v:1269:  reg                 execute_CsrPlugin_csr_3264;
+VexRiscv_FullDebug.v:1271:  reg                 execute_CsrPlugin_csr_3857;
+VexRiscv_FullDebug.v:1273:  reg                 execute_CsrPlugin_csr_3858;
+VexRiscv_FullDebug.v:1275:  reg                 execute_CsrPlugin_csr_3859;
+VexRiscv_FullDebug.v:1277:  reg                 execute_CsrPlugin_csr_3860;
+VexRiscv_FullDebug.v:1279:  reg                 execute_CsrPlugin_csr_769;
+VexRiscv_FullDebug.v:1281:  reg                 execute_CsrPlugin_csr_768;
+VexRiscv_FullDebug.v:1283:  reg                 execute_CsrPlugin_csr_836;
+VexRiscv_FullDebug.v:1285:  reg                 execute_CsrPlugin_csr_772;
+VexRiscv_FullDebug.v:1287:  reg                 execute_CsrPlugin_csr_773;
+VexRiscv_FullDebug.v:1289:  reg                 execute_CsrPlugin_csr_833;
+VexRiscv_FullDebug.v:1291:  reg                 execute_CsrPlugin_csr_832;
+VexRiscv_FullDebug.v:1293:  reg                 execute_CsrPlugin_csr_834;
+VexRiscv_FullDebug.v:1295:  reg                 execute_CsrPlugin_csr_835;
+VexRiscv_FullDebug.v:1297:  reg                 execute_CsrPlugin_csr_2816;
+VexRiscv_FullDebug.v:1299:  reg                 execute_CsrPlugin_csr_2944;
+VexRiscv_FullDebug.v:1301:  reg                 execute_CsrPlugin_csr_2818;
+VexRiscv_FullDebug.v:1303:  reg                 execute_CsrPlugin_csr_2946;
+VexRiscv_FullDebug.v:1305:  reg                 execute_CsrPlugin_csr_3072;
+VexRiscv_FullDebug.v:1307:  reg                 execute_CsrPlugin_csr_3200;
+VexRiscv_FullDebug.v:1309:  reg                 execute_CsrPlugin_csr_3074;
+VexRiscv_FullDebug.v:1311:  reg                 execute_CsrPlugin_csr_3202;
+VexRiscv_FullDebug.v:1313:  reg                 execute_CsrPlugin_csr_3008;
+VexRiscv_FullDebug.v:1315:  reg                 execute_CsrPlugin_csr_4032;
+VexRiscv_FullDebug.v:1316:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_1;
+VexRiscv_FullDebug.v:1317:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_2;
+VexRiscv_FullDebug.v:1318:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_3;
+VexRiscv_FullDebug.v:1319:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_4;
+VexRiscv_FullDebug.v:1320:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_5;
+VexRiscv_FullDebug.v:1322:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_6;
+VexRiscv_FullDebug.v:1323:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_7;
+VexRiscv_FullDebug.v:1324:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_8;
+VexRiscv_FullDebug.v:1325:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_9;
+VexRiscv_FullDebug.v:1326:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_10;
+VexRiscv_FullDebug.v:1327:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_11;
+VexRiscv_FullDebug.v:1328:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_12;
+VexRiscv_FullDebug.v:1329:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_13;
+VexRiscv_FullDebug.v:1330:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_14;
+VexRiscv_FullDebug.v:1331:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_15;
+VexRiscv_FullDebug.v:1332:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_16;
+VexRiscv_FullDebug.v:1333:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_17;
+VexRiscv_FullDebug.v:1334:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_18;
+VexRiscv_FullDebug.v:1335:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_19;
+VexRiscv_FullDebug.v:1336:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_20;
+VexRiscv_FullDebug.v:1337:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_21;
+VexRiscv_FullDebug.v:1338:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_22;
+VexRiscv_FullDebug.v:1339:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_23;
+VexRiscv_FullDebug.v:1681:  assign _zz_CsrPlugin_csrMapping_readDataInit_24 = 32'h00000000;
+VexRiscv_FullDebug.v:2604:      _zz_decode_RS2 = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_FullDebug.v:3037:    CsrPlugin_csrMapping_allowCsrSignal = 1'b0;
+VexRiscv_FullDebug.v:3039:      CsrPlugin_csrMapping_allowCsrSignal = 1'b1;
+VexRiscv_FullDebug.v:3042:      CsrPlugin_csrMapping_allowCsrSignal = 1'b1;
+VexRiscv_FullDebug.v:3046:  assign CsrPlugin_csrMapping_doForceFailCsr = 1'b0;
+VexRiscv_FullDebug.v:3047:  assign CsrPlugin_csrMapping_readDataSignal = CsrPlugin_csrMapping_readDataInit;
+VexRiscv_FullDebug.v:4342:    if(execute_CsrPlugin_csr_3264) begin
+VexRiscv_FullDebug.v:4347:    if(execute_CsrPlugin_csr_3857) begin
+VexRiscv_FullDebug.v:4352:    if(execute_CsrPlugin_csr_3858) begin
+VexRiscv_FullDebug.v:4357:    if(execute_CsrPlugin_csr_3859) begin
+VexRiscv_FullDebug.v:4362:    if(execute_CsrPlugin_csr_3860) begin
+VexRiscv_FullDebug.v:4367:    if(execute_CsrPlugin_csr_769) begin
+VexRiscv_FullDebug.v:4370:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_FullDebug.v:4373:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_FullDebug.v:4376:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_FullDebug.v:4379:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_FullDebug.v:4382:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_FullDebug.v:4385:    if(execute_CsrPlugin_csr_832) begin
+VexRiscv_FullDebug.v:4388:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_FullDebug.v:4391:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_FullDebug.v:4394:    if(execute_CsrPlugin_csr_2816) begin
+VexRiscv_FullDebug.v:4397:    if(execute_CsrPlugin_csr_2944) begin
+VexRiscv_FullDebug.v:4400:    if(execute_CsrPlugin_csr_2818) begin
+VexRiscv_FullDebug.v:4403:    if(execute_CsrPlugin_csr_2946) begin
+VexRiscv_FullDebug.v:4406:    if(execute_CsrPlugin_csr_3072) begin
+VexRiscv_FullDebug.v:4411:    if(execute_CsrPlugin_csr_3200) begin
+VexRiscv_FullDebug.v:4416:    if(execute_CsrPlugin_csr_3074) begin
+VexRiscv_FullDebug.v:4421:    if(execute_CsrPlugin_csr_3202) begin
+VexRiscv_FullDebug.v:4426:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_FullDebug.v:4429:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_FullDebug.v:4434:    if(CsrPlugin_csrMapping_allowCsrSignal) begin
+VexRiscv_FullDebug.v:4502:  assign CsrPlugin_csrMapping_hazardFree = (! execute_CsrPlugin_blockedBySideEffects);
+VexRiscv_FullDebug.v:4503:  assign execute_CsrPlugin_readToWriteData = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_FullDebug.v:4508:        _zz_CsrPlugin_csrMapping_writeDataSignal = execute_SRC1;
+VexRiscv_FullDebug.v:4511:        _zz_CsrPlugin_csrMapping_writeDataSignal = (execute_INSTRUCTION[12] ? (execute_CsrPlugin_readToWriteData & (~ execute_SRC1)) : (execute_CsrPlugin_readToWriteData | execute_SRC1));
+VexRiscv_FullDebug.v:4516:  assign CsrPlugin_csrMapping_writeDataSignal = _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_FullDebug.v:4519:  assign execute_CsrPlugin_csrAddress = execute_INSTRUCTION[31 : 20];
+VexRiscv_FullDebug.v:4610:  assign _zz_externalInterrupt = (_zz_CsrPlugin_csrMapping_readDataInit & externalInterruptArray_regNext);
+VexRiscv_FullDebug.v:4824:    _zz_CsrPlugin_csrMapping_readDataInit_1 = 32'h00000000;
+VexRiscv_FullDebug.v:4825:    if(execute_CsrPlugin_csr_3264) begin
+VexRiscv_FullDebug.v:4826:      _zz_CsrPlugin_csrMapping_readDataInit_1[12 : 0] = 13'h1000;
+VexRiscv_FullDebug.v:4827:      _zz_CsrPlugin_csrMapping_readDataInit_1[25 : 20] = 6'h20;
+VexRiscv_FullDebug.v:4832:    _zz_CsrPlugin_csrMapping_readDataInit_2 = 32'h00000000;
+VexRiscv_FullDebug.v:4833:    if(execute_CsrPlugin_csr_3857) begin
+VexRiscv_FullDebug.v:4834:      _zz_CsrPlugin_csrMapping_readDataInit_2[3 : 0] = 4'b1011;
+VexRiscv_FullDebug.v:4839:    _zz_CsrPlugin_csrMapping_readDataInit_3 = 32'h00000000;
+VexRiscv_FullDebug.v:4840:    if(execute_CsrPlugin_csr_3858) begin
+VexRiscv_FullDebug.v:4841:      _zz_CsrPlugin_csrMapping_readDataInit_3[4 : 0] = 5'h16;
+VexRiscv_FullDebug.v:4846:    _zz_CsrPlugin_csrMapping_readDataInit_4 = 32'h00000000;
+VexRiscv_FullDebug.v:4847:    if(execute_CsrPlugin_csr_3859) begin
+VexRiscv_FullDebug.v:4848:      _zz_CsrPlugin_csrMapping_readDataInit_4[5 : 0] = 6'h21;
+VexRiscv_FullDebug.v:4853:    _zz_CsrPlugin_csrMapping_readDataInit_5 = 32'h00000000;
+VexRiscv_FullDebug.v:4854:    if(execute_CsrPlugin_csr_769) begin
+VexRiscv_FullDebug.v:4855:      _zz_CsrPlugin_csrMapping_readDataInit_5[31 : 30] = CsrPlugin_misa_base;
+VexRiscv_FullDebug.v:4856:      _zz_CsrPlugin_csrMapping_readDataInit_5[25 : 0] = CsrPlugin_misa_extensions;
+VexRiscv_FullDebug.v:4860:  assign switch_CsrPlugin_l1031 = CsrPlugin_csrMapping_writeDataSignal[12 : 11];
+VexRiscv_FullDebug.v:4862:    _zz_CsrPlugin_csrMapping_readDataInit_6 = 32'h00000000;
+VexRiscv_FullDebug.v:4863:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_FullDebug.v:4864:      _zz_CsrPlugin_csrMapping_readDataInit_6[7 : 7] = CsrPlugin_mstatus_MPIE;
+VexRiscv_FullDebug.v:4865:      _zz_CsrPlugin_csrMapping_readDataInit_6[3 : 3] = CsrPlugin_mstatus_MIE;
+VexRiscv_FullDebug.v:4866:      _zz_CsrPlugin_csrMapping_readDataInit_6[12 : 11] = CsrPlugin_mstatus_MPP;
+VexRiscv_FullDebug.v:4871:    _zz_CsrPlugin_csrMapping_readDataInit_7 = 32'h00000000;
+VexRiscv_FullDebug.v:4872:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_FullDebug.v:4873:      _zz_CsrPlugin_csrMapping_readDataInit_7[11 : 11] = CsrPlugin_mip_MEIP;
+VexRiscv_FullDebug.v:4874:      _zz_CsrPlugin_csrMapping_readDataInit_7[7 : 7] = CsrPlugin_mip_MTIP;
+VexRiscv_FullDebug.v:4875:      _zz_CsrPlugin_csrMapping_readDataInit_7[3 : 3] = CsrPlugin_mip_MSIP;
+VexRiscv_FullDebug.v:4880:    _zz_CsrPlugin_csrMapping_readDataInit_8 = 32'h00000000;
+VexRiscv_FullDebug.v:4881:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_FullDebug.v:4882:      _zz_CsrPlugin_csrMapping_readDataInit_8[11 : 11] = CsrPlugin_mie_MEIE;
+VexRiscv_FullDebug.v:4883:      _zz_CsrPlugin_csrMapping_readDataInit_8[7 : 7] = CsrPlugin_mie_MTIE;
+VexRiscv_FullDebug.v:4884:      _zz_CsrPlugin_csrMapping_readDataInit_8[3 : 3] = CsrPlugin_mie_MSIE;
+VexRiscv_FullDebug.v:4889:    _zz_CsrPlugin_csrMapping_readDataInit_9 = 32'h00000000;
+VexRiscv_FullDebug.v:4890:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_FullDebug.v:4891:      _zz_CsrPlugin_csrMapping_readDataInit_9[31 : 2] = CsrPlugin_mtvec_base;
+VexRiscv_FullDebug.v:4896:    _zz_CsrPlugin_csrMapping_readDataInit_10 = 32'h00000000;
+VexRiscv_FullDebug.v:4897:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_FullDebug.v:4898:      _zz_CsrPlugin_csrMapping_readDataInit_10[31 : 0] = CsrPlugin_mepc;
+VexRiscv_FullDebug.v:4903:    _zz_CsrPlugin_csrMapping_readDataInit_11 = 32'h00000000;
+VexRiscv_FullDebug.v:4904:    if(execute_CsrPlugin_csr_832) begin
+VexRiscv_FullDebug.v:4905:      _zz_CsrPlugin_csrMapping_readDataInit_11[31 : 0] = CsrPlugin_mscratch;
+VexRiscv_FullDebug.v:4910:    _zz_CsrPlugin_csrMapping_readDataInit_12 = 32'h00000000;
+VexRiscv_FullDebug.v:4911:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_FullDebug.v:4912:      _zz_CsrPlugin_csrMapping_readDataInit_12[31 : 31] = CsrPlugin_mcause_interrupt;
+VexRiscv_FullDebug.v:4913:      _zz_CsrPlugin_csrMapping_readDataInit_12[3 : 0] = CsrPlugin_mcause_exceptionCode;
+VexRiscv_FullDebug.v:4918:    _zz_CsrPlugin_csrMapping_readDataInit_13 = 32'h00000000;
+VexRiscv_FullDebug.v:4919:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_FullDebug.v:4920:      _zz_CsrPlugin_csrMapping_readDataInit_13[31 : 0] = CsrPlugin_mtval;
+VexRiscv_FullDebug.v:4925:    _zz_CsrPlugin_csrMapping_readDataInit_14 = 32'h00000000;
+VexRiscv_FullDebug.v:4926:    if(execute_CsrPlugin_csr_2816) begin
+VexRiscv_FullDebug.v:4927:      _zz_CsrPlugin_csrMapping_readDataInit_14[31 : 0] = CsrPlugin_mcycle[31 : 0];
+VexRiscv_FullDebug.v:4932:    _zz_CsrPlugin_csrMapping_readDataInit_15 = 32'h00000000;
+VexRiscv_FullDebug.v:4933:    if(execute_CsrPlugin_csr_2944) begin
+VexRiscv_FullDebug.v:4934:      _zz_CsrPlugin_csrMapping_readDataInit_15[31 : 0] = CsrPlugin_mcycle[63 : 32];
+VexRiscv_FullDebug.v:4939:    _zz_CsrPlugin_csrMapping_readDataInit_16 = 32'h00000000;
+VexRiscv_FullDebug.v:4940:    if(execute_CsrPlugin_csr_2818) begin
+VexRiscv_FullDebug.v:4941:      _zz_CsrPlugin_csrMapping_readDataInit_16[31 : 0] = CsrPlugin_minstret[31 : 0];
+VexRiscv_FullDebug.v:4946:    _zz_CsrPlugin_csrMapping_readDataInit_17 = 32'h00000000;
+VexRiscv_FullDebug.v:4947:    if(execute_CsrPlugin_csr_2946) begin
+VexRiscv_FullDebug.v:4948:      _zz_CsrPlugin_csrMapping_readDataInit_17[31 : 0] = CsrPlugin_minstret[63 : 32];
+VexRiscv_FullDebug.v:4953:    _zz_CsrPlugin_csrMapping_readDataInit_18 = 32'h00000000;
+VexRiscv_FullDebug.v:4954:    if(execute_CsrPlugin_csr_3072) begin
+VexRiscv_FullDebug.v:4955:      _zz_CsrPlugin_csrMapping_readDataInit_18[31 : 0] = CsrPlugin_mcycle[31 : 0];
+VexRiscv_FullDebug.v:4960:    _zz_CsrPlugin_csrMapping_readDataInit_19 = 32'h00000000;
+VexRiscv_FullDebug.v:4961:    if(execute_CsrPlugin_csr_3200) begin
+VexRiscv_FullDebug.v:4962:      _zz_CsrPlugin_csrMapping_readDataInit_19[31 : 0] = CsrPlugin_mcycle[63 : 32];
+VexRiscv_FullDebug.v:4967:    _zz_CsrPlugin_csrMapping_readDataInit_20 = 32'h00000000;
+VexRiscv_FullDebug.v:4968:    if(execute_CsrPlugin_csr_3074) begin
+VexRiscv_FullDebug.v:4969:      _zz_CsrPlugin_csrMapping_readDataInit_20[31 : 0] = CsrPlugin_minstret[31 : 0];
+VexRiscv_FullDebug.v:4974:    _zz_CsrPlugin_csrMapping_readDataInit_21 = 32'h00000000;
+VexRiscv_FullDebug.v:4975:    if(execute_CsrPlugin_csr_3202) begin
+VexRiscv_FullDebug.v:4976:      _zz_CsrPlugin_csrMapping_readDataInit_21[31 : 0] = CsrPlugin_minstret[63 : 32];
+VexRiscv_FullDebug.v:4981:    _zz_CsrPlugin_csrMapping_readDataInit_22 = 32'h00000000;
+VexRiscv_FullDebug.v:4982:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_FullDebug.v:4983:      _zz_CsrPlugin_csrMapping_readDataInit_22[31 : 0] = _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_FullDebug.v:4988:    _zz_CsrPlugin_csrMapping_readDataInit_23 = 32'h00000000;
+VexRiscv_FullDebug.v:4989:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_FullDebug.v:4990:      _zz_CsrPlugin_csrMapping_readDataInit_23[31 : 0] = _zz_externalInterrupt;
+VexRiscv_FullDebug.v:4994:  assign CsrPlugin_csrMapping_readDataInit = (((((_zz_CsrPlugin_csrMapping_readDataInit_1 | _zz_CsrPlugin_csrMapping_readDataInit_2) | (_zz_CsrPlugin_csrMapping_readDataInit_3 | _zz_CsrPlugin_csrMapping_readDataInit_4)) | ((_zz_CsrPlugin_csrMapping_readDataInit_24 | _zz_CsrPlugin_csrMapping_readDataInit_5) | (_zz_CsrPlugin_csrMapping_readDataInit_6 | _zz_CsrPlugin_csrMapping_readDataInit_7))) | (((_zz_CsrPlugin_csrMapping_readDataInit_8 | _zz_CsrPlugin_csrMapping_readDataInit_9) | (_zz_CsrPlugin_csrMapping_readDataInit_10 | _zz_CsrPlugin_csrMapping_readDataInit_11)) | ((_zz_CsrPlugin_csrMapping_readDataInit_12 | _zz_CsrPlugin_csrMapping_readDataInit_13) | (_zz_CsrPlugin_csrMapping_readDataInit_14 | _zz_CsrPlugin_csrMapping_readDataInit_15)))) | (((_zz_CsrPlugin_csrMapping_readDataInit_16 | _zz_CsrPlugin_csrMapping_readDataInit_17) | (_zz_CsrPlugin_csrMapping_readDataInit_18 | _zz_CsrPlugin_csrMapping_readDataInit_19)) | ((_zz_CsrPlugin_csrMapping_readDataInit_20 | _zz_CsrPlugin_csrMapping_readDataInit_21) | (_zz_CsrPlugin_csrMapping_readDataInit_22 | _zz_CsrPlugin_csrMapping_readDataInit_23))));
+VexRiscv_FullDebug.v:4995:  assign when_CsrPlugin_l1702 = ((execute_arbitration_isValid && execute_IS_CSR) && (({execute_CsrPlugin_csrAddress[11 : 2],2'b00} == 12'h3a0) || ({execute_CsrPlugin_csrAddress[11 : 4],4'b0000} == 12'h3b0)));
+VexRiscv_FullDebug.v:4996:  assign _zz_when_CsrPlugin_l1709 = (execute_CsrPlugin_csrAddress & 12'hf60);
+VexRiscv_FullDebug.v:4997:  assign when_CsrPlugin_l1709 = (((execute_arbitration_isValid && execute_IS_CSR) && (5'h03 <= execute_CsrPlugin_csrAddress[4 : 0])) && (((_zz_when_CsrPlugin_l1709 == 12'hb00) || (((_zz_when_CsrPlugin_l1709 == 12'hc00) && (! execute_CsrPlugin_writeInstruction)) && (CsrPlugin_privilege == 2'b11))) || ((execute_CsrPlugin_csrAddress & 12'hfe0) == 12'h320)));
+VexRiscv_FullDebug.v:4999:    when_CsrPlugin_l1719 = CsrPlugin_csrMapping_doForceFailCsr;
+VexRiscv_FullDebug.v:5005:  assign when_CsrPlugin_l1717 = (CsrPlugin_privilege < execute_CsrPlugin_csrAddress[9 : 8]);
+VexRiscv_FullDebug.v:5075:      CsrPlugin_mcycle <= 64'h0000000000000000;
+VexRiscv_FullDebug.v:5076:      CsrPlugin_minstret <= 64'h0000000000000000;
+VexRiscv_FullDebug.v:5089:      _zz_CsrPlugin_csrMapping_readDataInit <= 32'h00000000;
+VexRiscv_FullDebug.v:5189:      CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
+VexRiscv_FullDebug.v:5191:        CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
+VexRiscv_FullDebug.v:5313:      if(execute_CsrPlugin_csr_768) begin
+VexRiscv_FullDebug.v:5315:          CsrPlugin_mstatus_MPIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_FullDebug.v:5316:          CsrPlugin_mstatus_MIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_FullDebug.v:5326:      if(execute_CsrPlugin_csr_772) begin
+VexRiscv_FullDebug.v:5328:          CsrPlugin_mie_MEIE <= CsrPlugin_csrMapping_writeDataSignal[11];
+VexRiscv_FullDebug.v:5329:          CsrPlugin_mie_MTIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_FullDebug.v:5330:          CsrPlugin_mie_MSIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_FullDebug.v:5333:      if(execute_CsrPlugin_csr_2816) begin
+VexRiscv_FullDebug.v:5335:          CsrPlugin_mcycle[31 : 0] <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_FullDebug.v:5338:      if(execute_CsrPlugin_csr_2944) begin
+VexRiscv_FullDebug.v:5340:          CsrPlugin_mcycle[63 : 32] <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_FullDebug.v:5343:      if(execute_CsrPlugin_csr_2818) begin
+VexRiscv_FullDebug.v:5345:          CsrPlugin_minstret[31 : 0] <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_FullDebug.v:5348:      if(execute_CsrPlugin_csr_2946) begin
+VexRiscv_FullDebug.v:5350:          CsrPlugin_minstret[63 : 32] <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_FullDebug.v:5353:      if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_FullDebug.v:5355:          _zz_CsrPlugin_csrMapping_readDataInit <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_FullDebug.v:5665:      execute_CsrPlugin_csr_3264 <= (decode_INSTRUCTION[31 : 20] == 12'hcc0);
+VexRiscv_FullDebug.v:5668:      execute_CsrPlugin_csr_3857 <= (decode_INSTRUCTION[31 : 20] == 12'hf11);
+VexRiscv_FullDebug.v:5671:      execute_CsrPlugin_csr_3858 <= (decode_INSTRUCTION[31 : 20] == 12'hf12);
+VexRiscv_FullDebug.v:5674:      execute_CsrPlugin_csr_3859 <= (decode_INSTRUCTION[31 : 20] == 12'hf13);
+VexRiscv_FullDebug.v:5677:      execute_CsrPlugin_csr_3860 <= (decode_INSTRUCTION[31 : 20] == 12'hf14);
+VexRiscv_FullDebug.v:5680:      execute_CsrPlugin_csr_769 <= (decode_INSTRUCTION[31 : 20] == 12'h301);
+VexRiscv_FullDebug.v:5683:      execute_CsrPlugin_csr_768 <= (decode_INSTRUCTION[31 : 20] == 12'h300);
+VexRiscv_FullDebug.v:5686:      execute_CsrPlugin_csr_836 <= (decode_INSTRUCTION[31 : 20] == 12'h344);
+VexRiscv_FullDebug.v:5689:      execute_CsrPlugin_csr_772 <= (decode_INSTRUCTION[31 : 20] == 12'h304);
+VexRiscv_FullDebug.v:5692:      execute_CsrPlugin_csr_773 <= (decode_INSTRUCTION[31 : 20] == 12'h305);
+VexRiscv_FullDebug.v:5695:      execute_CsrPlugin_csr_833 <= (decode_INSTRUCTION[31 : 20] == 12'h341);
+VexRiscv_FullDebug.v:5698:      execute_CsrPlugin_csr_832 <= (decode_INSTRUCTION[31 : 20] == 12'h340);
+VexRiscv_FullDebug.v:5701:      execute_CsrPlugin_csr_834 <= (decode_INSTRUCTION[31 : 20] == 12'h342);
+VexRiscv_FullDebug.v:5704:      execute_CsrPlugin_csr_835 <= (decode_INSTRUCTION[31 : 20] == 12'h343);
+VexRiscv_FullDebug.v:5707:      execute_CsrPlugin_csr_2816 <= (decode_INSTRUCTION[31 : 20] == 12'hb00);
+VexRiscv_FullDebug.v:5710:      execute_CsrPlugin_csr_2944 <= (decode_INSTRUCTION[31 : 20] == 12'hb80);
+VexRiscv_FullDebug.v:5713:      execute_CsrPlugin_csr_2818 <= (decode_INSTRUCTION[31 : 20] == 12'hb02);
+VexRiscv_FullDebug.v:5716:      execute_CsrPlugin_csr_2946 <= (decode_INSTRUCTION[31 : 20] == 12'hb82);
+VexRiscv_FullDebug.v:5719:      execute_CsrPlugin_csr_3072 <= (decode_INSTRUCTION[31 : 20] == 12'hc00);
+VexRiscv_FullDebug.v:5722:      execute_CsrPlugin_csr_3200 <= (decode_INSTRUCTION[31 : 20] == 12'hc80);
+VexRiscv_FullDebug.v:5725:      execute_CsrPlugin_csr_3074 <= (decode_INSTRUCTION[31 : 20] == 12'hc02);
+VexRiscv_FullDebug.v:5728:      execute_CsrPlugin_csr_3202 <= (decode_INSTRUCTION[31 : 20] == 12'hc82);
+VexRiscv_FullDebug.v:5731:      execute_CsrPlugin_csr_3008 <= (decode_INSTRUCTION[31 : 20] == 12'hbc0);
+VexRiscv_FullDebug.v:5734:      execute_CsrPlugin_csr_4032 <= (decode_INSTRUCTION[31 : 20] == 12'hfc0);
+VexRiscv_FullDebug.v:5736:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_FullDebug.v:5738:        CsrPlugin_mip_MSIP <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_FullDebug.v:5741:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_FullDebug.v:5743:        CsrPlugin_mtvec_base <= CsrPlugin_csrMapping_writeDataSignal[31 : 2];
+VexRiscv_FullDebug.v:5746:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_FullDebug.v:5748:        CsrPlugin_mepc <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_FullDebug.v:5751:    if(execute_CsrPlugin_csr_832) begin
+VexRiscv_FullDebug.v:5753:        CsrPlugin_mscratch <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_FullDebug.v:5756:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_FullDebug.v:5758:        CsrPlugin_mcause_interrupt <= CsrPlugin_csrMapping_writeDataSignal[31];
+VexRiscv_FullDebug.v:5759:        CsrPlugin_mcause_exceptionCode <= CsrPlugin_csrMapping_writeDataSignal[3 : 0];
+VexRiscv_FullDebug.v:5762:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_FullDebug.v:5764:        CsrPlugin_mtval <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_IMACDebug.v:418:  wire       [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_24;
+VexRiscv_IMACDebug.v:720:  wire       [31:0]   CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_IMACDebug.v:721:  wire       [31:0]   CsrPlugin_csrMapping_readDataInit;
+VexRiscv_IMACDebug.v:722:  wire       [31:0]   CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_IMACDebug.v:723:  reg                 CsrPlugin_csrMapping_allowCsrSignal;
+VexRiscv_IMACDebug.v:724:  wire                CsrPlugin_csrMapping_hazardFree;
+VexRiscv_IMACDebug.v:725:  wire                CsrPlugin_csrMapping_doForceFailCsr;
+VexRiscv_IMACDebug.v:1077:  reg        [63:0]   CsrPlugin_mcycle;
+VexRiscv_IMACDebug.v:1078:  reg        [63:0]   CsrPlugin_minstret;
+VexRiscv_IMACDebug.v:1149:  reg        [31:0]   _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_IMACDebug.v:1152:  wire       [11:0]   execute_CsrPlugin_csrAddress;
+VexRiscv_IMACDebug.v:1197:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_IMACDebug.v:1380:  reg                 execute_CsrPlugin_csr_3264;
+VexRiscv_IMACDebug.v:1382:  reg                 execute_CsrPlugin_csr_3857;
+VexRiscv_IMACDebug.v:1384:  reg                 execute_CsrPlugin_csr_3858;
+VexRiscv_IMACDebug.v:1386:  reg                 execute_CsrPlugin_csr_3859;
+VexRiscv_IMACDebug.v:1388:  reg                 execute_CsrPlugin_csr_3860;
+VexRiscv_IMACDebug.v:1390:  reg                 execute_CsrPlugin_csr_769;
+VexRiscv_IMACDebug.v:1392:  reg                 execute_CsrPlugin_csr_768;
+VexRiscv_IMACDebug.v:1394:  reg                 execute_CsrPlugin_csr_836;
+VexRiscv_IMACDebug.v:1396:  reg                 execute_CsrPlugin_csr_772;
+VexRiscv_IMACDebug.v:1398:  reg                 execute_CsrPlugin_csr_773;
+VexRiscv_IMACDebug.v:1400:  reg                 execute_CsrPlugin_csr_833;
+VexRiscv_IMACDebug.v:1402:  reg                 execute_CsrPlugin_csr_832;
+VexRiscv_IMACDebug.v:1404:  reg                 execute_CsrPlugin_csr_834;
+VexRiscv_IMACDebug.v:1406:  reg                 execute_CsrPlugin_csr_835;
+VexRiscv_IMACDebug.v:1408:  reg                 execute_CsrPlugin_csr_2816;
+VexRiscv_IMACDebug.v:1410:  reg                 execute_CsrPlugin_csr_2944;
+VexRiscv_IMACDebug.v:1412:  reg                 execute_CsrPlugin_csr_2818;
+VexRiscv_IMACDebug.v:1414:  reg                 execute_CsrPlugin_csr_2946;
+VexRiscv_IMACDebug.v:1416:  reg                 execute_CsrPlugin_csr_3072;
+VexRiscv_IMACDebug.v:1418:  reg                 execute_CsrPlugin_csr_3200;
+VexRiscv_IMACDebug.v:1420:  reg                 execute_CsrPlugin_csr_3074;
+VexRiscv_IMACDebug.v:1422:  reg                 execute_CsrPlugin_csr_3202;
+VexRiscv_IMACDebug.v:1424:  reg                 execute_CsrPlugin_csr_3008;
+VexRiscv_IMACDebug.v:1426:  reg                 execute_CsrPlugin_csr_4032;
+VexRiscv_IMACDebug.v:1427:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_1;
+VexRiscv_IMACDebug.v:1428:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_2;
+VexRiscv_IMACDebug.v:1429:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_3;
+VexRiscv_IMACDebug.v:1430:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_4;
+VexRiscv_IMACDebug.v:1431:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_5;
+VexRiscv_IMACDebug.v:1433:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_6;
+VexRiscv_IMACDebug.v:1434:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_7;
+VexRiscv_IMACDebug.v:1435:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_8;
+VexRiscv_IMACDebug.v:1436:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_9;
+VexRiscv_IMACDebug.v:1437:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_10;
+VexRiscv_IMACDebug.v:1438:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_11;
+VexRiscv_IMACDebug.v:1439:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_12;
+VexRiscv_IMACDebug.v:1440:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_13;
+VexRiscv_IMACDebug.v:1441:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_14;
+VexRiscv_IMACDebug.v:1442:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_15;
+VexRiscv_IMACDebug.v:1443:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_16;
+VexRiscv_IMACDebug.v:1444:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_17;
+VexRiscv_IMACDebug.v:1445:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_18;
+VexRiscv_IMACDebug.v:1446:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_19;
+VexRiscv_IMACDebug.v:1447:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_20;
+VexRiscv_IMACDebug.v:1448:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_21;
+VexRiscv_IMACDebug.v:1449:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_22;
+VexRiscv_IMACDebug.v:1450:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_23;
+VexRiscv_IMACDebug.v:1823:  assign _zz_CsrPlugin_csrMapping_readDataInit_24 = 32'h00000000;
+VexRiscv_IMACDebug.v:2749:      _zz_decode_RS2 = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_IMACDebug.v:3198:    CsrPlugin_csrMapping_allowCsrSignal = 1'b0;
+VexRiscv_IMACDebug.v:3200:      CsrPlugin_csrMapping_allowCsrSignal = 1'b1;
+VexRiscv_IMACDebug.v:3203:      CsrPlugin_csrMapping_allowCsrSignal = 1'b1;
+VexRiscv_IMACDebug.v:3207:  assign CsrPlugin_csrMapping_doForceFailCsr = 1'b0;
+VexRiscv_IMACDebug.v:3208:  assign CsrPlugin_csrMapping_readDataSignal = CsrPlugin_csrMapping_readDataInit;
+VexRiscv_IMACDebug.v:4627:    if(execute_CsrPlugin_csr_3264) begin
+VexRiscv_IMACDebug.v:4632:    if(execute_CsrPlugin_csr_3857) begin
+VexRiscv_IMACDebug.v:4637:    if(execute_CsrPlugin_csr_3858) begin
+VexRiscv_IMACDebug.v:4642:    if(execute_CsrPlugin_csr_3859) begin
+VexRiscv_IMACDebug.v:4647:    if(execute_CsrPlugin_csr_3860) begin
+VexRiscv_IMACDebug.v:4652:    if(execute_CsrPlugin_csr_769) begin
+VexRiscv_IMACDebug.v:4655:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_IMACDebug.v:4658:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_IMACDebug.v:4661:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_IMACDebug.v:4664:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_IMACDebug.v:4667:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_IMACDebug.v:4670:    if(execute_CsrPlugin_csr_832) begin
+VexRiscv_IMACDebug.v:4673:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_IMACDebug.v:4676:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_IMACDebug.v:4679:    if(execute_CsrPlugin_csr_2816) begin
+VexRiscv_IMACDebug.v:4682:    if(execute_CsrPlugin_csr_2944) begin
+VexRiscv_IMACDebug.v:4685:    if(execute_CsrPlugin_csr_2818) begin
+VexRiscv_IMACDebug.v:4688:    if(execute_CsrPlugin_csr_2946) begin
+VexRiscv_IMACDebug.v:4691:    if(execute_CsrPlugin_csr_3072) begin
+VexRiscv_IMACDebug.v:4696:    if(execute_CsrPlugin_csr_3200) begin
+VexRiscv_IMACDebug.v:4701:    if(execute_CsrPlugin_csr_3074) begin
+VexRiscv_IMACDebug.v:4706:    if(execute_CsrPlugin_csr_3202) begin
+VexRiscv_IMACDebug.v:4711:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_IMACDebug.v:4714:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_IMACDebug.v:4719:    if(CsrPlugin_csrMapping_allowCsrSignal) begin
+VexRiscv_IMACDebug.v:4787:  assign CsrPlugin_csrMapping_hazardFree = (! execute_CsrPlugin_blockedBySideEffects);
+VexRiscv_IMACDebug.v:4788:  assign execute_CsrPlugin_readToWriteData = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_IMACDebug.v:4793:        _zz_CsrPlugin_csrMapping_writeDataSignal = execute_SRC1;
+VexRiscv_IMACDebug.v:4796:        _zz_CsrPlugin_csrMapping_writeDataSignal = (execute_INSTRUCTION[12] ? (execute_CsrPlugin_readToWriteData & (~ execute_SRC1)) : (execute_CsrPlugin_readToWriteData | execute_SRC1));
+VexRiscv_IMACDebug.v:4801:  assign CsrPlugin_csrMapping_writeDataSignal = _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_IMACDebug.v:4804:  assign execute_CsrPlugin_csrAddress = execute_INSTRUCTION[31 : 20];
+VexRiscv_IMACDebug.v:4895:  assign _zz_externalInterrupt = (_zz_CsrPlugin_csrMapping_readDataInit & externalInterruptArray_regNext);
+VexRiscv_IMACDebug.v:5116:    _zz_CsrPlugin_csrMapping_readDataInit_1 = 32'h00000000;
+VexRiscv_IMACDebug.v:5117:    if(execute_CsrPlugin_csr_3264) begin
+VexRiscv_IMACDebug.v:5118:      _zz_CsrPlugin_csrMapping_readDataInit_1[12 : 0] = 13'h1000;
+VexRiscv_IMACDebug.v:5119:      _zz_CsrPlugin_csrMapping_readDataInit_1[25 : 20] = 6'h20;
+VexRiscv_IMACDebug.v:5124:    _zz_CsrPlugin_csrMapping_readDataInit_2 = 32'h00000000;
+VexRiscv_IMACDebug.v:5125:    if(execute_CsrPlugin_csr_3857) begin
+VexRiscv_IMACDebug.v:5126:      _zz_CsrPlugin_csrMapping_readDataInit_2[3 : 0] = 4'b1011;
+VexRiscv_IMACDebug.v:5131:    _zz_CsrPlugin_csrMapping_readDataInit_3 = 32'h00000000;
+VexRiscv_IMACDebug.v:5132:    if(execute_CsrPlugin_csr_3858) begin
+VexRiscv_IMACDebug.v:5133:      _zz_CsrPlugin_csrMapping_readDataInit_3[4 : 0] = 5'h16;
+VexRiscv_IMACDebug.v:5138:    _zz_CsrPlugin_csrMapping_readDataInit_4 = 32'h00000000;
+VexRiscv_IMACDebug.v:5139:    if(execute_CsrPlugin_csr_3859) begin
+VexRiscv_IMACDebug.v:5140:      _zz_CsrPlugin_csrMapping_readDataInit_4[5 : 0] = 6'h21;
+VexRiscv_IMACDebug.v:5145:    _zz_CsrPlugin_csrMapping_readDataInit_5 = 32'h00000000;
+VexRiscv_IMACDebug.v:5146:    if(execute_CsrPlugin_csr_769) begin
+VexRiscv_IMACDebug.v:5147:      _zz_CsrPlugin_csrMapping_readDataInit_5[31 : 30] = CsrPlugin_misa_base;
+VexRiscv_IMACDebug.v:5148:      _zz_CsrPlugin_csrMapping_readDataInit_5[25 : 0] = CsrPlugin_misa_extensions;
+VexRiscv_IMACDebug.v:5152:  assign switch_CsrPlugin_l1031 = CsrPlugin_csrMapping_writeDataSignal[12 : 11];
+VexRiscv_IMACDebug.v:5154:    _zz_CsrPlugin_csrMapping_readDataInit_6 = 32'h00000000;
+VexRiscv_IMACDebug.v:5155:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_IMACDebug.v:5156:      _zz_CsrPlugin_csrMapping_readDataInit_6[7 : 7] = CsrPlugin_mstatus_MPIE;
+VexRiscv_IMACDebug.v:5157:      _zz_CsrPlugin_csrMapping_readDataInit_6[3 : 3] = CsrPlugin_mstatus_MIE;
+VexRiscv_IMACDebug.v:5158:      _zz_CsrPlugin_csrMapping_readDataInit_6[12 : 11] = CsrPlugin_mstatus_MPP;
+VexRiscv_IMACDebug.v:5163:    _zz_CsrPlugin_csrMapping_readDataInit_7 = 32'h00000000;
+VexRiscv_IMACDebug.v:5164:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_IMACDebug.v:5165:      _zz_CsrPlugin_csrMapping_readDataInit_7[11 : 11] = CsrPlugin_mip_MEIP;
+VexRiscv_IMACDebug.v:5166:      _zz_CsrPlugin_csrMapping_readDataInit_7[7 : 7] = CsrPlugin_mip_MTIP;
+VexRiscv_IMACDebug.v:5167:      _zz_CsrPlugin_csrMapping_readDataInit_7[3 : 3] = CsrPlugin_mip_MSIP;
+VexRiscv_IMACDebug.v:5172:    _zz_CsrPlugin_csrMapping_readDataInit_8 = 32'h00000000;
+VexRiscv_IMACDebug.v:5173:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_IMACDebug.v:5174:      _zz_CsrPlugin_csrMapping_readDataInit_8[11 : 11] = CsrPlugin_mie_MEIE;
+VexRiscv_IMACDebug.v:5175:      _zz_CsrPlugin_csrMapping_readDataInit_8[7 : 7] = CsrPlugin_mie_MTIE;
+VexRiscv_IMACDebug.v:5176:      _zz_CsrPlugin_csrMapping_readDataInit_8[3 : 3] = CsrPlugin_mie_MSIE;
+VexRiscv_IMACDebug.v:5181:    _zz_CsrPlugin_csrMapping_readDataInit_9 = 32'h00000000;
+VexRiscv_IMACDebug.v:5182:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_IMACDebug.v:5183:      _zz_CsrPlugin_csrMapping_readDataInit_9[31 : 2] = CsrPlugin_mtvec_base;
+VexRiscv_IMACDebug.v:5188:    _zz_CsrPlugin_csrMapping_readDataInit_10 = 32'h00000000;
+VexRiscv_IMACDebug.v:5189:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_IMACDebug.v:5190:      _zz_CsrPlugin_csrMapping_readDataInit_10[31 : 0] = CsrPlugin_mepc;
+VexRiscv_IMACDebug.v:5195:    _zz_CsrPlugin_csrMapping_readDataInit_11 = 32'h00000000;
+VexRiscv_IMACDebug.v:5196:    if(execute_CsrPlugin_csr_832) begin
+VexRiscv_IMACDebug.v:5197:      _zz_CsrPlugin_csrMapping_readDataInit_11[31 : 0] = CsrPlugin_mscratch;
+VexRiscv_IMACDebug.v:5202:    _zz_CsrPlugin_csrMapping_readDataInit_12 = 32'h00000000;
+VexRiscv_IMACDebug.v:5203:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_IMACDebug.v:5204:      _zz_CsrPlugin_csrMapping_readDataInit_12[31 : 31] = CsrPlugin_mcause_interrupt;
+VexRiscv_IMACDebug.v:5205:      _zz_CsrPlugin_csrMapping_readDataInit_12[3 : 0] = CsrPlugin_mcause_exceptionCode;
+VexRiscv_IMACDebug.v:5210:    _zz_CsrPlugin_csrMapping_readDataInit_13 = 32'h00000000;
+VexRiscv_IMACDebug.v:5211:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_IMACDebug.v:5212:      _zz_CsrPlugin_csrMapping_readDataInit_13[31 : 0] = CsrPlugin_mtval;
+VexRiscv_IMACDebug.v:5217:    _zz_CsrPlugin_csrMapping_readDataInit_14 = 32'h00000000;
+VexRiscv_IMACDebug.v:5218:    if(execute_CsrPlugin_csr_2816) begin
+VexRiscv_IMACDebug.v:5219:      _zz_CsrPlugin_csrMapping_readDataInit_14[31 : 0] = CsrPlugin_mcycle[31 : 0];
+VexRiscv_IMACDebug.v:5224:    _zz_CsrPlugin_csrMapping_readDataInit_15 = 32'h00000000;
+VexRiscv_IMACDebug.v:5225:    if(execute_CsrPlugin_csr_2944) begin
+VexRiscv_IMACDebug.v:5226:      _zz_CsrPlugin_csrMapping_readDataInit_15[31 : 0] = CsrPlugin_mcycle[63 : 32];
+VexRiscv_IMACDebug.v:5231:    _zz_CsrPlugin_csrMapping_readDataInit_16 = 32'h00000000;
+VexRiscv_IMACDebug.v:5232:    if(execute_CsrPlugin_csr_2818) begin
+VexRiscv_IMACDebug.v:5233:      _zz_CsrPlugin_csrMapping_readDataInit_16[31 : 0] = CsrPlugin_minstret[31 : 0];
+VexRiscv_IMACDebug.v:5238:    _zz_CsrPlugin_csrMapping_readDataInit_17 = 32'h00000000;
+VexRiscv_IMACDebug.v:5239:    if(execute_CsrPlugin_csr_2946) begin
+VexRiscv_IMACDebug.v:5240:      _zz_CsrPlugin_csrMapping_readDataInit_17[31 : 0] = CsrPlugin_minstret[63 : 32];
+VexRiscv_IMACDebug.v:5245:    _zz_CsrPlugin_csrMapping_readDataInit_18 = 32'h00000000;
+VexRiscv_IMACDebug.v:5246:    if(execute_CsrPlugin_csr_3072) begin
+VexRiscv_IMACDebug.v:5247:      _zz_CsrPlugin_csrMapping_readDataInit_18[31 : 0] = CsrPlugin_mcycle[31 : 0];
+VexRiscv_IMACDebug.v:5252:    _zz_CsrPlugin_csrMapping_readDataInit_19 = 32'h00000000;
+VexRiscv_IMACDebug.v:5253:    if(execute_CsrPlugin_csr_3200) begin
+VexRiscv_IMACDebug.v:5254:      _zz_CsrPlugin_csrMapping_readDataInit_19[31 : 0] = CsrPlugin_mcycle[63 : 32];
+VexRiscv_IMACDebug.v:5259:    _zz_CsrPlugin_csrMapping_readDataInit_20 = 32'h00000000;
+VexRiscv_IMACDebug.v:5260:    if(execute_CsrPlugin_csr_3074) begin
+VexRiscv_IMACDebug.v:5261:      _zz_CsrPlugin_csrMapping_readDataInit_20[31 : 0] = CsrPlugin_minstret[31 : 0];
+VexRiscv_IMACDebug.v:5266:    _zz_CsrPlugin_csrMapping_readDataInit_21 = 32'h00000000;
+VexRiscv_IMACDebug.v:5267:    if(execute_CsrPlugin_csr_3202) begin
+VexRiscv_IMACDebug.v:5268:      _zz_CsrPlugin_csrMapping_readDataInit_21[31 : 0] = CsrPlugin_minstret[63 : 32];
+VexRiscv_IMACDebug.v:5273:    _zz_CsrPlugin_csrMapping_readDataInit_22 = 32'h00000000;
+VexRiscv_IMACDebug.v:5274:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_IMACDebug.v:5275:      _zz_CsrPlugin_csrMapping_readDataInit_22[31 : 0] = _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_IMACDebug.v:5280:    _zz_CsrPlugin_csrMapping_readDataInit_23 = 32'h00000000;
+VexRiscv_IMACDebug.v:5281:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_IMACDebug.v:5282:      _zz_CsrPlugin_csrMapping_readDataInit_23[31 : 0] = _zz_externalInterrupt;
+VexRiscv_IMACDebug.v:5286:  assign CsrPlugin_csrMapping_readDataInit = (((((_zz_CsrPlugin_csrMapping_readDataInit_1 | _zz_CsrPlugin_csrMapping_readDataInit_2) | (_zz_CsrPlugin_csrMapping_readDataInit_3 | _zz_CsrPlugin_csrMapping_readDataInit_4)) | ((_zz_CsrPlugin_csrMapping_readDataInit_24 | _zz_CsrPlugin_csrMapping_readDataInit_5) | (_zz_CsrPlugin_csrMapping_readDataInit_6 | _zz_CsrPlugin_csrMapping_readDataInit_7))) | (((_zz_CsrPlugin_csrMapping_readDataInit_8 | _zz_CsrPlugin_csrMapping_readDataInit_9) | (_zz_CsrPlugin_csrMapping_readDataInit_10 | _zz_CsrPlugin_csrMapping_readDataInit_11)) | ((_zz_CsrPlugin_csrMapping_readDataInit_12 | _zz_CsrPlugin_csrMapping_readDataInit_13) | (_zz_CsrPlugin_csrMapping_readDataInit_14 | _zz_CsrPlugin_csrMapping_readDataInit_15)))) | (((_zz_CsrPlugin_csrMapping_readDataInit_16 | _zz_CsrPlugin_csrMapping_readDataInit_17) | (_zz_CsrPlugin_csrMapping_readDataInit_18 | _zz_CsrPlugin_csrMapping_readDataInit_19)) | ((_zz_CsrPlugin_csrMapping_readDataInit_20 | _zz_CsrPlugin_csrMapping_readDataInit_21) | (_zz_CsrPlugin_csrMapping_readDataInit_22 | _zz_CsrPlugin_csrMapping_readDataInit_23))));
+VexRiscv_IMACDebug.v:5287:  assign when_CsrPlugin_l1702 = ((execute_arbitration_isValid && execute_IS_CSR) && (({execute_CsrPlugin_csrAddress[11 : 2],2'b00} == 12'h3a0) || ({execute_CsrPlugin_csrAddress[11 : 4],4'b0000} == 12'h3b0)));
+VexRiscv_IMACDebug.v:5288:  assign _zz_when_CsrPlugin_l1709 = (execute_CsrPlugin_csrAddress & 12'hf60);
+VexRiscv_IMACDebug.v:5289:  assign when_CsrPlugin_l1709 = (((execute_arbitration_isValid && execute_IS_CSR) && (5'h03 <= execute_CsrPlugin_csrAddress[4 : 0])) && (((_zz_when_CsrPlugin_l1709 == 12'hb00) || (((_zz_when_CsrPlugin_l1709 == 12'hc00) && (! execute_CsrPlugin_writeInstruction)) && (CsrPlugin_privilege == 2'b11))) || ((execute_CsrPlugin_csrAddress & 12'hfe0) == 12'h320)));
+VexRiscv_IMACDebug.v:5291:    when_CsrPlugin_l1719 = CsrPlugin_csrMapping_doForceFailCsr;
+VexRiscv_IMACDebug.v:5297:  assign when_CsrPlugin_l1717 = (CsrPlugin_privilege < execute_CsrPlugin_csrAddress[9 : 8]);
+VexRiscv_IMACDebug.v:5369:      CsrPlugin_mcycle <= 64'h0000000000000000;
+VexRiscv_IMACDebug.v:5370:      CsrPlugin_minstret <= 64'h0000000000000000;
+VexRiscv_IMACDebug.v:5383:      _zz_CsrPlugin_csrMapping_readDataInit <= 32'h00000000;
+VexRiscv_IMACDebug.v:5486:      CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
+VexRiscv_IMACDebug.v:5488:        CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
+VexRiscv_IMACDebug.v:5610:      if(execute_CsrPlugin_csr_768) begin
+VexRiscv_IMACDebug.v:5612:          CsrPlugin_mstatus_MPIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_IMACDebug.v:5613:          CsrPlugin_mstatus_MIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_IMACDebug.v:5623:      if(execute_CsrPlugin_csr_772) begin
+VexRiscv_IMACDebug.v:5625:          CsrPlugin_mie_MEIE <= CsrPlugin_csrMapping_writeDataSignal[11];
+VexRiscv_IMACDebug.v:5626:          CsrPlugin_mie_MTIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_IMACDebug.v:5627:          CsrPlugin_mie_MSIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_IMACDebug.v:5630:      if(execute_CsrPlugin_csr_2816) begin
+VexRiscv_IMACDebug.v:5632:          CsrPlugin_mcycle[31 : 0] <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_IMACDebug.v:5635:      if(execute_CsrPlugin_csr_2944) begin
+VexRiscv_IMACDebug.v:5637:          CsrPlugin_mcycle[63 : 32] <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_IMACDebug.v:5640:      if(execute_CsrPlugin_csr_2818) begin
+VexRiscv_IMACDebug.v:5642:          CsrPlugin_minstret[31 : 0] <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_IMACDebug.v:5645:      if(execute_CsrPlugin_csr_2946) begin
+VexRiscv_IMACDebug.v:5647:          CsrPlugin_minstret[63 : 32] <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_IMACDebug.v:5650:      if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_IMACDebug.v:5652:          _zz_CsrPlugin_csrMapping_readDataInit <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_IMACDebug.v:5988:      execute_CsrPlugin_csr_3264 <= (decode_INSTRUCTION[31 : 20] == 12'hcc0);
+VexRiscv_IMACDebug.v:5991:      execute_CsrPlugin_csr_3857 <= (decode_INSTRUCTION[31 : 20] == 12'hf11);
+VexRiscv_IMACDebug.v:5994:      execute_CsrPlugin_csr_3858 <= (decode_INSTRUCTION[31 : 20] == 12'hf12);
+VexRiscv_IMACDebug.v:5997:      execute_CsrPlugin_csr_3859 <= (decode_INSTRUCTION[31 : 20] == 12'hf13);
+VexRiscv_IMACDebug.v:6000:      execute_CsrPlugin_csr_3860 <= (decode_INSTRUCTION[31 : 20] == 12'hf14);
+VexRiscv_IMACDebug.v:6003:      execute_CsrPlugin_csr_769 <= (decode_INSTRUCTION[31 : 20] == 12'h301);
+VexRiscv_IMACDebug.v:6006:      execute_CsrPlugin_csr_768 <= (decode_INSTRUCTION[31 : 20] == 12'h300);
+VexRiscv_IMACDebug.v:6009:      execute_CsrPlugin_csr_836 <= (decode_INSTRUCTION[31 : 20] == 12'h344);
+VexRiscv_IMACDebug.v:6012:      execute_CsrPlugin_csr_772 <= (decode_INSTRUCTION[31 : 20] == 12'h304);
+VexRiscv_IMACDebug.v:6015:      execute_CsrPlugin_csr_773 <= (decode_INSTRUCTION[31 : 20] == 12'h305);
+VexRiscv_IMACDebug.v:6018:      execute_CsrPlugin_csr_833 <= (decode_INSTRUCTION[31 : 20] == 12'h341);
+VexRiscv_IMACDebug.v:6021:      execute_CsrPlugin_csr_832 <= (decode_INSTRUCTION[31 : 20] == 12'h340);
+VexRiscv_IMACDebug.v:6024:      execute_CsrPlugin_csr_834 <= (decode_INSTRUCTION[31 : 20] == 12'h342);
+VexRiscv_IMACDebug.v:6027:      execute_CsrPlugin_csr_835 <= (decode_INSTRUCTION[31 : 20] == 12'h343);
+VexRiscv_IMACDebug.v:6030:      execute_CsrPlugin_csr_2816 <= (decode_INSTRUCTION[31 : 20] == 12'hb00);
+VexRiscv_IMACDebug.v:6033:      execute_CsrPlugin_csr_2944 <= (decode_INSTRUCTION[31 : 20] == 12'hb80);
+VexRiscv_IMACDebug.v:6036:      execute_CsrPlugin_csr_2818 <= (decode_INSTRUCTION[31 : 20] == 12'hb02);
+VexRiscv_IMACDebug.v:6039:      execute_CsrPlugin_csr_2946 <= (decode_INSTRUCTION[31 : 20] == 12'hb82);
+VexRiscv_IMACDebug.v:6042:      execute_CsrPlugin_csr_3072 <= (decode_INSTRUCTION[31 : 20] == 12'hc00);
+VexRiscv_IMACDebug.v:6045:      execute_CsrPlugin_csr_3200 <= (decode_INSTRUCTION[31 : 20] == 12'hc80);
+VexRiscv_IMACDebug.v:6048:      execute_CsrPlugin_csr_3074 <= (decode_INSTRUCTION[31 : 20] == 12'hc02);
+VexRiscv_IMACDebug.v:6051:      execute_CsrPlugin_csr_3202 <= (decode_INSTRUCTION[31 : 20] == 12'hc82);
+VexRiscv_IMACDebug.v:6054:      execute_CsrPlugin_csr_3008 <= (decode_INSTRUCTION[31 : 20] == 12'hbc0);
+VexRiscv_IMACDebug.v:6057:      execute_CsrPlugin_csr_4032 <= (decode_INSTRUCTION[31 : 20] == 12'hfc0);
+VexRiscv_IMACDebug.v:6059:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_IMACDebug.v:6061:        CsrPlugin_mip_MSIP <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_IMACDebug.v:6064:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_IMACDebug.v:6066:        CsrPlugin_mtvec_base <= CsrPlugin_csrMapping_writeDataSignal[31 : 2];
+VexRiscv_IMACDebug.v:6069:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_IMACDebug.v:6071:        CsrPlugin_mepc <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_IMACDebug.v:6074:    if(execute_CsrPlugin_csr_832) begin
+VexRiscv_IMACDebug.v:6076:        CsrPlugin_mscratch <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_IMACDebug.v:6079:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_IMACDebug.v:6081:        CsrPlugin_mcause_interrupt <= CsrPlugin_csrMapping_writeDataSignal[31];
+VexRiscv_IMACDebug.v:6082:        CsrPlugin_mcause_exceptionCode <= CsrPlugin_csrMapping_writeDataSignal[3 : 0];
+VexRiscv_IMACDebug.v:6085:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_IMACDebug.v:6087:        CsrPlugin_mtval <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_MinDebugCache.v:88:  // am pulling the mcycle and mistret registers out as ports.
+VexRiscv_MinDebugCache.v:89:  output reg [63:0]   CsrPlugin_mcycle,
+VexRiscv_MinDebugCache.v:90:  output reg [63:0]   CsrPlugin_minstret
+VexRiscv_MinDebugCache.v:508:  wire       [31:0]   CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebugCache.v:509:  wire       [31:0]   CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebugCache.v:510:  wire       [31:0]   CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebugCache.v:511:  wire                CsrPlugin_csrMapping_allowCsrSignal;
+VexRiscv_MinDebugCache.v:512:  wire                CsrPlugin_csrMapping_hazardFree;
+VexRiscv_MinDebugCache.v:753:  // reg        [63:0]   CsrPlugin_mcycle = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+VexRiscv_MinDebugCache.v:754:  // reg        [63:0]   CsrPlugin_minstret = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+VexRiscv_MinDebugCache.v:821:  reg        [31:0]   _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebugCache.v:824:  wire       [11:0]   execute_CsrPlugin_csrAddress;
+VexRiscv_MinDebugCache.v:826:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebugCache.v:827:  wire       [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_1;
+VexRiscv_MinDebugCache.v:960:  reg                 execute_CsrPlugin_csr_768;
+VexRiscv_MinDebugCache.v:962:  reg                 execute_CsrPlugin_csr_836;
+VexRiscv_MinDebugCache.v:964:  reg                 execute_CsrPlugin_csr_772;
+VexRiscv_MinDebugCache.v:966:  reg                 execute_CsrPlugin_csr_773;
+VexRiscv_MinDebugCache.v:968:  reg                 execute_CsrPlugin_csr_833;
+VexRiscv_MinDebugCache.v:970:  reg                 execute_CsrPlugin_csr_834;
+VexRiscv_MinDebugCache.v:972:  reg                 execute_CsrPlugin_csr_835;
+VexRiscv_MinDebugCache.v:974:  reg                 execute_CsrPlugin_csr_3008;
+VexRiscv_MinDebugCache.v:976:  reg                 execute_CsrPlugin_csr_4032;
+VexRiscv_MinDebugCache.v:977:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_2;
+VexRiscv_MinDebugCache.v:978:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_3;
+VexRiscv_MinDebugCache.v:979:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_4;
+VexRiscv_MinDebugCache.v:980:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_5;
+VexRiscv_MinDebugCache.v:981:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_6;
+VexRiscv_MinDebugCache.v:982:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_7;
+VexRiscv_MinDebugCache.v:983:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_8;
+VexRiscv_MinDebugCache.v:984:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_9;
+VexRiscv_MinDebugCache.v:2003:      _zz_execute_to_memory_REGFILE_WRITE_DATA = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebugCache.v:2282:  assign CsrPlugin_csrMapping_allowCsrSignal = 1'b0;
+VexRiscv_MinDebugCache.v:2283:  assign CsrPlugin_csrMapping_readDataSignal = CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebugCache.v:3239:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebugCache.v:3242:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebugCache.v:3245:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebugCache.v:3248:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_MinDebugCache.v:3253:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebugCache.v:3256:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_MinDebugCache.v:3261:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_MinDebugCache.v:3266:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebugCache.v:3269:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_MinDebugCache.v:3274:    if(CsrPlugin_csrMapping_allowCsrSignal) begin
+VexRiscv_MinDebugCache.v:3335:  assign CsrPlugin_csrMapping_hazardFree = (! execute_CsrPlugin_blockedBySideEffects);
+VexRiscv_MinDebugCache.v:3336:  assign execute_CsrPlugin_readToWriteData = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebugCache.v:3341:        _zz_CsrPlugin_csrMapping_writeDataSignal = execute_SRC1;
+VexRiscv_MinDebugCache.v:3344:        _zz_CsrPlugin_csrMapping_writeDataSignal = (execute_INSTRUCTION[12] ? (execute_CsrPlugin_readToWriteData & (~ execute_SRC1)) : (execute_CsrPlugin_readToWriteData | execute_SRC1));
+VexRiscv_MinDebugCache.v:3349:  assign CsrPlugin_csrMapping_writeDataSignal = _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebugCache.v:3352:  assign execute_CsrPlugin_csrAddress = execute_INSTRUCTION[31 : 20];
+VexRiscv_MinDebugCache.v:3353:  assign _zz_CsrPlugin_csrMapping_readDataInit_1 = (_zz_CsrPlugin_csrMapping_readDataInit & externalInterruptArray_regNext);
+VexRiscv_MinDebugCache.v:3354:  assign externalInterrupt = (_zz_CsrPlugin_csrMapping_readDataInit_1 != 32'h0);
+VexRiscv_MinDebugCache.v:3534:    _zz_CsrPlugin_csrMapping_readDataInit_2 = 32'h0;
+VexRiscv_MinDebugCache.v:3535:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebugCache.v:3536:      _zz_CsrPlugin_csrMapping_readDataInit_2[12 : 11] = CsrPlugin_mstatus_MPP;
+VexRiscv_MinDebugCache.v:3537:      _zz_CsrPlugin_csrMapping_readDataInit_2[7 : 7] = CsrPlugin_mstatus_MPIE;
+VexRiscv_MinDebugCache.v:3538:      _zz_CsrPlugin_csrMapping_readDataInit_2[3 : 3] = CsrPlugin_mstatus_MIE;
+VexRiscv_MinDebugCache.v:3543:    _zz_CsrPlugin_csrMapping_readDataInit_3 = 32'h0;
+VexRiscv_MinDebugCache.v:3544:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebugCache.v:3545:      _zz_CsrPlugin_csrMapping_readDataInit_3[11 : 11] = CsrPlugin_mip_MEIP;
+VexRiscv_MinDebugCache.v:3546:      _zz_CsrPlugin_csrMapping_readDataInit_3[7 : 7] = CsrPlugin_mip_MTIP;
+VexRiscv_MinDebugCache.v:3547:      _zz_CsrPlugin_csrMapping_readDataInit_3[3 : 3] = CsrPlugin_mip_MSIP;
+VexRiscv_MinDebugCache.v:3552:    _zz_CsrPlugin_csrMapping_readDataInit_4 = 32'h0;
+VexRiscv_MinDebugCache.v:3553:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebugCache.v:3554:      _zz_CsrPlugin_csrMapping_readDataInit_4[11 : 11] = CsrPlugin_mie_MEIE;
+VexRiscv_MinDebugCache.v:3555:      _zz_CsrPlugin_csrMapping_readDataInit_4[7 : 7] = CsrPlugin_mie_MTIE;
+VexRiscv_MinDebugCache.v:3556:      _zz_CsrPlugin_csrMapping_readDataInit_4[3 : 3] = CsrPlugin_mie_MSIE;
+VexRiscv_MinDebugCache.v:3561:    _zz_CsrPlugin_csrMapping_readDataInit_5 = 32'h0;
+VexRiscv_MinDebugCache.v:3562:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebugCache.v:3563:      _zz_CsrPlugin_csrMapping_readDataInit_5[31 : 0] = CsrPlugin_mepc;
+VexRiscv_MinDebugCache.v:3568:    _zz_CsrPlugin_csrMapping_readDataInit_6 = 32'h0;
+VexRiscv_MinDebugCache.v:3569:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_MinDebugCache.v:3570:      _zz_CsrPlugin_csrMapping_readDataInit_6[31 : 31] = CsrPlugin_mcause_interrupt;
+VexRiscv_MinDebugCache.v:3571:      _zz_CsrPlugin_csrMapping_readDataInit_6[3 : 0] = CsrPlugin_mcause_exceptionCode;
+VexRiscv_MinDebugCache.v:3576:    _zz_CsrPlugin_csrMapping_readDataInit_7 = 32'h0;
+VexRiscv_MinDebugCache.v:3577:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_MinDebugCache.v:3578:      _zz_CsrPlugin_csrMapping_readDataInit_7[31 : 0] = CsrPlugin_mtval;
+VexRiscv_MinDebugCache.v:3583:    _zz_CsrPlugin_csrMapping_readDataInit_8 = 32'h0;
+VexRiscv_MinDebugCache.v:3584:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebugCache.v:3585:      _zz_CsrPlugin_csrMapping_readDataInit_8[31 : 0] = _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebugCache.v:3590:    _zz_CsrPlugin_csrMapping_readDataInit_9 = 32'h0;
+VexRiscv_MinDebugCache.v:3591:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_MinDebugCache.v:3592:      _zz_CsrPlugin_csrMapping_readDataInit_9[31 : 0] = _zz_CsrPlugin_csrMapping_readDataInit_1;
+VexRiscv_MinDebugCache.v:3596:  assign CsrPlugin_csrMapping_readDataInit = (((_zz_CsrPlugin_csrMapping_readDataInit_2 | _zz_CsrPlugin_csrMapping_readDataInit_3) | (_zz_CsrPlugin_csrMapping_readDataInit_4 | _zz_CsrPlugin_csrMapping_readDataInit_5)) | ((_zz_CsrPlugin_csrMapping_readDataInit_6 | _zz_CsrPlugin_csrMapping_readDataInit_7) | (_zz_CsrPlugin_csrMapping_readDataInit_8 | _zz_CsrPlugin_csrMapping_readDataInit_9)));
+VexRiscv_MinDebugCache.v:3597:  assign when_CsrPlugin_l1297 = (CsrPlugin_privilege < execute_CsrPlugin_csrAddress[9 : 8]);
+VexRiscv_MinDebugCache.v:3655:  // Hack---Initialize mcycle and minstret registers, which were moved into
+VexRiscv_MinDebugCache.v:3659:  //	CsrPlugin_mcycle <= 64'd0;
+VexRiscv_MinDebugCache.v:3660:  //	CsrPlugin_minstret <= 64'd0;
+VexRiscv_MinDebugCache.v:3707:      _zz_CsrPlugin_csrMapping_readDataInit <= 32'h0;
+VexRiscv_MinDebugCache.v:3941:      if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebugCache.v:3943:          CsrPlugin_mstatus_MPP <= CsrPlugin_csrMapping_writeDataSignal[12 : 11];
+VexRiscv_MinDebugCache.v:3944:          CsrPlugin_mstatus_MPIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_MinDebugCache.v:3945:          CsrPlugin_mstatus_MIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebugCache.v:3948:      if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebugCache.v:3950:          CsrPlugin_mie_MEIE <= CsrPlugin_csrMapping_writeDataSignal[11];
+VexRiscv_MinDebugCache.v:3951:          CsrPlugin_mie_MTIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_MinDebugCache.v:3952:          CsrPlugin_mie_MSIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebugCache.v:3955:      if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebugCache.v:3957:          _zz_CsrPlugin_csrMapping_readDataInit <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_MinDebugCache.v:3995:    // Hack---Moved mcycle and minstret to input/output list, so have to handle reset
+VexRiscv_MinDebugCache.v:3997:       CsrPlugin_mcycle <= 64'h0000000000000000;
+VexRiscv_MinDebugCache.v:3998:       CsrPlugin_minstret <= 64'h0000000000000000;
+VexRiscv_MinDebugCache.v:4000:       CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
+VexRiscv_MinDebugCache.v:4002:         CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
+VexRiscv_MinDebugCache.v:4188:      execute_CsrPlugin_csr_768 <= (decode_INSTRUCTION[31 : 20] == 12'h300);
+VexRiscv_MinDebugCache.v:4191:      execute_CsrPlugin_csr_836 <= (decode_INSTRUCTION[31 : 20] == 12'h344);
+VexRiscv_MinDebugCache.v:4194:      execute_CsrPlugin_csr_772 <= (decode_INSTRUCTION[31 : 20] == 12'h304);
+VexRiscv_MinDebugCache.v:4197:      execute_CsrPlugin_csr_773 <= (decode_INSTRUCTION[31 : 20] == 12'h305);
+VexRiscv_MinDebugCache.v:4200:      execute_CsrPlugin_csr_833 <= (decode_INSTRUCTION[31 : 20] == 12'h341);
+VexRiscv_MinDebugCache.v:4203:      execute_CsrPlugin_csr_834 <= (decode_INSTRUCTION[31 : 20] == 12'h342);
+VexRiscv_MinDebugCache.v:4206:      execute_CsrPlugin_csr_835 <= (decode_INSTRUCTION[31 : 20] == 12'h343);
+VexRiscv_MinDebugCache.v:4209:      execute_CsrPlugin_csr_3008 <= (decode_INSTRUCTION[31 : 20] == 12'hbc0);
+VexRiscv_MinDebugCache.v:4212:      execute_CsrPlugin_csr_4032 <= (decode_INSTRUCTION[31 : 20] == 12'hfc0);
+VexRiscv_MinDebugCache.v:4214:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebugCache.v:4216:        CsrPlugin_mip_MSIP <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebugCache.v:4219:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_MinDebugCache.v:4221:        CsrPlugin_mtvec_base <= CsrPlugin_csrMapping_writeDataSignal[31 : 2];
+VexRiscv_MinDebugCache.v:4222:        CsrPlugin_mtvec_mode <= CsrPlugin_csrMapping_writeDataSignal[1 : 0];
+VexRiscv_MinDebugCache.v:4225:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebugCache.v:4227:        CsrPlugin_mepc <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_MinDebugCache.v.bak:504:  wire       [31:0]   CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebugCache.v.bak:505:  wire       [31:0]   CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebugCache.v.bak:506:  wire       [31:0]   CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebugCache.v.bak:507:  wire                CsrPlugin_csrMapping_allowCsrSignal;
+VexRiscv_MinDebugCache.v.bak:508:  wire                CsrPlugin_csrMapping_hazardFree;
+VexRiscv_MinDebugCache.v.bak:749:  reg        [63:0]   CsrPlugin_mcycle = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+VexRiscv_MinDebugCache.v.bak:750:  reg        [63:0]   CsrPlugin_minstret = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+VexRiscv_MinDebugCache.v.bak:817:  reg        [31:0]   _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebugCache.v.bak:820:  wire       [11:0]   execute_CsrPlugin_csrAddress;
+VexRiscv_MinDebugCache.v.bak:822:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebugCache.v.bak:823:  wire       [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_1;
+VexRiscv_MinDebugCache.v.bak:956:  reg                 execute_CsrPlugin_csr_768;
+VexRiscv_MinDebugCache.v.bak:958:  reg                 execute_CsrPlugin_csr_836;
+VexRiscv_MinDebugCache.v.bak:960:  reg                 execute_CsrPlugin_csr_772;
+VexRiscv_MinDebugCache.v.bak:962:  reg                 execute_CsrPlugin_csr_773;
+VexRiscv_MinDebugCache.v.bak:964:  reg                 execute_CsrPlugin_csr_833;
+VexRiscv_MinDebugCache.v.bak:966:  reg                 execute_CsrPlugin_csr_834;
+VexRiscv_MinDebugCache.v.bak:968:  reg                 execute_CsrPlugin_csr_835;
+VexRiscv_MinDebugCache.v.bak:970:  reg                 execute_CsrPlugin_csr_3008;
+VexRiscv_MinDebugCache.v.bak:972:  reg                 execute_CsrPlugin_csr_4032;
+VexRiscv_MinDebugCache.v.bak:973:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_2;
+VexRiscv_MinDebugCache.v.bak:974:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_3;
+VexRiscv_MinDebugCache.v.bak:975:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_4;
+VexRiscv_MinDebugCache.v.bak:976:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_5;
+VexRiscv_MinDebugCache.v.bak:977:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_6;
+VexRiscv_MinDebugCache.v.bak:978:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_7;
+VexRiscv_MinDebugCache.v.bak:979:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_8;
+VexRiscv_MinDebugCache.v.bak:980:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_9;
+VexRiscv_MinDebugCache.v.bak:1999:      _zz_execute_to_memory_REGFILE_WRITE_DATA = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebugCache.v.bak:2278:  assign CsrPlugin_csrMapping_allowCsrSignal = 1'b0;
+VexRiscv_MinDebugCache.v.bak:2279:  assign CsrPlugin_csrMapping_readDataSignal = CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebugCache.v.bak:3235:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebugCache.v.bak:3238:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebugCache.v.bak:3241:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebugCache.v.bak:3244:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_MinDebugCache.v.bak:3249:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebugCache.v.bak:3252:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_MinDebugCache.v.bak:3257:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_MinDebugCache.v.bak:3262:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebugCache.v.bak:3265:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_MinDebugCache.v.bak:3270:    if(CsrPlugin_csrMapping_allowCsrSignal) begin
+VexRiscv_MinDebugCache.v.bak:3331:  assign CsrPlugin_csrMapping_hazardFree = (! execute_CsrPlugin_blockedBySideEffects);
+VexRiscv_MinDebugCache.v.bak:3332:  assign execute_CsrPlugin_readToWriteData = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebugCache.v.bak:3337:        _zz_CsrPlugin_csrMapping_writeDataSignal = execute_SRC1;
+VexRiscv_MinDebugCache.v.bak:3340:        _zz_CsrPlugin_csrMapping_writeDataSignal = (execute_INSTRUCTION[12] ? (execute_CsrPlugin_readToWriteData & (~ execute_SRC1)) : (execute_CsrPlugin_readToWriteData | execute_SRC1));
+VexRiscv_MinDebugCache.v.bak:3345:  assign CsrPlugin_csrMapping_writeDataSignal = _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebugCache.v.bak:3348:  assign execute_CsrPlugin_csrAddress = execute_INSTRUCTION[31 : 20];
+VexRiscv_MinDebugCache.v.bak:3349:  assign _zz_CsrPlugin_csrMapping_readDataInit_1 = (_zz_CsrPlugin_csrMapping_readDataInit & externalInterruptArray_regNext);
+VexRiscv_MinDebugCache.v.bak:3350:  assign externalInterrupt = (_zz_CsrPlugin_csrMapping_readDataInit_1 != 32'h0);
+VexRiscv_MinDebugCache.v.bak:3530:    _zz_CsrPlugin_csrMapping_readDataInit_2 = 32'h0;
+VexRiscv_MinDebugCache.v.bak:3531:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebugCache.v.bak:3532:      _zz_CsrPlugin_csrMapping_readDataInit_2[12 : 11] = CsrPlugin_mstatus_MPP;
+VexRiscv_MinDebugCache.v.bak:3533:      _zz_CsrPlugin_csrMapping_readDataInit_2[7 : 7] = CsrPlugin_mstatus_MPIE;
+VexRiscv_MinDebugCache.v.bak:3534:      _zz_CsrPlugin_csrMapping_readDataInit_2[3 : 3] = CsrPlugin_mstatus_MIE;
+VexRiscv_MinDebugCache.v.bak:3539:    _zz_CsrPlugin_csrMapping_readDataInit_3 = 32'h0;
+VexRiscv_MinDebugCache.v.bak:3540:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebugCache.v.bak:3541:      _zz_CsrPlugin_csrMapping_readDataInit_3[11 : 11] = CsrPlugin_mip_MEIP;
+VexRiscv_MinDebugCache.v.bak:3542:      _zz_CsrPlugin_csrMapping_readDataInit_3[7 : 7] = CsrPlugin_mip_MTIP;
+VexRiscv_MinDebugCache.v.bak:3543:      _zz_CsrPlugin_csrMapping_readDataInit_3[3 : 3] = CsrPlugin_mip_MSIP;
+VexRiscv_MinDebugCache.v.bak:3548:    _zz_CsrPlugin_csrMapping_readDataInit_4 = 32'h0;
+VexRiscv_MinDebugCache.v.bak:3549:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebugCache.v.bak:3550:      _zz_CsrPlugin_csrMapping_readDataInit_4[11 : 11] = CsrPlugin_mie_MEIE;
+VexRiscv_MinDebugCache.v.bak:3551:      _zz_CsrPlugin_csrMapping_readDataInit_4[7 : 7] = CsrPlugin_mie_MTIE;
+VexRiscv_MinDebugCache.v.bak:3552:      _zz_CsrPlugin_csrMapping_readDataInit_4[3 : 3] = CsrPlugin_mie_MSIE;
+VexRiscv_MinDebugCache.v.bak:3557:    _zz_CsrPlugin_csrMapping_readDataInit_5 = 32'h0;
+VexRiscv_MinDebugCache.v.bak:3558:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebugCache.v.bak:3559:      _zz_CsrPlugin_csrMapping_readDataInit_5[31 : 0] = CsrPlugin_mepc;
+VexRiscv_MinDebugCache.v.bak:3564:    _zz_CsrPlugin_csrMapping_readDataInit_6 = 32'h0;
+VexRiscv_MinDebugCache.v.bak:3565:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_MinDebugCache.v.bak:3566:      _zz_CsrPlugin_csrMapping_readDataInit_6[31 : 31] = CsrPlugin_mcause_interrupt;
+VexRiscv_MinDebugCache.v.bak:3567:      _zz_CsrPlugin_csrMapping_readDataInit_6[3 : 0] = CsrPlugin_mcause_exceptionCode;
+VexRiscv_MinDebugCache.v.bak:3572:    _zz_CsrPlugin_csrMapping_readDataInit_7 = 32'h0;
+VexRiscv_MinDebugCache.v.bak:3573:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_MinDebugCache.v.bak:3574:      _zz_CsrPlugin_csrMapping_readDataInit_7[31 : 0] = CsrPlugin_mtval;
+VexRiscv_MinDebugCache.v.bak:3579:    _zz_CsrPlugin_csrMapping_readDataInit_8 = 32'h0;
+VexRiscv_MinDebugCache.v.bak:3580:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebugCache.v.bak:3581:      _zz_CsrPlugin_csrMapping_readDataInit_8[31 : 0] = _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebugCache.v.bak:3586:    _zz_CsrPlugin_csrMapping_readDataInit_9 = 32'h0;
+VexRiscv_MinDebugCache.v.bak:3587:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_MinDebugCache.v.bak:3588:      _zz_CsrPlugin_csrMapping_readDataInit_9[31 : 0] = _zz_CsrPlugin_csrMapping_readDataInit_1;
+VexRiscv_MinDebugCache.v.bak:3592:  assign CsrPlugin_csrMapping_readDataInit = (((_zz_CsrPlugin_csrMapping_readDataInit_2 | _zz_CsrPlugin_csrMapping_readDataInit_3) | (_zz_CsrPlugin_csrMapping_readDataInit_4 | _zz_CsrPlugin_csrMapping_readDataInit_5)) | ((_zz_CsrPlugin_csrMapping_readDataInit_6 | _zz_CsrPlugin_csrMapping_readDataInit_7) | (_zz_CsrPlugin_csrMapping_readDataInit_8 | _zz_CsrPlugin_csrMapping_readDataInit_9)));
+VexRiscv_MinDebugCache.v.bak:3593:  assign when_CsrPlugin_l1297 = (CsrPlugin_privilege < execute_CsrPlugin_csrAddress[9 : 8]);
+VexRiscv_MinDebugCache.v.bak:3694:      _zz_CsrPlugin_csrMapping_readDataInit <= 32'h0;
+VexRiscv_MinDebugCache.v.bak:3928:      if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebugCache.v.bak:3930:          CsrPlugin_mstatus_MPP <= CsrPlugin_csrMapping_writeDataSignal[12 : 11];
+VexRiscv_MinDebugCache.v.bak:3931:          CsrPlugin_mstatus_MPIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_MinDebugCache.v.bak:3932:          CsrPlugin_mstatus_MIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebugCache.v.bak:3935:      if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebugCache.v.bak:3937:          CsrPlugin_mie_MEIE <= CsrPlugin_csrMapping_writeDataSignal[11];
+VexRiscv_MinDebugCache.v.bak:3938:          CsrPlugin_mie_MTIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_MinDebugCache.v.bak:3939:          CsrPlugin_mie_MSIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebugCache.v.bak:3942:      if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebugCache.v.bak:3944:          _zz_CsrPlugin_csrMapping_readDataInit <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_MinDebugCache.v.bak:3982:    CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
+VexRiscv_MinDebugCache.v.bak:3984:      CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
+VexRiscv_MinDebugCache.v.bak:4169:      execute_CsrPlugin_csr_768 <= (decode_INSTRUCTION[31 : 20] == 12'h300);
+VexRiscv_MinDebugCache.v.bak:4172:      execute_CsrPlugin_csr_836 <= (decode_INSTRUCTION[31 : 20] == 12'h344);
+VexRiscv_MinDebugCache.v.bak:4175:      execute_CsrPlugin_csr_772 <= (decode_INSTRUCTION[31 : 20] == 12'h304);
+VexRiscv_MinDebugCache.v.bak:4178:      execute_CsrPlugin_csr_773 <= (decode_INSTRUCTION[31 : 20] == 12'h305);
+VexRiscv_MinDebugCache.v.bak:4181:      execute_CsrPlugin_csr_833 <= (decode_INSTRUCTION[31 : 20] == 12'h341);
+VexRiscv_MinDebugCache.v.bak:4184:      execute_CsrPlugin_csr_834 <= (decode_INSTRUCTION[31 : 20] == 12'h342);
+VexRiscv_MinDebugCache.v.bak:4187:      execute_CsrPlugin_csr_835 <= (decode_INSTRUCTION[31 : 20] == 12'h343);
+VexRiscv_MinDebugCache.v.bak:4190:      execute_CsrPlugin_csr_3008 <= (decode_INSTRUCTION[31 : 20] == 12'hbc0);
+VexRiscv_MinDebugCache.v.bak:4193:      execute_CsrPlugin_csr_4032 <= (decode_INSTRUCTION[31 : 20] == 12'hfc0);
+VexRiscv_MinDebugCache.v.bak:4195:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebugCache.v.bak:4197:        CsrPlugin_mip_MSIP <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebugCache.v.bak:4200:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_MinDebugCache.v.bak:4202:        CsrPlugin_mtvec_base <= CsrPlugin_csrMapping_writeDataSignal[31 : 2];
+VexRiscv_MinDebugCache.v.bak:4203:        CsrPlugin_mtvec_mode <= CsrPlugin_csrMapping_writeDataSignal[1 : 0];
+VexRiscv_MinDebugCache.v.bak:4206:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebugCache.v.bak:4208:        CsrPlugin_mepc <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_MinDebug.v:433:  wire       [31:0]   CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebug.v:434:  wire       [31:0]   CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebug.v:435:  wire       [31:0]   CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebug.v:436:  reg                 CsrPlugin_csrMapping_allowCsrSignal;
+VexRiscv_MinDebug.v:437:  wire                CsrPlugin_csrMapping_hazardFree;
+VexRiscv_MinDebug.v:438:  wire                CsrPlugin_csrMapping_doForceFailCsr;
+VexRiscv_MinDebug.v:691:  reg        [63:0]   CsrPlugin_mcycle;
+VexRiscv_MinDebug.v:692:  reg        [63:0]   CsrPlugin_minstret;
+VexRiscv_MinDebug.v:760:  reg        [31:0]   _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebug.v:763:  wire       [11:0]   execute_CsrPlugin_csrAddress;
+VexRiscv_MinDebug.v:765:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebug.v:898:  reg                 execute_CsrPlugin_csr_768;
+VexRiscv_MinDebug.v:900:  reg                 execute_CsrPlugin_csr_836;
+VexRiscv_MinDebug.v:902:  reg                 execute_CsrPlugin_csr_772;
+VexRiscv_MinDebug.v:904:  reg                 execute_CsrPlugin_csr_773;
+VexRiscv_MinDebug.v:906:  reg                 execute_CsrPlugin_csr_833;
+VexRiscv_MinDebug.v:908:  reg                 execute_CsrPlugin_csr_834;
+VexRiscv_MinDebug.v:910:  reg                 execute_CsrPlugin_csr_835;
+VexRiscv_MinDebug.v:912:  reg                 execute_CsrPlugin_csr_3008;
+VexRiscv_MinDebug.v:914:  reg                 execute_CsrPlugin_csr_4032;
+VexRiscv_MinDebug.v:916:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_1;
+VexRiscv_MinDebug.v:917:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_2;
+VexRiscv_MinDebug.v:918:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_3;
+VexRiscv_MinDebug.v:919:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_4;
+VexRiscv_MinDebug.v:920:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_5;
+VexRiscv_MinDebug.v:921:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_6;
+VexRiscv_MinDebug.v:922:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_7;
+VexRiscv_MinDebug.v:923:  reg        [31:0]   _zz_CsrPlugin_csrMapping_readDataInit_8;
+VexRiscv_MinDebug.v:1893:      _zz_execute_to_memory_REGFILE_WRITE_DATA = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebug.v:2154:    CsrPlugin_csrMapping_allowCsrSignal = 1'b0;
+VexRiscv_MinDebug.v:2156:      CsrPlugin_csrMapping_allowCsrSignal = 1'b1;
+VexRiscv_MinDebug.v:2159:      CsrPlugin_csrMapping_allowCsrSignal = 1'b1;
+VexRiscv_MinDebug.v:2163:  assign CsrPlugin_csrMapping_doForceFailCsr = 1'b0;
+VexRiscv_MinDebug.v:2164:  assign CsrPlugin_csrMapping_readDataSignal = CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebug.v:3065:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebug.v:3068:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebug.v:3071:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebug.v:3074:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_MinDebug.v:3079:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebug.v:3082:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_MinDebug.v:3087:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_MinDebug.v:3092:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebug.v:3095:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_MinDebug.v:3100:    if(CsrPlugin_csrMapping_allowCsrSignal) begin
+VexRiscv_MinDebug.v:3161:  assign CsrPlugin_csrMapping_hazardFree = (! execute_CsrPlugin_blockedBySideEffects);
+VexRiscv_MinDebug.v:3162:  assign execute_CsrPlugin_readToWriteData = CsrPlugin_csrMapping_readDataSignal;
+VexRiscv_MinDebug.v:3167:        _zz_CsrPlugin_csrMapping_writeDataSignal = execute_SRC1;
+VexRiscv_MinDebug.v:3170:        _zz_CsrPlugin_csrMapping_writeDataSignal = (execute_INSTRUCTION[12] ? (execute_CsrPlugin_readToWriteData & (~ execute_SRC1)) : (execute_CsrPlugin_readToWriteData | execute_SRC1));
+VexRiscv_MinDebug.v:3175:  assign CsrPlugin_csrMapping_writeDataSignal = _zz_CsrPlugin_csrMapping_writeDataSignal;
+VexRiscv_MinDebug.v:3178:  assign execute_CsrPlugin_csrAddress = execute_INSTRUCTION[31 : 20];
+VexRiscv_MinDebug.v:3179:  assign _zz_externalInterrupt = (_zz_CsrPlugin_csrMapping_readDataInit & externalInterruptArray_regNext);
+VexRiscv_MinDebug.v:3359:  assign switch_CsrPlugin_l1031 = CsrPlugin_csrMapping_writeDataSignal[12 : 11];
+VexRiscv_MinDebug.v:3361:    _zz_CsrPlugin_csrMapping_readDataInit_1 = 32'h00000000;
+VexRiscv_MinDebug.v:3362:    if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebug.v:3363:      _zz_CsrPlugin_csrMapping_readDataInit_1[7 : 7] = CsrPlugin_mstatus_MPIE;
+VexRiscv_MinDebug.v:3364:      _zz_CsrPlugin_csrMapping_readDataInit_1[3 : 3] = CsrPlugin_mstatus_MIE;
+VexRiscv_MinDebug.v:3365:      _zz_CsrPlugin_csrMapping_readDataInit_1[12 : 11] = CsrPlugin_mstatus_MPP;
+VexRiscv_MinDebug.v:3370:    _zz_CsrPlugin_csrMapping_readDataInit_2 = 32'h00000000;
+VexRiscv_MinDebug.v:3371:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebug.v:3372:      _zz_CsrPlugin_csrMapping_readDataInit_2[11 : 11] = CsrPlugin_mip_MEIP;
+VexRiscv_MinDebug.v:3373:      _zz_CsrPlugin_csrMapping_readDataInit_2[7 : 7] = CsrPlugin_mip_MTIP;
+VexRiscv_MinDebug.v:3374:      _zz_CsrPlugin_csrMapping_readDataInit_2[3 : 3] = CsrPlugin_mip_MSIP;
+VexRiscv_MinDebug.v:3379:    _zz_CsrPlugin_csrMapping_readDataInit_3 = 32'h00000000;
+VexRiscv_MinDebug.v:3380:    if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebug.v:3381:      _zz_CsrPlugin_csrMapping_readDataInit_3[11 : 11] = CsrPlugin_mie_MEIE;
+VexRiscv_MinDebug.v:3382:      _zz_CsrPlugin_csrMapping_readDataInit_3[7 : 7] = CsrPlugin_mie_MTIE;
+VexRiscv_MinDebug.v:3383:      _zz_CsrPlugin_csrMapping_readDataInit_3[3 : 3] = CsrPlugin_mie_MSIE;
+VexRiscv_MinDebug.v:3388:    _zz_CsrPlugin_csrMapping_readDataInit_4 = 32'h00000000;
+VexRiscv_MinDebug.v:3389:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebug.v:3390:      _zz_CsrPlugin_csrMapping_readDataInit_4[31 : 0] = CsrPlugin_mepc;
+VexRiscv_MinDebug.v:3395:    _zz_CsrPlugin_csrMapping_readDataInit_5 = 32'h00000000;
+VexRiscv_MinDebug.v:3396:    if(execute_CsrPlugin_csr_834) begin
+VexRiscv_MinDebug.v:3397:      _zz_CsrPlugin_csrMapping_readDataInit_5[31 : 31] = CsrPlugin_mcause_interrupt;
+VexRiscv_MinDebug.v:3398:      _zz_CsrPlugin_csrMapping_readDataInit_5[3 : 0] = CsrPlugin_mcause_exceptionCode;
+VexRiscv_MinDebug.v:3403:    _zz_CsrPlugin_csrMapping_readDataInit_6 = 32'h00000000;
+VexRiscv_MinDebug.v:3404:    if(execute_CsrPlugin_csr_835) begin
+VexRiscv_MinDebug.v:3405:      _zz_CsrPlugin_csrMapping_readDataInit_6[31 : 0] = CsrPlugin_mtval;
+VexRiscv_MinDebug.v:3410:    _zz_CsrPlugin_csrMapping_readDataInit_7 = 32'h00000000;
+VexRiscv_MinDebug.v:3411:    if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebug.v:3412:      _zz_CsrPlugin_csrMapping_readDataInit_7[31 : 0] = _zz_CsrPlugin_csrMapping_readDataInit;
+VexRiscv_MinDebug.v:3417:    _zz_CsrPlugin_csrMapping_readDataInit_8 = 32'h00000000;
+VexRiscv_MinDebug.v:3418:    if(execute_CsrPlugin_csr_4032) begin
+VexRiscv_MinDebug.v:3419:      _zz_CsrPlugin_csrMapping_readDataInit_8[31 : 0] = _zz_externalInterrupt;
+VexRiscv_MinDebug.v:3423:  assign CsrPlugin_csrMapping_readDataInit = (((_zz_CsrPlugin_csrMapping_readDataInit_1 | _zz_CsrPlugin_csrMapping_readDataInit_2) | (_zz_CsrPlugin_csrMapping_readDataInit_3 | _zz_CsrPlugin_csrMapping_readDataInit_4)) | ((_zz_CsrPlugin_csrMapping_readDataInit_5 | _zz_CsrPlugin_csrMapping_readDataInit_6) | (_zz_CsrPlugin_csrMapping_readDataInit_7 | _zz_CsrPlugin_csrMapping_readDataInit_8)));
+VexRiscv_MinDebug.v:3424:  assign when_CsrPlugin_l1702 = ((execute_arbitration_isValid && execute_IS_CSR) && (({execute_CsrPlugin_csrAddress[11 : 2],2'b00} == 12'h3a0) || ({execute_CsrPlugin_csrAddress[11 : 4],4'b0000} == 12'h3b0)));
+VexRiscv_MinDebug.v:3425:  assign _zz_when_CsrPlugin_l1709 = (execute_CsrPlugin_csrAddress & 12'hf60);
+VexRiscv_MinDebug.v:3426:  assign when_CsrPlugin_l1709 = (((execute_arbitration_isValid && execute_IS_CSR) && (5'h03 <= execute_CsrPlugin_csrAddress[4 : 0])) && (((_zz_when_CsrPlugin_l1709 == 12'hb00) || (((_zz_when_CsrPlugin_l1709 == 12'hc00) && (! execute_CsrPlugin_writeInstruction)) && (CsrPlugin_privilege == 2'b11))) || ((execute_CsrPlugin_csrAddress & 12'hfe0) == 12'h320)));
+VexRiscv_MinDebug.v:3428:    when_CsrPlugin_l1719 = CsrPlugin_csrMapping_doForceFailCsr;
+VexRiscv_MinDebug.v:3434:  assign when_CsrPlugin_l1717 = (CsrPlugin_privilege < execute_CsrPlugin_csrAddress[9 : 8]);
+VexRiscv_MinDebug.v:3524:      CsrPlugin_mcycle <= 64'h0000000000000000;
+VexRiscv_MinDebug.v:3525:      CsrPlugin_minstret <= 64'h0000000000000000;
+VexRiscv_MinDebug.v:3536:      _zz_CsrPlugin_csrMapping_readDataInit <= 32'h00000000;
+VexRiscv_MinDebug.v:3635:      CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
+VexRiscv_MinDebug.v:3637:        CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
+VexRiscv_MinDebug.v:3757:      if(execute_CsrPlugin_csr_768) begin
+VexRiscv_MinDebug.v:3759:          CsrPlugin_mstatus_MPIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_MinDebug.v:3760:          CsrPlugin_mstatus_MIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebug.v:3770:      if(execute_CsrPlugin_csr_772) begin
+VexRiscv_MinDebug.v:3772:          CsrPlugin_mie_MEIE <= CsrPlugin_csrMapping_writeDataSignal[11];
+VexRiscv_MinDebug.v:3773:          CsrPlugin_mie_MTIE <= CsrPlugin_csrMapping_writeDataSignal[7];
+VexRiscv_MinDebug.v:3774:          CsrPlugin_mie_MSIE <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebug.v:3777:      if(execute_CsrPlugin_csr_3008) begin
+VexRiscv_MinDebug.v:3779:          _zz_CsrPlugin_csrMapping_readDataInit <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];
+VexRiscv_MinDebug.v:3999:      execute_CsrPlugin_csr_768 <= (decode_INSTRUCTION[31 : 20] == 12'h300);
+VexRiscv_MinDebug.v:4002:      execute_CsrPlugin_csr_836 <= (decode_INSTRUCTION[31 : 20] == 12'h344);
+VexRiscv_MinDebug.v:4005:      execute_CsrPlugin_csr_772 <= (decode_INSTRUCTION[31 : 20] == 12'h304);
+VexRiscv_MinDebug.v:4008:      execute_CsrPlugin_csr_773 <= (decode_INSTRUCTION[31 : 20] == 12'h305);
+VexRiscv_MinDebug.v:4011:      execute_CsrPlugin_csr_833 <= (decode_INSTRUCTION[31 : 20] == 12'h341);
+VexRiscv_MinDebug.v:4014:      execute_CsrPlugin_csr_834 <= (decode_INSTRUCTION[31 : 20] == 12'h342);
+VexRiscv_MinDebug.v:4017:      execute_CsrPlugin_csr_835 <= (decode_INSTRUCTION[31 : 20] == 12'h343);
+VexRiscv_MinDebug.v:4020:      execute_CsrPlugin_csr_3008 <= (decode_INSTRUCTION[31 : 20] == 12'hbc0);
+VexRiscv_MinDebug.v:4023:      execute_CsrPlugin_csr_4032 <= (decode_INSTRUCTION[31 : 20] == 12'hfc0);
+VexRiscv_MinDebug.v:4025:    if(execute_CsrPlugin_csr_836) begin
+VexRiscv_MinDebug.v:4027:        CsrPlugin_mip_MSIP <= CsrPlugin_csrMapping_writeDataSignal[3];
+VexRiscv_MinDebug.v:4030:    if(execute_CsrPlugin_csr_773) begin
+VexRiscv_MinDebug.v:4032:        CsrPlugin_mtvec_base <= CsrPlugin_csrMapping_writeDataSignal[31 : 2];
+VexRiscv_MinDebug.v:4035:    if(execute_CsrPlugin_csr_833) begin
+VexRiscv_MinDebug.v:4037:        CsrPlugin_mepc <= CsrPlugin_csrMapping_writeDataSignal[31 : 0];

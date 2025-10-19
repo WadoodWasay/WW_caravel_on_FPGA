@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date             : Mon Oct 13 01:11:25 2025
+| Date             : Sat Oct 18 23:18:06 2025
 | Host             : FedoraHP running 64-bit unknown
 | Command          : report_power -file caravel_power_routed.rpt -pb caravel_power_summary_routed.pb -rpx caravel_power_routed.rpx
 | Design           : caravel
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.182        |
+| Total On-Chip Power (W)  | 0.187        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.085        |
+| Dynamic (W)              | 0.089        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.2         |
-| Junction Temperature (C) | 25.8         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.014 |        3 |       --- |             --- |
-| Slice Logic              |     0.010 |     8607 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     3560 |     63400 |            5.62 |
-|   CARRY4                 |    <0.001 |      179 |     15850 |            1.13 |
-|   Register               |    <0.001 |     4024 |    126800 |            3.17 |
+| Slice Logic              |     0.011 |     8617 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     3564 |     63400 |            5.62 |
+|   CARRY4                 |    <0.001 |      178 |     15850 |            1.12 |
+|   Register               |    <0.001 |     4030 |    126800 |            3.18 |
 |   LUT as Shift Register  |    <0.001 |       39 |     19000 |            0.21 |
 |   F7/F8 Muxes            |    <0.001 |      218 |     63400 |            0.34 |
 |   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
 |   LUT as Distributed RAM |    <0.001 |       16 |     19000 |            0.08 |
 |   Others                 |     0.000 |      100 |       --- |             --- |
-| Signals                  |     0.014 |     6912 |       --- |             --- |
-| Block RAM                |     0.017 |        6 |       135 |            4.44 |
+| Signals                  |     0.016 |     6926 |       --- |             --- |
+| Block RAM                |     0.019 |      6.5 |       135 |            4.81 |
 | I/O                      |     0.029 |       47 |       210 |           22.38 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.182 |          |           |                 |
+| Total                    |     0.187 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.070 |       0.055 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.075 |       0.059 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.012 |       0.008 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -85,7 +85,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.001 |       0.001 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.002 |       0.001 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -145,14 +145,14 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| caravel                  |     0.085 |
-|   chip_core              |     0.054 |
-|     housekeeping         |     0.004 |
-|     soc                  |     0.048 |
-|       core               |     0.048 |
+| caravel                  |     0.089 |
+|   chip_core              |     0.058 |
+|     housekeeping         |     0.005 |
+|       hkspi              |     0.002 |
+|     soc                  |     0.052 |
+|       core               |     0.052 |
 |   mprj_io_IOBUF[14]_inst |     0.012 |
 |   mprj_io_IOBUF[15]_inst |     0.012 |
-|   mprj_io_IOBUF[37]_inst |     0.001 |
 +--------------------------+-----------+
 
 

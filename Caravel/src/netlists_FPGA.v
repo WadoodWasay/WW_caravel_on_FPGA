@@ -29,5 +29,9 @@
 `include "pads.v"
 `include "user_defines.v"
 `include "user_id_programming.v"
-`include "../../mgmt_soc/src/VexRiscv_MinDebugCache.v"
+// original 16 word cache 
+//`include "../../mgmt_soc/src/VexRiscv_MinDebugCache.v"
 `include "../../arty/uart_to_spi.v"
+//new cores being tested (in order of size) 
+//`include "../../mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v"
+`include "../../mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v"

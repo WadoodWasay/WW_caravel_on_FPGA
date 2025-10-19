@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Mon Oct 13 01:11:14 2025
+| Date         : Sat Oct 18 23:17:55 2025
 | Host         : FedoraHP running 64-bit unknown
 | Command      : report_drc -file caravel_drc_routed.rpt -pb caravel_drc_routed.pb -rpx caravel_drc_routed.rpx
 | Design       : caravel
@@ -24,19 +24,19 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 38
+             Checks found: 41
 +-----------+----------+-----------------------------------------------------+--------+
 | Rule      | Severity | Description                                         | Checks |
 +-----------+----------+-----------------------------------------------------+--------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1      |
 | CHECK-3   | Warning  | Report rule limit reached                           | 1      |
+| PDRC-132  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 4      |
 | PDRC-134  | Warning  | SLICE_PairEqSame_B6B5_WARN                          | 2      |
 | PDRC-136  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
-| PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 2      |
-| PDRC-140  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 2      |
-| PDRC-142  | Warning  | SLICE_PairEqSame_B6B5_WARN                          | 1      |
-| PDRC-144  | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
-| PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
+| PDRC-138  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
+| PDRC-140  | Warning  | SLICE_PairEqSame_A6A5_WARN                          | 1      |
+| PDRC-146  | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 2      |
+| REQP-1839 | Warning  | RAMB36 async control check                          | 2      |
 | REQP-1840 | Warning  | RAMB18 async control check                          | 20     |
 | RPBF-3    | Warning  | IO port buffering is incomplete                     | 6      |
 +-----------+----------+-----------------------------------------------------+--------+
@@ -61,54 +61,69 @@ Report rule limit reached
 REQP-1840 rule limit reached: 20 violations have been found.
 Related violations: <none>
 
+PDRC-132#1 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X31Y98 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-132#2 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X43Y95 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-132#3 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X47Y94 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-132#4 Warning
+SLICE_PairEqSame_A6A5_WARN  
+Luts A6LUT and A5LUT in use in site SLICE_X49Y71 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
 PDRC-134#1 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X13Y56 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X31Y98 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#2 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X31Y85 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X47Y94 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X59Y77 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X31Y98 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X32Y62 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-138#2 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X59Y77 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X49Y78 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-140#1 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X30Y54 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-140#2 Warning
-SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X46Y79 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-142#1 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X46Y79 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-144#1 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X38Y71 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X54Y106 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X38Y71 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X50Y76 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-146#2 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X62Y79 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+REQP-1839#1 Warning
+RAMB36 async control check  
+The RAMB36E1 chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg has an input control pin chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg/ENBWREN (net: chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/IBusCachedPlugin_iBusRsp_stages_1_output_m2sPipe_ready) which is driven by a register (chip_core/housekeeping/wb_ack_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#2 Warning
+RAMB36 async control check  
+The RAMB36E1 chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg has an input control pin chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg/ENBWREN (net: chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/IBusCachedPlugin_iBusRsp_stages_1_output_m2sPipe_ready) which is driven by a register (chip_core/mprj/debug/wbs_ack_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#1 Warning

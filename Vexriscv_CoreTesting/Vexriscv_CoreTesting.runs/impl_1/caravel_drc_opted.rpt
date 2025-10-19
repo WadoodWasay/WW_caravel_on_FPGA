@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Mon Oct 13 01:09:35 2025
+| Date         : Sat Oct 18 23:16:11 2025
 | Host         : FedoraHP running 64-bit unknown
 | Command      : report_drc -file caravel_drc_opted.rpt -pb caravel_drc_opted.pb -rpx caravel_drc_opted.rpx
 | Design       : caravel
@@ -24,12 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 28
+             Checks found: 30
 +-----------+----------+-----------------------------------------------------+--------+
 | Rule      | Severity | Description                                         | Checks |
 +-----------+----------+-----------------------------------------------------+--------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1      |
 | CHECK-3   | Warning  | Report rule limit reached                           | 1      |
+| REQP-1839 | Warning  | RAMB36 async control check                          | 2      |
 | REQP-1840 | Warning  | RAMB18 async control check                          | 20     |
 | RPBF-3    | Warning  | IO port buffering is incomplete                     | 6      |
 +-----------+----------+-----------------------------------------------------+--------+
@@ -52,6 +53,16 @@ Related violations: <none>
 CHECK-3#1 Warning
 Report rule limit reached  
 REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+REQP-1839#1 Warning
+RAMB36 async control check  
+The RAMB36E1 chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg has an input control pin chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg/ENBWREN (net: chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/IBusCachedPlugin_iBusRsp_stages_1_output_m2sPipe_ready) which is driven by a register (chip_core/housekeeping/wb_ack_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#2 Warning
+RAMB36 async control check  
+The RAMB36E1 chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg has an input control pin chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg/ENBWREN (net: chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/IBusCachedPlugin_iBusRsp_stages_1_output_m2sPipe_ready) which is driven by a register (chip_core/mprj/debug/wbs_ack_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#1 Warning

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Mon Oct 13 01:11:20 2025
+| Date         : Sat Oct 18 23:18:01 2025
 | Host         : FedoraHP running 64-bit unknown
 | Command      : report_methodology -file caravel_methodology_drc_routed.rpt -pb caravel_methodology_drc_routed.pb -rpx caravel_methodology_drc_routed.rpx
 | Design       : caravel
@@ -23,14 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 1101
+             Checks found: 1099
 +-----------+------------------+--------------------------------------------+--------+
 | Rule      | Severity         | Description                                | Checks |
 +-----------+------------------+--------------------------------------------+--------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                | 1000   |
 | HPDR-1    | Warning          | Port pin direction inconsistency           | 5      |
 | LUTAR-1   | Warning          | LUT drives async reset alert               | 3      |
-| SYNTH-4   | Warning          | Shallow depth for a dedicated block RAM    | 2      |
 | SYNTH-6   | Warning          | Timing of a RAM block might be sub-optimal | 6      |
 | TIMING-18 | Warning          | Missing input or output delay              | 85     |
 +-----------+------------------+--------------------------------------------+--------+
@@ -5101,16 +5100,6 @@ chip_core/gpio_control_in_1a_c_3/CLR, chip_core/gpio_control_in_1a_c_4/CLR,
 chip_core/gpio_control_in_1a_c_5/CLR, chip_core/gpio_control_in_1a_c_6/CLR,
 chip_core/gpio_control_in_1a_c_7/CLR, chip_core/gpio_control_in_1a_c_8/CLR
  (the first 15 of 411 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-SYNTH-4#1 Warning
-Shallow depth for a dedicated block RAM  
-The instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason: The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *)  to instruct Vivado to infer distributed LUT RAM.
-Related violations: <none>
-
-SYNTH-4#2 Warning
-Shallow depth for a dedicated block RAM  
-The instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason: The depth (1 address bits) is shallow. Please use attribute (* ram_style = "distributed" *)  to instruct Vivado to infer distributed LUT RAM.
 Related violations: <none>
 
 SYNTH-6#1 Warning

@@ -1,0 +1,112 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Oct 10 16:44:15 2025
+# Process ID         : 5782
+# Current directory  : /home/wadood/gits/WW_caravel_on_FPGA
+# Command line       : vivado
+# Log file           : /home/wadood/gits/WW_caravel_on_FPGA/vivado.log
+# Journal file       : /home/wadood/gits/WW_caravel_on_FPGA/vivado.jou
+# Running On         : FedoraHP
+# Platform           : unknown
+# Operating System   : unknown
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1195G7 @ 2.90GHz
+# CPU Frequency      : 1438.660 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16494 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 25084 MB
+# Available Virtual  : 20628 MB
+#-----------------------------------------------------------
+start_gui
+create_project Vexriscv_CoreTesting /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting -part xc7a100tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/share/Xilinx/Vivado/2024.2/data/ip'.
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 7821.277 ; gain = 173.965 ; free physical = 3307 ; free virtual = 18974
+set_property board_part digilentinc.com:arty-a7-100:part0:1.0 [current_project]
+add_files -norecurse /home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/netlists_FPGA.v
+add_files -fileset constrs_1 -norecurse /home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Fri Oct 10 16:47:22 2025] Launched synth_1...
+Run output will be captured here: /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Fri Oct 10 16:50:37 2025] Launched impl_1...
+Run output will be captured here: /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Fri Oct 10 16:54:06 2025] Launched impl_1...
+Run output will be captured here: /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.2
+  **** Build date : Oct 29 2024 at 10:16:47
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-14:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210319BE0620A
+set_property PROGRAM.FILE {/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/caravel.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/caravel.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/caravel.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+INFO: [Project 1-1160] Copying file /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/caravel.dcp to /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+launch_runs synth_1 -jobs 8
+[Fri Oct 10 17:13:12 2025] Launched synth_1...
+Run output will be captured here: /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Fri Oct 10 17:16:18 2025] Launched impl_1...
+Run output will be captured here: /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Fri Oct 10 17:19:25 2025] Launched impl_1...
+Run output will be captured here: /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/caravel.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/caravel.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.

@@ -4429,8 +4429,8 @@ module InstructionCache (
   wire                when_InstructionCache_l459_2;
   reg                 decodeStage_hit_error;
   wire                when_Fetcher_l398;
-  (* ram_style = "block" *) reg [31:0] banks_0 [0:15];
-  (* ram_style = "block" *) reg [27:0] ways_0_tags [0:1];
+  (* ram_style = "block" *) reg [31:0] banks_0 [0:63];
+  (* ram_style = "block" *) reg [27:0] ways_0_tags [0:7];
 
   assign _zz_ways_0_tags_port = {lineLoader_write_tag_0_payload_data_address,{lineLoader_write_tag_0_payload_data_error,lineLoader_write_tag_0_payload_data_valid}};
   always @(posedge clk) begin

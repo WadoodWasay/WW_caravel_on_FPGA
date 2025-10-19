@@ -1,7 +1,7 @@
 // Generator : SpinalHDL v1.6.0    git head : 73c8d8e2b86b45646e9d0b2e729291f2b65e6be3
 // Component : VexRiscv
 // Git hash  : c4eca1837ebca20b637a0a61e3a93d9446488459
-
+// MODIFIED BY TIM 10/13/2025 for 1024-byte instruction cache
 
 `define EnvCtrlEnum_binary_sequential_type [1:0]
 `define EnvCtrlEnum_binary_sequential_NONE 2'b00
@@ -84,10 +84,8 @@ module VexRiscv (
   input               clk,
   input               reset,
   input               debugReset,
-  // Hack---Cannot figure out how to enable in LiteX/Migen, so
-  // am pulling the mcycle and mistret registers out as ports.
-  output reg [63:0]   CsrPlugin_mcycle,
-  output reg [63:0]   CsrPlugin_minstret
+  output reg [63:0]	      CsrPlugin_mcycle,
+  output reg [63:0]	      CsrPlugin_minstret
 );
   wire                IBusCachedPlugin_cache_io_flush;
   wire                IBusCachedPlugin_cache_io_cpu_prefetch_isValid;
@@ -3652,13 +3650,13 @@ module VexRiscv (
     end
   end
 
-  // Hack---Initialize mcycle and minstret registers, which were moved into
-  // the input/output list
+  // Hack---Initialize mcycle and minstret (because registers were
+  // moved to the input/output list)
   // always @(posedge clk) begin
   //   if(reset) begin
   //	CsrPlugin_mcycle <= 64'd0;
   //	CsrPlugin_minstret <= 64'd0;
-  //  end
+  //   end
   // end
 
   assign when_DBusSimplePlugin_l189 = (! dBus_cmd_halfPipe_payload_wr);
@@ -3992,15 +3990,15 @@ module VexRiscv (
     CsrPlugin_mip_MEIP <= externalInterrupt;
     CsrPlugin_mip_MTIP <= timerInterrupt;
     CsrPlugin_mip_MSIP <= softwareInterrupt;
-    // Hack---Moved mcycle and minstret to input/output list, so have to handle reset
-    if (reset) begin 
-       CsrPlugin_mcycle <= 64'h0000000000000000;
-       CsrPlugin_minstret <= 64'h0000000000000000;
+    // Hack
+    if (reset) begin
+	CsrPlugin_mcycle <= 64'h0000000000000000;
+	CsrPlugin_minstret <= 64'h0000000000000000;
     end else begin
-       CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
-       if(writeBack_arbitration_isFiring) begin
-         CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
-       end
+        CsrPlugin_mcycle <= (CsrPlugin_mcycle + 64'h0000000000000001);
+        if(writeBack_arbitration_isFiring) begin
+          CsrPlugin_minstret <= (CsrPlugin_minstret + 64'h0000000000000001);
+        end
     end
     if(_zz_when) begin
       CsrPlugin_exceptionPortCtrl_exceptionContext_code <= (_zz_CsrPlugin_exceptionPortCtrl_exceptionContext_code_1 ? IBusCachedPlugin_decodeExceptionPort_payload_code : decodeExceptionPort_payload_code);
@@ -4366,8 +4364,8 @@ module InstructionCache (
   input               reset
 );
   reg        [31:0]   _zz_banks_0_port1;
-  reg        [27:0]   _zz_ways_0_tags_port1;
-  wire       [27:0]   _zz_ways_0_tags_port;
+  reg        [21:0]   _zz_ways_0_tags_port1;	// 27 -> 21
+  wire       [21:0]   _zz_ways_0_tags_port;	// 27 -> 21
   reg                 _zz_1;
   reg                 _zz_2;
   reg                 lineLoader_fire;
@@ -4375,7 +4373,7 @@ module InstructionCache (
   (* keep , syn_keep *) reg        [31:0]   lineLoader_address /* synthesis syn_keep = 1 */ ;
   reg                 lineLoader_hadError;
   reg                 lineLoader_flushPending;
-  reg        [1:0]    lineLoader_flushCounter;
+  reg        [7:0]    lineLoader_flushCounter;		// 1 -> 7	
   wire                when_InstructionCache_l338;
   reg                 _zz_when_InstructionCache_l342;
   wire                when_InstructionCache_l342;
@@ -4389,24 +4387,24 @@ module InstructionCache (
   wire                lineLoader_wayToAllocate_willOverflow;
   (* keep , syn_keep *) reg        [2:0]    lineLoader_wordIndex /* synthesis syn_keep = 1 */ ;
   wire                lineLoader_write_tag_0_valid;
-  wire       [0:0]    lineLoader_write_tag_0_payload_address;
+  wire       [6:0]    lineLoader_write_tag_0_payload_address;		// 0 -> 6
   wire                lineLoader_write_tag_0_payload_data_valid;
   wire                lineLoader_write_tag_0_payload_data_error;
-  wire       [25:0]   lineLoader_write_tag_0_payload_data_address;
+  wire       [19:0]   lineLoader_write_tag_0_payload_data_address;	// 25 -> 19
   wire                lineLoader_write_data_0_valid;
-  wire       [3:0]    lineLoader_write_data_0_payload_address;
+  wire       [9:0]    lineLoader_write_data_0_payload_address;		// 3 -> 9
   wire       [31:0]   lineLoader_write_data_0_payload_data;
   wire                when_InstructionCache_l401;
-  wire       [3:0]    _zz_fetchStage_read_banksValue_0_dataMem;
+  wire       [9:0]    _zz_fetchStage_read_banksValue_0_dataMem;		// 3 -> 9
   wire                _zz_fetchStage_read_banksValue_0_dataMem_1;
   wire       [31:0]   fetchStage_read_banksValue_0_dataMem;
   wire       [31:0]   fetchStage_read_banksValue_0_data;
-  wire       [0:0]    _zz_fetchStage_read_waysValues_0_tag_valid;
+  wire       [6:0]    _zz_fetchStage_read_waysValues_0_tag_valid;	// 0 -> 6
   wire                _zz_fetchStage_read_waysValues_0_tag_valid_1;
   wire                fetchStage_read_waysValues_0_tag_valid;
   wire                fetchStage_read_waysValues_0_tag_error;
-  wire       [25:0]   fetchStage_read_waysValues_0_tag_address;
-  wire       [27:0]   _zz_fetchStage_read_waysValues_0_tag_valid_2;
+  wire       [19:0]   fetchStage_read_waysValues_0_tag_address;		// 25 -> 19
+  wire       [21:0]   _zz_fetchStage_read_waysValues_0_tag_valid_2;	// 27 -> 21
   wire                fetchStage_hit_hits_0;
   wire                fetchStage_hit_valid;
   wire                fetchStage_hit_error;
@@ -4429,8 +4427,10 @@ module InstructionCache (
   wire                when_InstructionCache_l459_2;
   reg                 decodeStage_hit_error;
   wire                when_Fetcher_l398;
-  (* ram_style = "block" *) reg [31:0] banks_0 [0:15];
-  (* ram_style = "block" *) reg [27:0] ways_0_tags [0:1];
+  // (* ram_style = "block" *) reg [31:0] banks_0 [0:15];
+  // (* ram_style = "block" *) reg [27:0] ways_0_tags [0:1];
+  (* ram_style = "block" *) reg [31:0] banks_0 [0:1023];
+  (* ram_style = "block" *) reg [27:0] ways_0_tags [0:127];
 
   assign _zz_ways_0_tags_port = {lineLoader_write_tag_0_payload_data_address,{lineLoader_write_tag_0_payload_data_error,lineLoader_write_tag_0_payload_data_valid}};
   always @(posedge clk) begin
@@ -4493,7 +4493,7 @@ module InstructionCache (
     end
   end
 
-  assign when_InstructionCache_l338 = (! lineLoader_flushCounter[1]);
+  assign when_InstructionCache_l338 = (! lineLoader_flushCounter[7]);		// 1 -> 7
   assign when_InstructionCache_l342 = (! _zz_when_InstructionCache_l342);
   assign when_InstructionCache_l351 = (lineLoader_flushPending && (! (lineLoader_valid || io_cpu_fetch_isValid)));
   assign io_mem_cmd_fire = (io_mem_cmd_valid && io_mem_cmd_ready);
@@ -4511,26 +4511,26 @@ module InstructionCache (
   assign lineLoader_wayToAllocate_willClear = 1'b0;
   assign lineLoader_wayToAllocate_willOverflowIfInc = 1'b1;
   assign lineLoader_wayToAllocate_willOverflow = (lineLoader_wayToAllocate_willOverflowIfInc && lineLoader_wayToAllocate_willIncrement);
-  assign lineLoader_write_tag_0_valid = ((1'b1 && lineLoader_fire) || (! lineLoader_flushCounter[1]));
-  assign lineLoader_write_tag_0_payload_address = (lineLoader_flushCounter[1] ? lineLoader_address[5 : 5] : lineLoader_flushCounter[0 : 0]);
-  assign lineLoader_write_tag_0_payload_data_valid = lineLoader_flushCounter[1];
+  assign lineLoader_write_tag_0_valid = ((1'b1 && lineLoader_fire) || (! lineLoader_flushCounter[7]));	// 1 -> 7
+  assign lineLoader_write_tag_0_payload_address = (lineLoader_flushCounter[7] ? lineLoader_address[11 : 5] : lineLoader_flushCounter[6 : 0]);	// 1 -> 7, 5:5 -> 11:5,  0:0 -> 6:0
+  assign lineLoader_write_tag_0_payload_data_valid = lineLoader_flushCounter[7];	// 1 -> 7
   assign lineLoader_write_tag_0_payload_data_error = (lineLoader_hadError || io_mem_rsp_payload_error);
-  assign lineLoader_write_tag_0_payload_data_address = lineLoader_address[31 : 6];
+  assign lineLoader_write_tag_0_payload_data_address = lineLoader_address[31 : 12];	// 31:6 -> 31:12
   assign lineLoader_write_data_0_valid = (io_mem_rsp_valid && 1'b1);
-  assign lineLoader_write_data_0_payload_address = {lineLoader_address[5 : 5],lineLoader_wordIndex};
+  assign lineLoader_write_data_0_payload_address = {lineLoader_address[11 : 5],lineLoader_wordIndex};	// 5:5 -> 11:5
   assign lineLoader_write_data_0_payload_data = io_mem_rsp_payload_data;
   assign when_InstructionCache_l401 = (lineLoader_wordIndex == 3'b111);
-  assign _zz_fetchStage_read_banksValue_0_dataMem = io_cpu_prefetch_pc[5 : 2];
+  assign _zz_fetchStage_read_banksValue_0_dataMem = io_cpu_prefetch_pc[11 : 2];	// 5:2 -> 11:2
   assign _zz_fetchStage_read_banksValue_0_dataMem_1 = (! io_cpu_fetch_isStuck);
   assign fetchStage_read_banksValue_0_dataMem = _zz_banks_0_port1;
   assign fetchStage_read_banksValue_0_data = fetchStage_read_banksValue_0_dataMem[31 : 0];
-  assign _zz_fetchStage_read_waysValues_0_tag_valid = io_cpu_prefetch_pc[5 : 5];
+  assign _zz_fetchStage_read_waysValues_0_tag_valid = io_cpu_prefetch_pc[11 : 5];	// 5:5 -> 11:5
   assign _zz_fetchStage_read_waysValues_0_tag_valid_1 = (! io_cpu_fetch_isStuck);
   assign _zz_fetchStage_read_waysValues_0_tag_valid_2 = _zz_ways_0_tags_port1;
   assign fetchStage_read_waysValues_0_tag_valid = _zz_fetchStage_read_waysValues_0_tag_valid_2[0];
   assign fetchStage_read_waysValues_0_tag_error = _zz_fetchStage_read_waysValues_0_tag_valid_2[1];
-  assign fetchStage_read_waysValues_0_tag_address = _zz_fetchStage_read_waysValues_0_tag_valid_2[27 : 2];
-  assign fetchStage_hit_hits_0 = (fetchStage_read_waysValues_0_tag_valid && (fetchStage_read_waysValues_0_tag_address == io_cpu_fetch_mmuRsp_physicalAddress[31 : 6]));
+  assign fetchStage_read_waysValues_0_tag_address = _zz_fetchStage_read_waysValues_0_tag_valid_2[21 : 2];		// 27:2 -> 21:2
+  assign fetchStage_hit_hits_0 = (fetchStage_read_waysValues_0_tag_valid && (fetchStage_read_waysValues_0_tag_address == io_cpu_fetch_mmuRsp_physicalAddress[31 : 12]));	// 31:6 -> 31:12
   assign fetchStage_hit_valid = (fetchStage_hit_hits_0 != 1'b0);
   assign fetchStage_hit_error = fetchStage_read_waysValues_0_tag_error;
   assign fetchStage_hit_data = fetchStage_read_banksValue_0_data;
@@ -4593,7 +4593,7 @@ module InstructionCache (
     if(when_InstructionCache_l338) begin
       lineLoader_flushCounter <= (lineLoader_flushCounter + 2'b01);
     end
-    _zz_when_InstructionCache_l342 <= lineLoader_flushCounter[1];
+    _zz_when_InstructionCache_l342 <= lineLoader_flushCounter[7];	// 1 -> 7
     if(when_InstructionCache_l351) begin
       lineLoader_flushCounter <= 2'b00;
     end

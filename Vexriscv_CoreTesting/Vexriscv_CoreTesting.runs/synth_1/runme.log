@@ -7,7 +7,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Sat Oct 18 23:12:11 2025
+  **** Start of session at: Mon Oct 20 17:56:47 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -24,9 +24,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 297969
+INFO: [Synth 8-7075] Helper process launched with PID 43412
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2060.980 ; gain = 384.840 ; free physical = 1565 ; free virtual = 17615
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2062.738 ; gain = 431.707 ; free physical = 5782 ; free virtual = 19771
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'io_in' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:88]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'io_out' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:89]
@@ -104,10 +104,10 @@ INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/
 INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7845]
 INFO: [Synth 8-6157] synthesizing module 'RAM4096' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/RAM4096.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'RAM4096' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/RAM4096.v:1]
-INFO: [Synth 8-6157] synthesizing module 'VexRiscv' [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:46]
-INFO: [Synth 8-6157] synthesizing module 'InstructionCache' [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4322]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionCache' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4322]
-INFO: [Synth 8-6155] done synthesizing module 'VexRiscv' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:46]
+INFO: [Synth 8-6157] synthesizing module 'VexRiscv' [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:46]
+INFO: [Synth 8-6157] synthesizing module 'InstructionCache' [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4322]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionCache' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4322]
+INFO: [Synth 8-6155] done synthesizing module 'VexRiscv' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:46]
 INFO: [Synth 8-6155] done synthesizing module 'mgmt_core' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:4]
 WARNING: [Synth 8-7071] port 'clk_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
 WARNING: [Synth 8-7071] port 'clk_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
@@ -188,31 +188,31 @@ INFO: [Synth 8-6157] synthesizing module 'user_id_programming' [/home/wadood/git
 INFO: [Synth 8-6155] done synthesizing module 'user_id_programming' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_id_programming.v:28]
 INFO: [Synth 8-6155] done synthesizing module 'caravel_core' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:45]
 INFO: [Synth 8-6155] done synthesizing module 'caravel' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:46]
-WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_isIoAccess_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4605]
-WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowRead_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4607]
-WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowWrite_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4608]
-WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_bypassTranslation_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4612]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_fetchPc_correctionReg_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:2359]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_2_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:2467]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_3_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:2468]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_4_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:2469]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_rspCounter_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:3684]
-WARNING: [Synth 8-6014] Unused sequential element execute_CsrPlugin_wfiWake_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:3704]
-WARNING: [Synth 8-6014] Unused sequential element HazardSimplePlugin_writeBackBuffer_payload_data_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:3989]
-WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:1971]
-WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:1970]
-WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:1969]
-WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_EXECUTE_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:1990]
-WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:1959]
-WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:1993]
-WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_MEMORY_STORE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:2038]
-WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_CSR_READ_OPCODE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:1976]
-WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_mtvec_mode_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4220]
-WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_firstCycle_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4238]
-WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_secondCycle_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:4242]
-WARNING: [Synth 8-3936] Found unconnected internal register 'memory_to_writeBack_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:2098]
-WARNING: [Synth 8-3848] Net IBusCachedPlugin_cache_io_cpu_fetch_isRemoved in module/entity VexRiscv does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:94]
-WARNING: [Synth 8-3848] Net IBusCachedPlugin_mmuBus_rsp_bypassTranslation in module/entity VexRiscv does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:492]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_isIoAccess_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4605]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowRead_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4607]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowWrite_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4608]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_bypassTranslation_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4612]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_fetchPc_correctionReg_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2359]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_2_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2467]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_3_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2468]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_4_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2469]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_rspCounter_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:3684]
+WARNING: [Synth 8-6014] Unused sequential element execute_CsrPlugin_wfiWake_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:3704]
+WARNING: [Synth 8-6014] Unused sequential element HazardSimplePlugin_writeBackBuffer_payload_data_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:3989]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1971]
+WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1970]
+WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1969]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_EXECUTE_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1990]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1959]
+WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1993]
+WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_MEMORY_STORE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2038]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_CSR_READ_OPCODE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1976]
+WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_mtvec_mode_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4220]
+WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_firstCycle_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4238]
+WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_secondCycle_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4242]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memory_to_writeBack_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2098]
+WARNING: [Synth 8-3848] Net IBusCachedPlugin_cache_io_cpu_fetch_isRemoved in module/entity VexRiscv does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:94]
+WARNING: [Synth 8-3848] Net IBusCachedPlugin_mmuBus_rsp_bypassTranslation in module/entity VexRiscv does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:492]
 WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_first_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:2872]
 WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_last_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:2873]
 WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_first_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:6910]
@@ -413,18 +413,18 @@ WARNING: [Synth 8-7129] Port la_data_out[30] in module user_proj_example is eith
 WARNING: [Synth 8-7129] Port la_data_out[29] in module user_proj_example is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2222.949 ; gain = 546.809 ; free physical = 1396 ; free virtual = 17450
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2222.707 ; gain = 591.676 ; free physical = 5587 ; free virtual = 19580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.793 ; gain = 561.652 ; free physical = 1398 ; free virtual = 17451
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.551 ; gain = 606.520 ; free physical = 5586 ; free virtual = 19580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.793 ; gain = 561.652 ; free physical = 1398 ; free virtual = 17451
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.551 ; gain = 606.520 ; free physical = 5586 ; free virtual = 19580
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2237.793 ; gain = 0.000 ; free physical = 1395 ; free virtual = 17449
+Netlist sorting complete. Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2237.551 ; gain = 0.000 ; free physical = 5586 ; free virtual = 19579
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -447,31 +447,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/caravel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2371.574 ; gain = 0.000 ; free physical = 1384 ; free virtual = 17438
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.301 ; gain = 0.000 ; free physical = 5559 ; free virtual = 19565
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2371.574 ; gain = 0.000 ; free physical = 1384 ; free virtual = 17438
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2370.301 ; gain = 0.000 ; free physical = 5559 ; free virtual = 19565
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2371.574 ; gain = 695.434 ; free physical = 1381 ; free virtual = 17431
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2370.301 ; gain = 739.270 ; free physical = 5553 ; free virtual = 19560
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2379.578 ; gain = 703.438 ; free physical = 1381 ; free virtual = 17431
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2378.305 ; gain = 747.273 ; free physical = 5553 ; free virtual = 19560
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2379.578 ; gain = 703.438 ; free physical = 1381 ; free virtual = 17431
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2378.305 ; gain = 747.273 ; free physical = 5553 ; free virtual = 19560
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'send_state_reg' in module 'uart_to_spi'
-WARNING: [Synth 8-3936] Found unconnected internal register 'execute_to_memory_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v:1992]
+WARNING: [Synth 8-3936] Found unconnected internal register 'execute_to_memory_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1992]
 INFO: [Synth 8-802] inferred FSM for state register 'switch_Fetcher_l362_reg' in module 'VexRiscv'
 WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_1_reg' and it is trimmed from '10' to '8' bits. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:8422]
 WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_3_reg' and it is trimmed from '10' to '8' bits. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:8439]
@@ -566,7 +566,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'xfer_state_reg' using enco
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'wbbd_state_reg' using encoding 'sequential' in module 'housekeeping'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2379.578 ; gain = 703.438 ; free physical = 1360 ; free virtual = 17419
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2378.305 ; gain = 747.273 ; free physical = 5550 ; free virtual = 19560
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'chip_core/gpio_defaults_block_0' (gpio_defaults_block) to 'chip_core/gpio_defaults_block_5'
 INFO: [Synth 8-223] decloning instance 'chip_core/gpio_defaults_block_0' (gpio_defaults_block) to 'chip_core/gpio_defaults_block_7'
@@ -616,8 +616,9 @@ Detailed RTL Component Info :
 	   2 Input   24 Bit       Adders := 3     
 	   2 Input   16 Bit       Adders := 5     
 	   2 Input    9 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 5     
 	   3 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 2     
 	   2 Input    5 Bit       Adders := 4     
 	   2 Input    4 Bit       Adders := 17    
@@ -633,14 +634,14 @@ Detailed RTL Component Info :
 	               30 Bit    Registers := 4     
 	               26 Bit    Registers := 1     
 	               24 Bit    Registers := 2     
-	               22 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 7     
 	               13 Bit    Registers := 78    
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 28    
-	                7 Bit    Registers := 2     
+	                8 Bit    Registers := 27    
+	                7 Bit    Registers := 3     
 	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 6     
 	                4 Bit    Registers := 19    
@@ -649,8 +650,8 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 947   
 +---RAMs : 
 	             128K Bit	(4096 X 32 bit)          RAMs := 1     
-	              32K Bit	(1024 X 32 bit)          RAMs := 1     
-	               2K Bit	(128 X 22 bit)          RAMs := 1     
+	              16K Bit	(512 X 32 bit)          RAMs := 1     
+	               1K Bit	(64 X 23 bit)          RAMs := 1     
 	             1024 Bit	(32 X 32 bit)          RAMs := 1     
 	              160 Bit	(16 X 10 bit)          RAMs := 2     
 +---Muxes : 
@@ -681,9 +682,9 @@ Detailed RTL Component Info :
 	   4 Input    8 Bit        Muxes := 3     
 	   3 Input    8 Bit        Muxes := 2     
 	  11 Input    8 Bit        Muxes := 2     
-	   2 Input    7 Bit        Muxes := 6     
+	   2 Input    7 Bit        Muxes := 5     
 	   5 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
 	   9 Input    6 Bit        Muxes := 1     
 	   4 Input    6 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 5     
@@ -725,9 +726,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-5784] Optimized 1 bits of RAM "IBusCachedPlugin_cache/ways_0_tags_reg" due to constant propagation. Old ram width 23 bits, new ram width 22 bits.
 INFO: [Synth 8-3971] The signal "chip_core/\soc/core /VexRiscv/RegFilePlugin_regFile_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 2395.586 ; gain = 719.445 ; free physical = 1287 ; free virtual = 17358
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 2394.312 ; gain = 763.281 ; free physical = 5458 ; free virtual = 19490
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -749,8 +751,8 @@ Block RAM: Preliminary Mapping Report (see note below)
 |Module Name                   | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |chip_core/\soc/core /RAM4096  | RAM_reg                                | 4 K x 32(READ_FIRST)   | W |   | 4 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
-|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 128 x 22(READ_FIRST)   | W |   | 128 x 22(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 512 x 32(READ_FIRST)   | W |   | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 64 x 23(READ_FIRST)    | W |   | 64 x 23(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +------------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -771,13 +773,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:34 ; elapsed = 00:01:35 . Memory (MB): peak = 2395.586 ; gain = 719.445 ; free physical = 1286 ; free virtual = 17356
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:34 ; elapsed = 00:01:35 . Memory (MB): peak = 2394.312 ; gain = 763.281 ; free physical = 5443 ; free virtual = 19483
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 2490.648 ; gain = 814.508 ; free physical = 1178 ; free virtual = 17248
+Finished Timing Optimization : Time (s): cpu = 00:01:48 ; elapsed = 00:01:50 . Memory (MB): peak = 2490.375 ; gain = 859.344 ; free physical = 5353 ; free virtual = 19384
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -788,8 +790,8 @@ Block RAM: Final Mapping Report
 |Module Name                   | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |chip_core/\soc/core /RAM4096  | RAM_reg                                | 4 K x 32(READ_FIRST)   | W |   | 4 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
-|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 128 x 22(READ_FIRST)   | W |   | 128 x 22(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 512 x 32(READ_FIRST)   | W |   | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 64 x 23(READ_FIRST)    | W |   | 64 x 23(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +------------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 
@@ -814,7 +816,7 @@ INFO: [Synth 8-7052] The timing for the instance chip_core/soc/core/RAM4096/RAM_
 INFO: [Synth 8-7052] The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:55 ; elapsed = 00:01:57 . Memory (MB): peak = 2517.656 ; gain = 841.516 ; free physical = 1159 ; free virtual = 17228
+Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:01:56 . Memory (MB): peak = 2516.383 ; gain = 885.352 ; free physical = 5326 ; free virtual = 19358
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -832,37 +834,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:02 ; elapsed = 00:02:04 . Memory (MB): peak = 2594.469 ; gain = 918.328 ; free physical = 1115 ; free virtual = 17184
+Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:02:03 . Memory (MB): peak = 2593.195 ; gain = 962.164 ; free physical = 5283 ; free virtual = 19314
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:02 ; elapsed = 00:02:04 . Memory (MB): peak = 2594.469 ; gain = 918.328 ; free physical = 1115 ; free virtual = 17184
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:03 . Memory (MB): peak = 2593.195 ; gain = 962.164 ; free physical = 5282 ; free virtual = 19314
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2594.469 ; gain = 918.328 ; free physical = 1115 ; free virtual = 17184
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:02 ; elapsed = 00:02:04 . Memory (MB): peak = 2593.195 ; gain = 962.164 ; free physical = 5276 ; free virtual = 19308
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2594.469 ; gain = 918.328 ; free physical = 1115 ; free virtual = 17184
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 2593.195 ; gain = 962.164 ; free physical = 5276 ; free virtual = 19308
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:04 ; elapsed = 00:02:06 . Memory (MB): peak = 2601.406 ; gain = 925.266 ; free physical = 1115 ; free virtual = 17184
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2600.133 ; gain = 969.102 ; free physical = 5275 ; free virtual = 19308
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:04 ; elapsed = 00:02:06 . Memory (MB): peak = 2601.406 ; gain = 925.266 ; free physical = 1114 ; free virtual = 17184
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2600.133 ; gain = 969.102 ; free physical = 5275 ; free virtual = 19308
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -902,52 +904,52 @@ Report Cell Usage:
 |2     |CARRY4   |   178|
 |3     |LUT1     |   207|
 |4     |LUT2     |   258|
-|5     |LUT3     |   292|
+|5     |LUT3     |   291|
 |6     |LUT4     |   590|
-|7     |LUT5     |   764|
-|8     |LUT6     |  1938|
+|7     |LUT5     |   762|
+|8     |LUT6     |  1940|
 |9     |MUXF7    |   168|
 |10    |MUXF8    |    50|
 |11    |RAM32M   |     4|
-|12    |RAMB18E1 |     3|
-|14    |RAMB36E1 |     5|
-|16    |SRL16E   |    39|
-|17    |FDCE     |   969|
-|18    |FDPE     |   266|
-|19    |FDRE     |  2743|
-|20    |FDSE     |    56|
-|21    |IBUF     |     4|
-|22    |IOBUF    |    35|
-|23    |OBUF     |     3|
-|24    |OBUFT    |     5|
+|12    |RAMB18E1 |     4|
+|14    |RAMB36E1 |     4|
+|15    |SRL16E   |    39|
+|16    |FDCE     |   969|
+|17    |FDPE     |   266|
+|18    |FDRE     |  2742|
+|19    |FDSE     |    56|
+|20    |IBUF     |     4|
+|21    |IOBUF    |    35|
+|22    |OBUF     |     3|
+|23    |OBUFT    |     5|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:04 ; elapsed = 00:02:06 . Memory (MB): peak = 2601.406 ; gain = 925.266 ; free physical = 1114 ; free virtual = 17184
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2600.133 ; gain = 969.102 ; free physical = 5275 ; free virtual = 19307
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 561 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:58 ; elapsed = 00:02:00 . Memory (MB): peak = 2601.406 ; gain = 791.484 ; free physical = 1113 ; free virtual = 17183
-Synthesis Optimization Complete : Time (s): cpu = 00:02:04 ; elapsed = 00:02:06 . Memory (MB): peak = 2601.414 ; gain = 925.266 ; free physical = 1113 ; free virtual = 17183
+Synthesis finished with 0 errors, 0 critical warnings and 562 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:57 ; elapsed = 00:02:00 . Memory (MB): peak = 2600.133 ; gain = 836.352 ; free physical = 5267 ; free virtual = 19299
+Synthesis Optimization Complete : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2600.141 ; gain = 969.102 ; free physical = 5267 ; free virtual = 19299
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2601.414 ; gain = 0.000 ; free physical = 1273 ; free virtual = 17343
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2600.141 ; gain = 0.000 ; free physical = 5431 ; free virtual = 19463
 INFO: [Netlist 29-17] Analyzing 443 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2657.434 ; gain = 0.000 ; free physical = 1277 ; free virtual = 17346
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2656.160 ; gain = 0.000 ; free physical = 5422 ; free virtual = 19453
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 39 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 35 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
-Synth Design complete | Checksum: 7933e8e
+Synth Design complete | Checksum: f12b372a
 INFO: [Common 17-83] Releasing license: Synthesis
-194 Infos, 271 Warnings, 4 Critical Warnings and 0 Errors encountered.
+195 Infos, 271 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:23 ; elapsed = 00:02:19 . Memory (MB): peak = 2657.434 ; gain = 981.316 ; free physical = 1275 ; free virtual = 17344
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1765.452; main = 1611.548; forked = 269.139
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4059.023; main = 2657.438; forked = 1541.363
+synth_design: Time (s): cpu = 00:02:22 ; elapsed = 00:02:18 . Memory (MB): peak = 2656.160 ; gain = 1075.660 ; free physical = 5422 ; free virtual = 19453
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1770.269; main = 1622.654; forked = 269.160
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4058.750; main = 2656.164; forked = 1541.363
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2681.445 ; gain = 0.000 ; free physical = 1275 ; free virtual = 17344
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2680.172 ; gain = 0.000 ; free physical = 5421 ; free virtual = 19453
 INFO: [Common 17-1381] The checkpoint '/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/caravel.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file caravel_utilization_synth.rpt -pb caravel_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 18 23:14:36 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 20 17:59:11 2025...

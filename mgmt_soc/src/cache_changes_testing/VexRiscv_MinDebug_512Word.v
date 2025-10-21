@@ -4512,7 +4512,7 @@ module InstructionCache (
   assign lineLoader_wayToAllocate_willOverflowIfInc = 1'b1;
   assign lineLoader_wayToAllocate_willOverflow = (lineLoader_wayToAllocate_willOverflowIfInc && lineLoader_wayToAllocate_willIncrement);
   assign lineLoader_write_tag_0_valid = ((1'b1 && lineLoader_fire) || (! lineLoader_flushCounter[6]));	// 1 -> 7
-  assign lineLoader_write_tag_0_payload_address = (lineLoader_flushCounter[7] ? lineLoader_address[10 : 5] : lineLoader_flushCounter[5 : 0]);	// 1 -> 7, 5:5 -> 11:5,  0:0 -> 6:0
+  assign lineLoader_write_tag_0_payload_address = (lineLoader_flushCounter[6] ? lineLoader_address[10 : 5] : lineLoader_flushCounter[5 : 0]);	// 1 -> 7, 5:5 -> 11:5,  0:0 -> 6:0
   assign lineLoader_write_tag_0_payload_data_valid = lineLoader_flushCounter[6];	// 1 -> 7
   assign lineLoader_write_tag_0_payload_data_error = (lineLoader_hadError || io_mem_rsp_payload_error);
   assign lineLoader_write_tag_0_payload_data_address = lineLoader_address[31 : 12];	// 31:6 -> 31:12

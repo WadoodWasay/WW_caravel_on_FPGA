@@ -4364,8 +4364,8 @@ module InstructionCache (
   input               reset
 );
   reg        [31:0]   _zz_banks_0_port1;
-  reg        [22:0]   _zz_ways_0_tags_port1;	// 27 -> 21
-  wire       [22:0]   _zz_ways_0_tags_port;	// 27 -> 21
+  reg        [22:0]   _zz_ways_0_tags_port1;	// 27 -> 22
+  wire       [22:0]   _zz_ways_0_tags_port;	// 27 -> 22
   reg                 _zz_1;
   reg                 _zz_2;
   reg                 lineLoader_fire;
@@ -4373,7 +4373,7 @@ module InstructionCache (
   (* keep , syn_keep *) reg        [31:0]   lineLoader_address /* synthesis syn_keep = 1 */ ;
   reg                 lineLoader_hadError;
   reg                 lineLoader_flushPending;
-  reg        [6:0]    lineLoader_flushCounter;		// 1 -> 7	
+  reg        [6:0]    lineLoader_flushCounter;		// 1 -> 6	
   wire                when_InstructionCache_l338;
   reg                 _zz_when_InstructionCache_l342;
   wire                when_InstructionCache_l342;
@@ -4387,12 +4387,12 @@ module InstructionCache (
   wire                lineLoader_wayToAllocate_willOverflow;
   (* keep , syn_keep *) reg        [2:0]    lineLoader_wordIndex /* synthesis syn_keep = 1 */ ;
   wire                lineLoader_write_tag_0_valid;
-  wire       [5:0]    lineLoader_write_tag_0_payload_address;		// 0 -> 6
+  wire       [5:0]    lineLoader_write_tag_0_payload_address;		// 0 -> 5
   wire                lineLoader_write_tag_0_payload_data_valid;
   wire                lineLoader_write_tag_0_payload_data_error;
-  wire       [20:0]   lineLoader_write_tag_0_payload_data_address;	// 25 -> 19
+  wire       [20:0]   lineLoader_write_tag_0_payload_data_address;	// 25 -> 20
   wire                lineLoader_write_data_0_valid;
-  wire       [8:0]    lineLoader_write_data_0_payload_address;		// 3 -> 9
+  wire       [8:0]    lineLoader_write_data_0_payload_address;		// 3 -> 8
   wire       [31:0]   lineLoader_write_data_0_payload_data;
   wire                when_InstructionCache_l401;
   wire       [8:0]    _zz_fetchStage_read_banksValue_0_dataMem;		// 3 -> 9

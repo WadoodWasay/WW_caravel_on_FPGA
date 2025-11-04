@@ -4395,16 +4395,16 @@ module InstructionCache (
   wire       [8:0]    lineLoader_write_data_0_payload_address;		// 3 -> 8
   wire       [31:0]   lineLoader_write_data_0_payload_data;
   wire                when_InstructionCache_l401;
-  wire       [8:0]    _zz_fetchStage_read_banksValue_0_dataMem;		// 3 -> 9
+  wire       [8:0]    _zz_fetchStage_read_banksValue_0_dataMem;		// 3 -> 8
   wire                _zz_fetchStage_read_banksValue_0_dataMem_1;
   wire       [31:0]   fetchStage_read_banksValue_0_dataMem;
   wire       [31:0]   fetchStage_read_banksValue_0_data;
-  wire       [5:0]    _zz_fetchStage_read_waysValues_0_tag_valid;	// 0 -> 6
+  wire       [5:0]    _zz_fetchStage_read_waysValues_0_tag_valid;	// 0 -> 5
   wire                _zz_fetchStage_read_waysValues_0_tag_valid_1;
   wire                fetchStage_read_waysValues_0_tag_valid;
   wire                fetchStage_read_waysValues_0_tag_error;
-  wire       [20:0]   fetchStage_read_waysValues_0_tag_address;		// 25 -> 19
-  wire       [22:0]   _zz_fetchStage_read_waysValues_0_tag_valid_2;	// 27 -> 21
+  wire       [20:0]   fetchStage_read_waysValues_0_tag_address;		// 25 -> 20
+  wire       [22:0]   _zz_fetchStage_read_waysValues_0_tag_valid_2;	// 27 -> 22
   wire                fetchStage_hit_hits_0;
   wire                fetchStage_hit_valid;
   wire                fetchStage_hit_error;
@@ -4493,7 +4493,7 @@ module InstructionCache (
     end
   end
 
-  assign when_InstructionCache_l338 = (! lineLoader_flushCounter[6]);		// 1 -> 7
+  assign when_InstructionCache_l338 = (! lineLoader_flushCounter[6]);		// 1 -> 6
   assign when_InstructionCache_l342 = (! _zz_when_InstructionCache_l342);
   assign when_InstructionCache_l351 = (lineLoader_flushPending && (! (lineLoader_valid || io_cpu_fetch_isValid)));
   assign io_mem_cmd_fire = (io_mem_cmd_valid && io_mem_cmd_ready);
@@ -4511,26 +4511,26 @@ module InstructionCache (
   assign lineLoader_wayToAllocate_willClear = 1'b0;
   assign lineLoader_wayToAllocate_willOverflowIfInc = 1'b1;
   assign lineLoader_wayToAllocate_willOverflow = (lineLoader_wayToAllocate_willOverflowIfInc && lineLoader_wayToAllocate_willIncrement);
-  assign lineLoader_write_tag_0_valid = ((1'b1 && lineLoader_fire) || (! lineLoader_flushCounter[6]));	// 1 -> 7
-  assign lineLoader_write_tag_0_payload_address = (lineLoader_flushCounter[6] ? lineLoader_address[10 : 5] : lineLoader_flushCounter[5 : 0]);	// 1 -> 7, 5:5 -> 11:5,  0:0 -> 6:0
-  assign lineLoader_write_tag_0_payload_data_valid = lineLoader_flushCounter[6];	// 1 -> 7
+  assign lineLoader_write_tag_0_valid = ((1'b1 && lineLoader_fire) || (! lineLoader_flushCounter[6]));	// 1 -> 6
+  assign lineLoader_write_tag_0_payload_address = (lineLoader_flushCounter[6] ? lineLoader_address[10 : 5] : lineLoader_flushCounter[5 : 0]);	// 1 -> 6, 5:5 -> 10:5,  0:0 -> 5:0
+  assign lineLoader_write_tag_0_payload_data_valid = lineLoader_flushCounter[6];	// 1 -> 6
   assign lineLoader_write_tag_0_payload_data_error = (lineLoader_hadError || io_mem_rsp_payload_error);
-  assign lineLoader_write_tag_0_payload_data_address = lineLoader_address[31 : 11];	// 31:6 -> 31:12
+  assign lineLoader_write_tag_0_payload_data_address = lineLoader_address[31 : 11];	// 31:6 -> 31:11
   assign lineLoader_write_data_0_valid = (io_mem_rsp_valid && 1'b1);
-  assign lineLoader_write_data_0_payload_address = {lineLoader_address[10 : 5],lineLoader_wordIndex};	// 5:5 -> 11:5
+  assign lineLoader_write_data_0_payload_address = {lineLoader_address[10 : 5],lineLoader_wordIndex};	// 5:5 -> 10:5
   assign lineLoader_write_data_0_payload_data = io_mem_rsp_payload_data;
   assign when_InstructionCache_l401 = (lineLoader_wordIndex == 3'b111);
-  assign _zz_fetchStage_read_banksValue_0_dataMem = io_cpu_prefetch_pc[10 : 2];	// 5:2 -> 11:2
+  assign _zz_fetchStage_read_banksValue_0_dataMem = io_cpu_prefetch_pc[10 : 2];	// 5:2 -> 10:2
   assign _zz_fetchStage_read_banksValue_0_dataMem_1 = (! io_cpu_fetch_isStuck);
   assign fetchStage_read_banksValue_0_dataMem = _zz_banks_0_port1;
   assign fetchStage_read_banksValue_0_data = fetchStage_read_banksValue_0_dataMem[31 : 0];
-  assign _zz_fetchStage_read_waysValues_0_tag_valid = io_cpu_prefetch_pc[10 : 5];	// 5:5 -> 11:5
+  assign _zz_fetchStage_read_waysValues_0_tag_valid = io_cpu_prefetch_pc[10 : 5];	// 5:5 -> 10:5
   assign _zz_fetchStage_read_waysValues_0_tag_valid_1 = (! io_cpu_fetch_isStuck);
   assign _zz_fetchStage_read_waysValues_0_tag_valid_2 = _zz_ways_0_tags_port1;
   assign fetchStage_read_waysValues_0_tag_valid = _zz_fetchStage_read_waysValues_0_tag_valid_2[0];
   assign fetchStage_read_waysValues_0_tag_error = _zz_fetchStage_read_waysValues_0_tag_valid_2[1];
-  assign fetchStage_read_waysValues_0_tag_address = _zz_fetchStage_read_waysValues_0_tag_valid_2[22 : 2];		// 27:2 -> 21:2
-  assign fetchStage_hit_hits_0 = (fetchStage_read_waysValues_0_tag_valid && (fetchStage_read_waysValues_0_tag_address == io_cpu_fetch_mmuRsp_physicalAddress[31 : 11]));	// 31:6 -> 31:12
+  assign fetchStage_read_waysValues_0_tag_address = _zz_fetchStage_read_waysValues_0_tag_valid_2[22 : 2];		// 27:2 -> 22:2
+  assign fetchStage_hit_hits_0 = (fetchStage_read_waysValues_0_tag_valid && (fetchStage_read_waysValues_0_tag_address == io_cpu_fetch_mmuRsp_physicalAddress[31 : 11]));	// 31:6 -> 31:11
   assign fetchStage_hit_valid = (fetchStage_hit_hits_0 != 1'b0);
   assign fetchStage_hit_error = fetchStage_read_waysValues_0_tag_error;
   assign fetchStage_hit_data = fetchStage_read_banksValue_0_data;
@@ -4593,7 +4593,7 @@ module InstructionCache (
     if(when_InstructionCache_l338) begin
       lineLoader_flushCounter <= (lineLoader_flushCounter + 2'b01);
     end
-    _zz_when_InstructionCache_l342 <= lineLoader_flushCounter[6];	// 1 -> 7
+    _zz_when_InstructionCache_l342 <= lineLoader_flushCounter[6];	// 1 -> 6
     if(when_InstructionCache_l351) begin
       lineLoader_flushCounter <= 2'b00;
     end

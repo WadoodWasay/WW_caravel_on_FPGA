@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1760997401" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/caravel.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="caravel_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="caravel.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="caravel_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="caravel_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="caravel_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="caravel.vds"/>
   <File Type="REPORTS-TCL" Name="caravel_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="caravel_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="caravel.tcl"/>
+  <File Type="RDS-UTIL" Name="caravel_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="caravel_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../Caravel/src/netlists_FPGA.v">

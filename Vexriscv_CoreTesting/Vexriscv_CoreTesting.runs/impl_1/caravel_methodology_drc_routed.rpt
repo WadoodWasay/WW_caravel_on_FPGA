@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Tue Nov 11 19:24:59 2025
+| Date         : Wed Nov 12 14:56:36 2025
 | Host         : fedora running 64-bit Fedora Linux 43 (KDE Plasma Desktop Edition)
 | Command      : report_methodology -file caravel_methodology_drc_routed.rpt -pb caravel_methodology_drc_routed.pb -rpx caravel_methodology_drc_routed.rpx
 | Design       : caravel
@@ -5105,7 +5105,7 @@ Related violations: <none>
 
 SYNTH-4#1 Warning
 Shallow depth for a dedicated block RAM  
-The instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason: The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *)  to instruct Vivado to infer distributed LUT RAM.
+The instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason: The depth (3 address bits) is shallow. Please use attribute (* ram_style = "distributed" *)  to instruct Vivado to infer distributed LUT RAM.
 Related violations: <none>
 
 SYNTH-6#1 Warning

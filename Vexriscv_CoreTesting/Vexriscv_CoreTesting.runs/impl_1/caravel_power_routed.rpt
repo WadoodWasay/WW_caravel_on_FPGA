@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date             : Tue Nov 11 19:25:01 2025
+| Date             : Wed Nov 12 14:56:38 2025
 | Host             : fedora running 64-bit Fedora Linux 43 (KDE Plasma Desktop Edition)
 | Command          : report_power -file caravel_power_routed.rpt -pb caravel_power_summary_routed.pb -rpx caravel_power_routed.rpx
 | Design           : caravel
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.186        |
+| Total On-Chip Power (W)  | 0.184        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.088        |
+| Dynamic (W)              | 0.087        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.2         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |        3 |       --- |             --- |
-| Slice Logic              |     0.010 |     8621 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     3577 |     63400 |            5.64 |
+| Clocks                   |     0.015 |        3 |       --- |             --- |
+| Slice Logic              |     0.010 |     8613 |       --- |             --- |
+|   LUT as Logic           |     0.009 |     3564 |     63400 |            5.62 |
 |   CARRY4                 |    <0.001 |      178 |     15850 |            1.12 |
-|   Register               |    <0.001 |     4027 |    126800 |            3.18 |
+|   Register               |    <0.001 |     4026 |    126800 |            3.18 |
 |   LUT as Shift Register  |    <0.001 |       39 |     19000 |            0.21 |
 |   F7/F8 Muxes            |    <0.001 |      218 |     63400 |            0.34 |
 |   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
 |   LUT as Distributed RAM |    <0.001 |       16 |     19000 |            0.08 |
 |   Others                 |     0.000 |      100 |       --- |             --- |
-| Signals                  |     0.016 |     6937 |       --- |             --- |
+| Signals                  |     0.015 |     6920 |       --- |             --- |
 | Block RAM                |     0.018 |        6 |       135 |            4.44 |
 | I/O                      |     0.029 |       47 |       210 |           22.38 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.186 |          |           |                 |
+| Total                    |     0.184 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.073 |       0.058 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.072 |       0.057 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.012 |       0.008 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,11 +145,12 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| caravel                  |     0.088 |
-|   chip_core              |     0.057 |
+| caravel                  |     0.087 |
+|   chip_core              |     0.056 |
 |     housekeeping         |     0.004 |
-|     soc                  |     0.051 |
-|       core               |     0.051 |
+|     soc                  |     0.050 |
+|       core               |     0.050 |
+|   mprj_io_IOBUF[0]_inst  |     0.001 |
 |   mprj_io_IOBUF[14]_inst |     0.012 |
 |   mprj_io_IOBUF[15]_inst |     0.012 |
 |   mprj_io_IOBUF[37]_inst |     0.001 |

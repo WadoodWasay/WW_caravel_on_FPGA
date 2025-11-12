@@ -33,7 +33,8 @@
 //`include "../../mgmt_soc/src/VexRiscv_MinDebugCache.v"
 `include "../../arty/uart_to_spi.v"
 //new cores being tested (in order of size) 
-`include "../../mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v"
+`include "../../mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_64Word.v"
+//`include "../../mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v"
 //`include "../../mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_256Word.v"
 //`include "../../mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v"
 //`include "../../mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_1024Word.v"

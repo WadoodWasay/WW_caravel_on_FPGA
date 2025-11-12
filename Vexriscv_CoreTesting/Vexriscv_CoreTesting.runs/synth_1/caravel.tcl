@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/caravel.tcl"
+  variable script "/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/caravel.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,23 +56,22 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param general.usePosixSpawnForFork 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.cache/wt [current_project]
-set_property parent.project_path /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.xpr [current_project]
+set_property webtalk.parent_dir /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.cache/wt [current_project]
+set_property parent.project_path /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {/home/wadood/.Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part digilentinc.com:arty-a7-100:part0:1.0 [current_project]
-set_property ip_output_repo /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.cache/ip [current_project]
+set_property ip_output_repo /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/netlists_FPGA.v
+read_verilog -library xil_defaultlib /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/netlists_FPGA.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -82,12 +81,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc
-set_property used_in_implementation false [get_files /home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc]
+read_xdc /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc
+set_property used_in_implementation false [get_files /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.srcs/utils_1/imports/synth_1/caravel.dcp
+read_checkpoint -auto_incremental -incremental /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.srcs/utils_1/imports/synth_1/caravel.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

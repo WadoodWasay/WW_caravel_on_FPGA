@@ -1,29 +1,29 @@
 #-----------------------------------------------------------
-# Vivado v2024.2 (64-bit)
-# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
-# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
-# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Oct 20 17:56:47 2025
-# Process ID         : 43351
-# Current directory  : /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Nov 11 19:21:53 2025
+# Process ID         : 5068
+# Current directory  : /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1
 # Command line       : vivado -log caravel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source caravel.tcl
-# Log file           : /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/caravel.vds
-# Journal file       : /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/vivado.jou
-# Running On         : FedoraHP
-# Platform           : unknown
-# Operating System   : unknown
-# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1195G7 @ 2.90GHz
-# CPU Frequency      : 713.256 MHz
-# CPU Physical cores : 4
-# CPU Logical cores  : 8
-# Host memory        : 16494 MB
+# Log file           : /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/caravel.vds
+# Journal file       : /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/vivado.jou
+# Running On         : fedora
+# Platform           : Fedora
+# Operating System   : Fedora Linux 43 (KDE Plasma Desktop Edition)
+# Processor Detail   : AMD Ryzen 5 5500U with Radeon Graphics
+# CPU Frequency      : 2021.208 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 15506 MB
 # Swap memory        : 8589 MB
-# Total Virtual      : 25084 MB
-# Available Virtual  : 21699 MB
+# Total Virtual      : 24096 MB
+# Available Virtual  : 19149 MB
 #-----------------------------------------------------------
 source caravel.tcl -notrace
-Command: read_checkpoint -auto_incremental -incremental /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.srcs/utils_1/imports/synth_1/caravel.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from /home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.srcs/utils_1/imports/synth_1/caravel.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.srcs/utils_1/imports/synth_1/caravel.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.srcs/utils_1/imports/synth_1/caravel.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top caravel -part xc7a100tcsg324-1
 Starting synth_design
@@ -34,293 +34,293 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 43412
+INFO: [Synth 8-7075] Helper process launched with PID 5100
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2062.738 ; gain = 431.707 ; free physical = 5782 ; free virtual = 19771
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2321.164 ; gain = 441.711 ; free physical = 4704 ; free virtual = 17001
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'io_in' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:88]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'io_out' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:89]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'io_oeb' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:90]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'ready' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:147]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'count' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:148]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'rdata' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:149]
-INFO: [Synth 8-11241] undeclared symbol 'resetb', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:92]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'ser_rx_in' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:189]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'ser_tx_out' is not allowed [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:190]
-INFO: [Synth 8-11241] undeclared symbol 'porb_h', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:208]
-WARNING: [Synth 8-8895] 'porb_h' is already implicitly declared on line 208 [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:230]
-INFO: [Synth 8-11241] undeclared symbol 'qspi_enabled', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:352]
-INFO: [Synth 8-11241] undeclared symbol 'spi_enabled', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:354]
-INFO: [Synth 8-11241] undeclared symbol 'debug_mode', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:355]
-INFO: [Synth 8-11241] undeclared symbol 'ser_tx', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:359]
-INFO: [Synth 8-11241] undeclared symbol 'ser_rx', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:360]
-INFO: [Synth 8-11241] undeclared symbol 'spi_sdi', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:362]
-INFO: [Synth 8-11241] undeclared symbol 'spi_csb', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:363]
-INFO: [Synth 8-11241] undeclared symbol 'spi_sck', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:364]
-INFO: [Synth 8-11241] undeclared symbol 'spi_sdo', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:365]
-INFO: [Synth 8-11241] undeclared symbol 'spi_sdoenb', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:366]
-INFO: [Synth 8-11241] undeclared symbol 'debug_in', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:368]
-INFO: [Synth 8-11241] undeclared symbol 'debug_out', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:369]
-INFO: [Synth 8-11241] undeclared symbol 'debug_oeb', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:370]
-INFO: [Synth 8-11241] undeclared symbol 'trap', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:386]
-INFO: [Synth 8-11241] undeclared symbol 'porb_l', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:551]
-INFO: [Synth 8-11241] undeclared symbol 'ext_reset', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:569]
-INFO: [Synth 8-11241] undeclared symbol 'spi_pll_ena', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:633]
-INFO: [Synth 8-11241] undeclared symbol 'spi_pll_dco_ena', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:634]
-INFO: [Synth 8-11241] undeclared symbol 'ext_clk_sel', assumed default net type 'wire' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:639]
-WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/io_buf.v:13]
-INFO: [Synth 8-6157] synthesizing module 'caravel' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:46]
-INFO: [Synth 8-6157] synthesizing module 'uart_to_spi' [/home/wadood/gits/WW_caravel_on_FPGA/arty/uart_to_spi.v:50]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/arty/uart_to_spi.v:168]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/arty/uart_to_spi.v:235]
-INFO: [Synth 8-6155] done synthesizing module 'uart_to_spi' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/arty/uart_to_spi.v:50]
-INFO: [Synth 8-6157] synthesizing module 'chip_io_FPGA' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/chip_io_FPGA.v:10]
-INFO: [Synth 8-6157] synthesizing module 'io_buf' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/io_buf.v:1]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'io_in' is not allowed [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:88]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'io_out' is not allowed [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:89]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'io_oeb' is not allowed [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:90]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'ready' is not allowed [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:147]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'count' is not allowed [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:148]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'rdata' is not allowed [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:149]
+INFO: [Synth 8-11241] undeclared symbol 'resetb', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:92]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'ser_rx_in' is not allowed [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:189]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'ser_tx_out' is not allowed [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:190]
+INFO: [Synth 8-11241] undeclared symbol 'porb_h', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:208]
+WARNING: [Synth 8-8895] 'porb_h' is already implicitly declared on line 208 [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:230]
+INFO: [Synth 8-11241] undeclared symbol 'qspi_enabled', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:352]
+INFO: [Synth 8-11241] undeclared symbol 'spi_enabled', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:354]
+INFO: [Synth 8-11241] undeclared symbol 'debug_mode', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:355]
+INFO: [Synth 8-11241] undeclared symbol 'ser_tx', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:359]
+INFO: [Synth 8-11241] undeclared symbol 'ser_rx', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:360]
+INFO: [Synth 8-11241] undeclared symbol 'spi_sdi', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:362]
+INFO: [Synth 8-11241] undeclared symbol 'spi_csb', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:363]
+INFO: [Synth 8-11241] undeclared symbol 'spi_sck', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:364]
+INFO: [Synth 8-11241] undeclared symbol 'spi_sdo', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:365]
+INFO: [Synth 8-11241] undeclared symbol 'spi_sdoenb', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:366]
+INFO: [Synth 8-11241] undeclared symbol 'debug_in', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:368]
+INFO: [Synth 8-11241] undeclared symbol 'debug_out', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:369]
+INFO: [Synth 8-11241] undeclared symbol 'debug_oeb', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:370]
+INFO: [Synth 8-11241] undeclared symbol 'trap', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:386]
+INFO: [Synth 8-11241] undeclared symbol 'porb_l', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:551]
+INFO: [Synth 8-11241] undeclared symbol 'ext_reset', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:569]
+INFO: [Synth 8-11241] undeclared symbol 'spi_pll_ena', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:633]
+INFO: [Synth 8-11241] undeclared symbol 'spi_pll_dco_ena', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:634]
+INFO: [Synth 8-11241] undeclared symbol 'ext_clk_sel', assumed default net type 'wire' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:639]
+WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/io_buf.v:13]
+INFO: [Synth 8-6157] synthesizing module 'caravel' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:46]
+INFO: [Synth 8-6157] synthesizing module 'uart_to_spi' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/arty/uart_to_spi.v:50]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/arty/uart_to_spi.v:168]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/arty/uart_to_spi.v:235]
+INFO: [Synth 8-6155] done synthesizing module 'uart_to_spi' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/arty/uart_to_spi.v:50]
+INFO: [Synth 8-6157] synthesizing module 'chip_io_FPGA' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/chip_io_FPGA.v:10]
+INFO: [Synth 8-6157] synthesizing module 'io_buf' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/io_buf.v:1]
 	Parameter WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'io_buf' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/io_buf.v:1]
-INFO: [Synth 8-6157] synthesizing module 'io_buf__parameterized0' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/io_buf.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'io_buf' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/io_buf.v:1]
+INFO: [Synth 8-6157] synthesizing module 'io_buf__parameterized0' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/io_buf.v:1]
 	Parameter WIDTH bound to: 38 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'io_buf__parameterized0' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/io_buf.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'chip_io_FPGA' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/chip_io_FPGA.v:10]
-WARNING: [Synth 8-7071] port 'flash_csb_ieb_core' of module 'chip_io_FPGA' is unconnected for instance 'padframe' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:266]
-WARNING: [Synth 8-7071] port 'flash_clk_ieb_core' of module 'chip_io_FPGA' is unconnected for instance 'padframe' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:266]
-WARNING: [Synth 8-7023] instance 'padframe' of module 'chip_io_FPGA' has 45 connections declared, but only 43 given [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:266]
-INFO: [Synth 8-6157] synthesizing module 'caravel_core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:45]
-INFO: [Synth 8-6157] synthesizing module 'mgmt_core_wrapper' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:40]
-INFO: [Synth 8-6157] synthesizing module 'mgmt_core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:1891]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:6814]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:6830]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7144]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7189]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7212]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7224]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7236]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7269]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7281]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7325]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7418]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7430]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7442]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7490]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7545]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7587]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7599]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7640]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7681]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7722]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7763]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7804]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7845]
-INFO: [Synth 8-6157] synthesizing module 'RAM4096' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/RAM4096.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'RAM4096' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/RAM4096.v:1]
-INFO: [Synth 8-6157] synthesizing module 'VexRiscv' [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:46]
-INFO: [Synth 8-6157] synthesizing module 'InstructionCache' [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4322]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionCache' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4322]
-INFO: [Synth 8-6155] done synthesizing module 'VexRiscv' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'mgmt_core' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:4]
-WARNING: [Synth 8-7071] port 'clk_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'clk_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'resetn_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'resetn_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'serial_load_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'serial_load_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'serial_data_2_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'serial_data_2_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'serial_resetn_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'serial_resetn_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'serial_clock_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'serial_clock_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'rstb_l_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'rstb_l_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'por_l_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'por_l_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'porb_h_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7071] port 'porb_h_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-WARNING: [Synth 8-7023] instance 'core' of module 'mgmt_core' has 76 connections declared, but only 58 given [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
-INFO: [Synth 8-6155] done synthesizing module 'mgmt_core_wrapper' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:40]
-INFO: [Synth 8-6157] synthesizing module 'mgmt_protect' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_protect.v:46]
-INFO: [Synth 8-6157] synthesizing module 'mprj_logic_high' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_logic_high.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'mprj_logic_high' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_logic_high.v:23]
-INFO: [Synth 8-6157] synthesizing module 'mprj2_logic_high' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj2_logic_high.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'mprj2_logic_high' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj2_logic_high.v:24]
-INFO: [Synth 8-6157] synthesizing module 'mgmt_protect_hv' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_protect_hv.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'mgmt_protect_hv' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_protect_hv.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'mgmt_protect' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_protect.v:46]
-INFO: [Synth 8-6157] synthesizing module 'user_project_wrapper' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:40]
-INFO: [Synth 8-6157] synthesizing module 'debug_regs' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/debug_regs.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'debug_regs' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/debug_regs.v:2]
-INFO: [Synth 8-6157] synthesizing module 'user_proj_example' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:50]
-INFO: [Synth 8-6157] synthesizing module 'counter' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:132]
+INFO: [Synth 8-6155] done synthesizing module 'io_buf__parameterized0' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/io_buf.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'chip_io_FPGA' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/chip_io_FPGA.v:10]
+WARNING: [Synth 8-7071] port 'flash_csb_ieb_core' of module 'chip_io_FPGA' is unconnected for instance 'padframe' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:266]
+WARNING: [Synth 8-7071] port 'flash_clk_ieb_core' of module 'chip_io_FPGA' is unconnected for instance 'padframe' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:266]
+WARNING: [Synth 8-7023] instance 'padframe' of module 'chip_io_FPGA' has 45 connections declared, but only 43 given [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:266]
+INFO: [Synth 8-6157] synthesizing module 'caravel_core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:45]
+INFO: [Synth 8-6157] synthesizing module 'mgmt_core_wrapper' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:40]
+INFO: [Synth 8-6157] synthesizing module 'mgmt_core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:1891]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:6814]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:6830]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7144]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7189]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7212]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7224]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7236]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7269]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7281]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7325]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7418]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7430]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7442]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7490]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7545]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7587]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7599]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7640]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7681]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7722]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7763]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7804]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7845]
+INFO: [Synth 8-6157] synthesizing module 'RAM4096' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/RAM4096.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RAM4096' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/RAM4096.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VexRiscv' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:46]
+INFO: [Synth 8-6157] synthesizing module 'InstructionCache' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4322]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionCache' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4322]
+INFO: [Synth 8-6155] done synthesizing module 'VexRiscv' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'mgmt_core' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:4]
+WARNING: [Synth 8-7071] port 'clk_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'clk_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'resetn_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'resetn_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'serial_load_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'serial_load_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'serial_data_2_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'serial_data_2_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'serial_resetn_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'serial_resetn_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'serial_clock_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'serial_clock_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'rstb_l_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'rstb_l_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'por_l_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'por_l_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'porb_h_in' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7071] port 'porb_h_out' of module 'mgmt_core' is unconnected for instance 'core' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+WARNING: [Synth 8-7023] instance 'core' of module 'mgmt_core' has 76 connections declared, but only 58 given [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:134]
+INFO: [Synth 8-6155] done synthesizing module 'mgmt_core_wrapper' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core_wrapper.v:40]
+INFO: [Synth 8-6157] synthesizing module 'mgmt_protect' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_protect.v:46]
+INFO: [Synth 8-6157] synthesizing module 'mprj_logic_high' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_logic_high.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mprj_logic_high' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_logic_high.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mprj2_logic_high' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj2_logic_high.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'mprj2_logic_high' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj2_logic_high.v:24]
+INFO: [Synth 8-6157] synthesizing module 'mgmt_protect_hv' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_protect_hv.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'mgmt_protect_hv' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_protect_hv.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'mgmt_protect' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_protect.v:46]
+INFO: [Synth 8-6157] synthesizing module 'user_project_wrapper' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:40]
+INFO: [Synth 8-6157] synthesizing module 'debug_regs' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/debug_regs.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'debug_regs' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/debug_regs.v:2]
+INFO: [Synth 8-6157] synthesizing module 'user_proj_example' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:50]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:132]
 	Parameter BITS bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'counter' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:132]
-INFO: [Synth 8-6155] done synthesizing module 'user_proj_example' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:50]
-WARNING: [Synth 8-7071] port 'la_data_in' of module 'user_proj_example' is unconnected for instance 'counter_example' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
-WARNING: [Synth 8-7071] port 'la_data_out' of module 'user_proj_example' is unconnected for instance 'counter_example' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
-WARNING: [Synth 8-7071] port 'la_oenb' of module 'user_proj_example' is unconnected for instance 'counter_example' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
-WARNING: [Synth 8-7071] port 'irq' of module 'user_proj_example' is unconnected for instance 'counter_example' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
-WARNING: [Synth 8-7023] instance 'counter_example' of module 'user_proj_example' has 19 connections declared, but only 15 given [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
-INFO: [Synth 8-6155] done synthesizing module 'user_project_wrapper' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:40]
-INFO: [Synth 8-6157] synthesizing module 'caravel_clocking' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_clocking.v:25]
-INFO: [Synth 8-6157] synthesizing module 'clock_div' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/clock_div.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:132]
+INFO: [Synth 8-6155] done synthesizing module 'user_proj_example' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:50]
+WARNING: [Synth 8-7071] port 'la_data_in' of module 'user_proj_example' is unconnected for instance 'counter_example' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
+WARNING: [Synth 8-7071] port 'la_data_out' of module 'user_proj_example' is unconnected for instance 'counter_example' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
+WARNING: [Synth 8-7071] port 'la_oenb' of module 'user_proj_example' is unconnected for instance 'counter_example' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
+WARNING: [Synth 8-7071] port 'irq' of module 'user_proj_example' is unconnected for instance 'counter_example' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
+WARNING: [Synth 8-7023] instance 'counter_example' of module 'user_proj_example' has 19 connections declared, but only 15 given [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:181]
+INFO: [Synth 8-6155] done synthesizing module 'user_project_wrapper' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:40]
+INFO: [Synth 8-6157] synthesizing module 'caravel_clocking' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_clocking.v:25]
+INFO: [Synth 8-6157] synthesizing module 'clock_div' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/clock_div.v:23]
 	Parameter SIZE bound to: 3 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'even' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/clock_div.v:177]
-INFO: [Synth 8-6155] done synthesizing module 'even' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/clock_div.v:177]
-INFO: [Synth 8-6157] synthesizing module 'odd' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/clock_div.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'odd' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/clock_div.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'clock_div' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/clock_div.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'caravel_clocking' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_clocking.v:25]
-INFO: [Synth 8-6157] synthesizing module 'FPGA_POR' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/FPGA_POR.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'FPGA_POR' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/FPGA_POR.v:2]
-INFO: [Synth 8-6157] synthesizing module 'housekeeping' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/housekeeping.v:63]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/housekeeping.v:672]
-INFO: [Synth 8-6157] synthesizing module 'housekeeping_spi' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/housekeeping_spi.v:81]
-INFO: [Synth 8-6155] done synthesizing module 'housekeeping_spi' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/housekeeping_spi.v:81]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/housekeeping.v:1142]
-INFO: [Synth 8-6155] done synthesizing module 'housekeeping' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/housekeeping.v:63]
-INFO: [Synth 8-6157] synthesizing module 'mprj_io_buffer' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:16]
-WARNING: [Synth 8-6104] Input port 'mgmt_gpio_in' has an internal driver [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:41]
-WARNING: [Synth 8-6104] Input port 'mgmt_gpio_oeb' has an internal driver [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:42]
-WARNING: [Synth 8-6104] Input port 'mgmt_gpio_out' has an internal driver [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:43]
-INFO: [Synth 8-6155] done synthesizing module 'mprj_io_buffer' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:16]
-INFO: [Synth 8-6157] synthesizing module 'gpio_defaults_block' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_defaults_block.v:30]
+INFO: [Synth 8-6157] synthesizing module 'even' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/clock_div.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'even' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/clock_div.v:177]
+INFO: [Synth 8-6157] synthesizing module 'odd' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/clock_div.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'odd' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/clock_div.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'clock_div' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/clock_div.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'caravel_clocking' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_clocking.v:25]
+INFO: [Synth 8-6157] synthesizing module 'FPGA_POR' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/FPGA_POR.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'FPGA_POR' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/FPGA_POR.v:2]
+INFO: [Synth 8-6157] synthesizing module 'housekeeping' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/housekeeping.v:63]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/housekeeping.v:672]
+INFO: [Synth 8-6157] synthesizing module 'housekeeping_spi' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/housekeeping_spi.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'housekeeping_spi' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/housekeeping_spi.v:81]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/housekeeping.v:1142]
+INFO: [Synth 8-6155] done synthesizing module 'housekeeping' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/housekeeping.v:63]
+INFO: [Synth 8-6157] synthesizing module 'mprj_io_buffer' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:16]
+WARNING: [Synth 8-6104] Input port 'mgmt_gpio_in' has an internal driver [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:41]
+WARNING: [Synth 8-6104] Input port 'mgmt_gpio_oeb' has an internal driver [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:42]
+WARNING: [Synth 8-6104] Input port 'mgmt_gpio_out' has an internal driver [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'mprj_io_buffer' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:16]
+INFO: [Synth 8-6157] synthesizing module 'gpio_defaults_block' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_defaults_block.v:30]
 	Parameter GPIO_CONFIG_INIT bound to: 13'b0010000000011 
-INFO: [Synth 8-6155] done synthesizing module 'gpio_defaults_block' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_defaults_block.v:30]
-INFO: [Synth 8-6157] synthesizing module 'gpio_defaults_block__parameterized0' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_defaults_block.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_defaults_block' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_defaults_block.v:30]
+INFO: [Synth 8-6157] synthesizing module 'gpio_defaults_block__parameterized0' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_defaults_block.v:30]
 	Parameter GPIO_CONFIG_INIT bound to: 13'b1100000001001 
-INFO: [Synth 8-6155] done synthesizing module 'gpio_defaults_block__parameterized0' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_defaults_block.v:30]
-INFO: [Synth 8-6157] synthesizing module 'gpio_control_block' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:59]
-INFO: [Synth 8-6157] synthesizing module 'gpio_logic_high' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_logic_high.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'gpio_logic_high' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_logic_high.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'gpio_control_block' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:59]
-INFO: [Synth 8-6157] synthesizing module 'user_id_programming' [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_id_programming.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_defaults_block__parameterized0' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_defaults_block.v:30]
+INFO: [Synth 8-6157] synthesizing module 'gpio_control_block' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:59]
+INFO: [Synth 8-6157] synthesizing module 'gpio_logic_high' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_logic_high.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_logic_high' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_logic_high.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_control_block' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:59]
+INFO: [Synth 8-6157] synthesizing module 'user_id_programming' [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_id_programming.v:28]
 	Parameter USER_PROJECT_ID bound to: 305419896 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'user_id_programming' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_id_programming.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'caravel_core' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_core.v:45]
-INFO: [Synth 8-6155] done synthesizing module 'caravel' (0#1) [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel.v:46]
-WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_isIoAccess_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4605]
-WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowRead_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4607]
-WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowWrite_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4608]
-WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_bypassTranslation_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4612]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_fetchPc_correctionReg_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2359]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_2_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2467]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_3_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2468]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_4_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2469]
-WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_rspCounter_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:3684]
-WARNING: [Synth 8-6014] Unused sequential element execute_CsrPlugin_wfiWake_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:3704]
-WARNING: [Synth 8-6014] Unused sequential element HazardSimplePlugin_writeBackBuffer_payload_data_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:3989]
-WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1971]
-WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1970]
-WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1969]
-WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_EXECUTE_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1990]
-WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1959]
-WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1993]
-WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_MEMORY_STORE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2038]
-WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_CSR_READ_OPCODE_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1976]
-WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_mtvec_mode_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4220]
-WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_firstCycle_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4238]
-WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_secondCycle_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:4242]
-WARNING: [Synth 8-3936] Found unconnected internal register 'memory_to_writeBack_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:2098]
-WARNING: [Synth 8-3848] Net IBusCachedPlugin_cache_io_cpu_fetch_isRemoved in module/entity VexRiscv does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:94]
-WARNING: [Synth 8-3848] Net IBusCachedPlugin_mmuBus_rsp_bypassTranslation in module/entity VexRiscv does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:492]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_first_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:2872]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_last_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:2873]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_first_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:6910]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_last_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:6911]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_scratch_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7208]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_bus_errors_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7209]
-WARNING: [Synth 8-6014] Unused sequential element debug_mode_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7221]
-WARNING: [Synth 8-6014] Unused sequential element debug_oeb_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7233]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_litespimmap_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7257]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_cs_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7261]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_phyconfig_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7265]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7266]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_litespisdrphycore_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7278]
-WARNING: [Synth 8-6014] Unused sequential element gpio_mode1_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7305]
-WARNING: [Synth 8-6014] Unused sequential element gpio_mode0_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7309]
-WARNING: [Synth 8-6014] Unused sequential element gpio_ien_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7313]
-WARNING: [Synth 8-6014] Unused sequential element gpio_oe_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7317]
-WARNING: [Synth 8-6014] Unused sequential element gpio_in_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7318]
-WARNING: [Synth 8-6014] Unused sequential element gpio_out_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7322]
-WARNING: [Synth 8-6014] Unused sequential element la_ien_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7388]
-WARNING: [Synth 8-6014] Unused sequential element la_oe_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7401]
-WARNING: [Synth 8-6014] Unused sequential element la_in_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7402]
-WARNING: [Synth 8-6014] Unused sequential element la_out_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7415]
-WARNING: [Synth 8-6014] Unused sequential element mprj_wb_iena_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7427]
-WARNING: [Synth 8-6014] Unused sequential element spi_enabled_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7439]
-WARNING: [Synth 8-6014] Unused sequential element spi_master_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7470]
-WARNING: [Synth 8-6014] Unused sequential element spi_master_mosi_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7474]
-WARNING: [Synth 8-6014] Unused sequential element spi_master_miso_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7475]
-WARNING: [Synth 8-6014] Unused sequential element spi_master_cs_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7479]
-WARNING: [Synth 8-6014] Unused sequential element spi_master_loopback_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7483]
-WARNING: [Synth 8-6014] Unused sequential element spimaster_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7487]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_load_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7520]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_reload_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7524]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_en_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7528]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_value_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7533]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7534]
-WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_enable_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7542]
-WARNING: [Synth 8-6014] Unused sequential element uart_txfull_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7572]
-WARNING: [Synth 8-6014] Unused sequential element uart_rxempty_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7573]
-WARNING: [Synth 8-6014] Unused sequential element uart_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7574]
-WARNING: [Synth 8-6014] Unused sequential element uart_enable_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7582]
-WARNING: [Synth 8-6014] Unused sequential element uart_txempty_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7583]
-WARNING: [Synth 8-6014] Unused sequential element uart_rxfull_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7584]
-WARNING: [Synth 8-6014] Unused sequential element uart_enabled_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7596]
-WARNING: [Synth 8-6014] Unused sequential element gpioin0_in_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7620]
-WARNING: [Synth 8-6014] Unused sequential element gpioin0_gpioin0_mode_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7624]
-WARNING: [Synth 8-6014] Unused sequential element gpioin0_gpioin0_edge_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7628]
-WARNING: [Synth 8-6014] Unused sequential element gpioin0_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7629]
-WARNING: [Synth 8-6014] Unused sequential element gpioin0_enable_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7637]
-WARNING: [Synth 8-6014] Unused sequential element gpioin1_in_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7661]
-WARNING: [Synth 8-6014] Unused sequential element gpioin1_gpioin1_mode_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7665]
-WARNING: [Synth 8-6014] Unused sequential element gpioin1_gpioin1_edge_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7669]
-WARNING: [Synth 8-6014] Unused sequential element gpioin1_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7670]
-WARNING: [Synth 8-6014] Unused sequential element gpioin1_enable_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7678]
-WARNING: [Synth 8-6014] Unused sequential element gpioin2_in_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7702]
-WARNING: [Synth 8-6014] Unused sequential element gpioin2_gpioin2_mode_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7706]
-WARNING: [Synth 8-6014] Unused sequential element gpioin2_gpioin2_edge_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7710]
-WARNING: [Synth 8-6014] Unused sequential element gpioin2_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7711]
-WARNING: [Synth 8-6014] Unused sequential element gpioin2_enable_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7719]
-WARNING: [Synth 8-6014] Unused sequential element gpioin3_in_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7743]
-WARNING: [Synth 8-6014] Unused sequential element gpioin3_gpioin3_mode_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7747]
-WARNING: [Synth 8-6014] Unused sequential element gpioin3_gpioin3_edge_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7751]
-WARNING: [Synth 8-6014] Unused sequential element gpioin3_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7752]
-WARNING: [Synth 8-6014] Unused sequential element gpioin3_enable_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7760]
-WARNING: [Synth 8-6014] Unused sequential element gpioin4_in_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7784]
-WARNING: [Synth 8-6014] Unused sequential element gpioin4_gpioin4_mode_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7788]
-WARNING: [Synth 8-6014] Unused sequential element gpioin4_gpioin4_edge_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7792]
-WARNING: [Synth 8-6014] Unused sequential element gpioin4_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7793]
-WARNING: [Synth 8-6014] Unused sequential element gpioin4_enable_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7801]
-WARNING: [Synth 8-6014] Unused sequential element gpioin5_in_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7825]
-WARNING: [Synth 8-6014] Unused sequential element gpioin5_gpioin5_mode_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7829]
-WARNING: [Synth 8-6014] Unused sequential element gpioin5_gpioin5_edge_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7833]
-WARNING: [Synth 8-6014] Unused sequential element gpioin5_status_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7834]
-WARNING: [Synth 8-6014] Unused sequential element gpioin5_enable_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7842]
-WARNING: [Synth 8-6014] Unused sequential element user_irq_ena_re_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:7854]
-WARNING: [Synth 8-6014] Unused sequential element memdat_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:8417]
-WARNING: [Synth 8-6014] Unused sequential element memdat_2_reg was removed.  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:8434]
-WARNING: [Synth 8-3936] Found unconnected internal register 'litespi_tx_mux_source_payload_mask_reg' and it is trimmed from '8' to '1' bits. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:2190]
-WARNING: [Synth 8-3848] Net dff2_do in module/entity mgmt_core does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:211]
-WARNING: [Synth 8-3848] Net la_data_out in module/entity user_proj_example does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/user_proj_example.v:72]
-WARNING: [Synth 8-3848] Net la_data_out in module/entity user_project_wrapper does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:68]
-WARNING: [Synth 8-3848] Net user_irq in module/entity user_project_wrapper does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:86]
-WARNING: [Synth 8-7137] Register ext_clk_syncd_pre_reg in module caravel_clocking has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/caravel_clocking.v:69]
-WARNING: [Synth 8-7137] Register wb_dat_o_reg in module housekeeping has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/housekeeping.v:700]
-WARNING: [Synth 8-3848] Net mgmt_gpio_in_buf in module/entity mprj_io_buffer does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:22]
-WARNING: [Synth 8-3848] Net mgmt_gpio_oeb_buf in module/entity mprj_io_buffer does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:24]
-WARNING: [Synth 8-3848] Net mgmt_gpio_out_buf in module/entity mprj_io_buffer does not have driver. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:26]
-WARNING: [Synth 8-7137] Register mgmt_ena_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:193]
-WARNING: [Synth 8-7137] Register gpio_holdover_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:194]
-WARNING: [Synth 8-7137] Register gpio_slow_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:195]
-WARNING: [Synth 8-7137] Register gpio_vtrip_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:196]
-WARNING: [Synth 8-7137] Register gpio_ib_mode_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:197]
-WARNING: [Synth 8-7137] Register gpio_inenb_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:198]
-WARNING: [Synth 8-7137] Register gpio_outenb_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:199]
-WARNING: [Synth 8-7137] Register gpio_dm_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:200]
-WARNING: [Synth 8-7137] Register gpio_ana_en_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:201]
-WARNING: [Synth 8-7137] Register gpio_ana_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:202]
-WARNING: [Synth 8-7137] Register gpio_ana_pol_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/gpio_control_block.v:203]
+INFO: [Synth 8-6155] done synthesizing module 'user_id_programming' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_id_programming.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'caravel_core' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_core.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'caravel' (0#1) [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel.v:46]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_isIoAccess_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4605]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowRead_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4607]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowWrite_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4608]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_bypassTranslation_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4612]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_fetchPc_correctionReg_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:2359]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_2_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:2467]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_3_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:2468]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_4_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:2469]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_rspCounter_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:3684]
+WARNING: [Synth 8-6014] Unused sequential element execute_CsrPlugin_wfiWake_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:3704]
+WARNING: [Synth 8-6014] Unused sequential element HazardSimplePlugin_writeBackBuffer_payload_data_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:3989]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:1971]
+WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:1970]
+WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_FORMAL_PC_NEXT_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:1969]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_EXECUTE_STAGE_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:1990]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:1959]
+WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:1993]
+WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_MEMORY_STORE_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:2038]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_CSR_READ_OPCODE_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:1976]
+WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_mtvec_mode_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4220]
+WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_firstCycle_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4238]
+WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_secondCycle_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:4242]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memory_to_writeBack_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:2098]
+WARNING: [Synth 8-3848] Net IBusCachedPlugin_cache_io_cpu_fetch_isRemoved in module/entity VexRiscv does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:94]
+WARNING: [Synth 8-3848] Net IBusCachedPlugin_mmuBus_rsp_bypassTranslation in module/entity VexRiscv does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:492]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_first_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:2872]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_last_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:2873]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_first_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:6910]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_last_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:6911]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_scratch_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7208]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_bus_errors_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7209]
+WARNING: [Synth 8-6014] Unused sequential element debug_mode_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7221]
+WARNING: [Synth 8-6014] Unused sequential element debug_oeb_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7233]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_litespimmap_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7257]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_cs_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7261]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_phyconfig_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7265]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7266]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_litespisdrphycore_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7278]
+WARNING: [Synth 8-6014] Unused sequential element gpio_mode1_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7305]
+WARNING: [Synth 8-6014] Unused sequential element gpio_mode0_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7309]
+WARNING: [Synth 8-6014] Unused sequential element gpio_ien_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7313]
+WARNING: [Synth 8-6014] Unused sequential element gpio_oe_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7317]
+WARNING: [Synth 8-6014] Unused sequential element gpio_in_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7318]
+WARNING: [Synth 8-6014] Unused sequential element gpio_out_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7322]
+WARNING: [Synth 8-6014] Unused sequential element la_ien_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7388]
+WARNING: [Synth 8-6014] Unused sequential element la_oe_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7401]
+WARNING: [Synth 8-6014] Unused sequential element la_in_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7402]
+WARNING: [Synth 8-6014] Unused sequential element la_out_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7415]
+WARNING: [Synth 8-6014] Unused sequential element mprj_wb_iena_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7427]
+WARNING: [Synth 8-6014] Unused sequential element spi_enabled_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7439]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7470]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_mosi_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7474]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_miso_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7475]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_cs_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7479]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_loopback_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7483]
+WARNING: [Synth 8-6014] Unused sequential element spimaster_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7487]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_load_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7520]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_reload_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7524]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_en_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7528]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_value_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7533]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7534]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_enable_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7542]
+WARNING: [Synth 8-6014] Unused sequential element uart_txfull_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7572]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxempty_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7573]
+WARNING: [Synth 8-6014] Unused sequential element uart_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7574]
+WARNING: [Synth 8-6014] Unused sequential element uart_enable_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7582]
+WARNING: [Synth 8-6014] Unused sequential element uart_txempty_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7583]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxfull_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7584]
+WARNING: [Synth 8-6014] Unused sequential element uart_enabled_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7596]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_in_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7620]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_gpioin0_mode_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7624]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_gpioin0_edge_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7628]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7629]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_enable_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7637]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_in_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7661]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_gpioin1_mode_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7665]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_gpioin1_edge_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7669]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7670]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_enable_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7678]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_in_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7702]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_gpioin2_mode_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7706]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_gpioin2_edge_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7710]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7711]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_enable_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7719]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_in_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7743]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_gpioin3_mode_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7747]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_gpioin3_edge_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7751]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7752]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_enable_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7760]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_in_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7784]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_gpioin4_mode_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7788]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_gpioin4_edge_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7792]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7793]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_enable_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7801]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_in_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7825]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_gpioin5_mode_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7829]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_gpioin5_edge_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7833]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_status_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7834]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_enable_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7842]
+WARNING: [Synth 8-6014] Unused sequential element user_irq_ena_re_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:7854]
+WARNING: [Synth 8-6014] Unused sequential element memdat_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:8417]
+WARNING: [Synth 8-6014] Unused sequential element memdat_2_reg was removed.  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:8434]
+WARNING: [Synth 8-3936] Found unconnected internal register 'litespi_tx_mux_source_payload_mask_reg' and it is trimmed from '8' to '1' bits. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:2190]
+WARNING: [Synth 8-3848] Net dff2_do in module/entity mgmt_core does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:211]
+WARNING: [Synth 8-3848] Net la_data_out in module/entity user_proj_example does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/user_proj_example.v:72]
+WARNING: [Synth 8-3848] Net la_data_out in module/entity user_project_wrapper does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:68]
+WARNING: [Synth 8-3848] Net user_irq in module/entity user_project_wrapper does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/__user_project_wrapper.v:86]
+WARNING: [Synth 8-7137] Register ext_clk_syncd_pre_reg in module caravel_clocking has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/caravel_clocking.v:69]
+WARNING: [Synth 8-7137] Register wb_dat_o_reg in module housekeeping has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/housekeeping.v:700]
+WARNING: [Synth 8-3848] Net mgmt_gpio_in_buf in module/entity mprj_io_buffer does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:22]
+WARNING: [Synth 8-3848] Net mgmt_gpio_oeb_buf in module/entity mprj_io_buffer does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:24]
+WARNING: [Synth 8-3848] Net mgmt_gpio_out_buf in module/entity mprj_io_buffer does not have driver. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mprj_io_buffer.v:26]
+WARNING: [Synth 8-7137] Register mgmt_ena_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:193]
+WARNING: [Synth 8-7137] Register gpio_holdover_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:194]
+WARNING: [Synth 8-7137] Register gpio_slow_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:195]
+WARNING: [Synth 8-7137] Register gpio_vtrip_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:196]
+WARNING: [Synth 8-7137] Register gpio_ib_mode_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:197]
+WARNING: [Synth 8-7137] Register gpio_inenb_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:198]
+WARNING: [Synth 8-7137] Register gpio_outenb_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:199]
+WARNING: [Synth 8-7137] Register gpio_dm_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:200]
+WARNING: [Synth 8-7137] Register gpio_ana_en_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:201]
+WARNING: [Synth 8-7137] Register gpio_ana_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:202]
+WARNING: [Synth 8-7137] Register gpio_ana_pol_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/gpio_control_block.v:203]
 WARNING: [Synth 8-7129] Port N[0] in module even is either unconnected or has no load
 WARNING: [Synth 8-7129] Port la_data_out[127] in module user_proj_example is either unconnected or has no load
 WARNING: [Synth 8-7129] Port la_data_out[126] in module user_proj_example is either unconnected or has no load
@@ -423,68 +423,68 @@ WARNING: [Synth 8-7129] Port la_data_out[30] in module user_proj_example is eith
 WARNING: [Synth 8-7129] Port la_data_out[29] in module user_proj_example is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2222.707 ; gain = 591.676 ; free physical = 5587 ; free virtual = 19580
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2486.102 ; gain = 606.648 ; free physical = 4505 ; free virtual = 16809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.551 ; gain = 606.520 ; free physical = 5586 ; free virtual = 19580
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2497.977 ; gain = 618.523 ; free physical = 4505 ; free virtual = 16809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.551 ; gain = 606.520 ; free physical = 5586 ; free virtual = 19580
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2497.977 ; gain = 618.523 ; free physical = 4505 ; free virtual = 16809
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2237.551 ; gain = 0.000 ; free physical = 5586 ; free virtual = 19579
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2497.977 ; gain = 0.000 ; free physical = 4506 ; free virtual = 16809
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc]
-WARNING: [Vivado 12-584] No ports matched 'csb_out'. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:53]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:53]
+Parsing XDC File [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc]
+WARNING: [Vivado 12-584] No ports matched 'csb_out'. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:53]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sck_out'. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'sck_out'. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:54]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sdi_out'. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'sdi_out'. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:55]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sdo_out'. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:56]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'sdo_out'. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc:56]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/caravel_propImpl.xdc].
+Finished Parsing XDC File [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/constr/arty_a7_35T.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/caravel_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/caravel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.301 ; gain = 0.000 ; free physical = 5559 ; free virtual = 19565
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2612.715 ; gain = 0.000 ; free physical = 4490 ; free virtual = 16809
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2370.301 ; gain = 0.000 ; free physical = 5559 ; free virtual = 19565
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2612.750 ; gain = 0.000 ; free physical = 4490 ; free virtual = 16810
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2370.301 ; gain = 739.270 ; free physical = 5553 ; free virtual = 19560
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2612.750 ; gain = 733.297 ; free physical = 4519 ; free virtual = 16841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2378.305 ; gain = 747.273 ; free physical = 5553 ; free virtual = 19560
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2620.719 ; gain = 741.266 ; free physical = 4519 ; free virtual = 16841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2378.305 ; gain = 747.273 ; free physical = 5553 ; free virtual = 19560
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2620.719 ; gain = 741.266 ; free physical = 4519 ; free virtual = 16841
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'send_state_reg' in module 'uart_to_spi'
-WARNING: [Synth 8-3936] Found unconnected internal register 'execute_to_memory_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/wadood/gits/WW_caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_512Word.v:1992]
+WARNING: [Synth 8-3936] Found unconnected internal register 'execute_to_memory_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/mgmt_soc/src/cache_changes_testing/VexRiscv_MinDebug_128Word.v:1992]
 INFO: [Synth 8-802] inferred FSM for state register 'switch_Fetcher_l362_reg' in module 'VexRiscv'
-WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_1_reg' and it is trimmed from '10' to '8' bits. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:8422]
-WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_3_reg' and it is trimmed from '10' to '8' bits. [/home/wadood/gits/WW_caravel_on_FPGA/Caravel/src/mgmt_core.v:8439]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_1_reg' and it is trimmed from '10' to '8' bits. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:8422]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_3_reg' and it is trimmed from '10' to '8' bits. [/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Caravel/src/mgmt_core.v:8439]
 INFO: [Synth 8-802] inferred FSM for state register 'litespiphy_state_reg' in module 'mgmt_core'
 INFO: [Synth 8-802] inferred FSM for state register 'spimaster_state_reg' in module 'mgmt_core'
 INFO: [Synth 8-802] inferred FSM for state register 'grant_reg' in module 'mgmt_core'
@@ -501,6 +501,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'xfer_state_reg' in module '
                  iSTATE3 |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'send_state_reg' using encoding 'sequential' in module 'uart_to_spi'
+INFO: [Synth 8-7082] The signal ways_0_tags_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -576,7 +577,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'xfer_state_reg' using enco
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'wbbd_state_reg' using encoding 'sequential' in module 'housekeeping'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2378.305 ; gain = 747.273 ; free physical = 5550 ; free virtual = 19560
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2620.719 ; gain = 741.266 ; free physical = 4593 ; free virtual = 16917
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'chip_core/gpio_defaults_block_0' (gpio_defaults_block) to 'chip_core/gpio_defaults_block_5'
 INFO: [Synth 8-223] decloning instance 'chip_core/gpio_defaults_block_0' (gpio_defaults_block) to 'chip_core/gpio_defaults_block_7'
@@ -628,9 +629,8 @@ Detailed RTL Component Info :
 	   2 Input    9 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 5     
 	   3 Input    8 Bit       Adders := 2     
-	   2 Input    7 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 2     
-	   2 Input    5 Bit       Adders := 4     
+	   2 Input    5 Bit       Adders := 5     
 	   2 Input    4 Bit       Adders := 17    
 	   2 Input    3 Bit       Adders := 14    
 	   2 Input    2 Bit       Adders := 1     
@@ -643,26 +643,26 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 71    
 	               30 Bit    Registers := 4     
 	               26 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
 	               24 Bit    Registers := 2     
-	               23 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 7     
 	               13 Bit    Registers := 78    
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 27    
-	                7 Bit    Registers := 3     
+	                7 Bit    Registers := 2     
 	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 6     
+	                5 Bit    Registers := 7     
 	                4 Bit    Registers := 19    
 	                3 Bit    Registers := 63    
 	                2 Bit    Registers := 20    
 	                1 Bit    Registers := 947   
 +---RAMs : 
 	             128K Bit	(4096 X 32 bit)          RAMs := 1     
-	              16K Bit	(512 X 32 bit)          RAMs := 1     
-	               1K Bit	(64 X 23 bit)          RAMs := 1     
+	               4K Bit	(128 X 32 bit)          RAMs := 1     
 	             1024 Bit	(32 X 32 bit)          RAMs := 1     
+	              400 Bit	(16 X 25 bit)          RAMs := 1     
 	              160 Bit	(16 X 10 bit)          RAMs := 2     
 +---Muxes : 
 	   2 Input   38 Bit        Muxes := 2     
@@ -694,13 +694,13 @@ Detailed RTL Component Info :
 	  11 Input    8 Bit        Muxes := 2     
 	   2 Input    7 Bit        Muxes := 5     
 	   5 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 1     
 	   9 Input    6 Bit        Muxes := 1     
 	   4 Input    6 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 5     
 	   3 Input    5 Bit        Muxes := 1     
 	   4 Input    5 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 13    
+	   2 Input    4 Bit        Muxes := 14    
 	   5 Input    4 Bit        Muxes := 3     
 	   4 Input    4 Bit        Muxes := 2     
 	   6 Input    4 Bit        Muxes := 1     
@@ -736,10 +736,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-INFO: [Synth 8-5784] Optimized 1 bits of RAM "IBusCachedPlugin_cache/ways_0_tags_reg" due to constant propagation. Old ram width 23 bits, new ram width 22 bits.
+INFO: [Synth 8-7082] The signal IBusCachedPlugin_cache/ways_0_tags_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 INFO: [Synth 8-3971] The signal "chip_core/\soc/core /VexRiscv/RegFilePlugin_regFile_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 2394.312 ; gain = 763.281 ; free physical = 5458 ; free virtual = 19490
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2644.727 ; gain = 765.273 ; free physical = 4588 ; free virtual = 16923
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -761,8 +761,8 @@ Block RAM: Preliminary Mapping Report (see note below)
 |Module Name                   | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |chip_core/\soc/core /RAM4096  | RAM_reg                                | 4 K x 32(READ_FIRST)   | W |   | 4 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
-|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 512 x 32(READ_FIRST)   | W |   | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 64 x 23(READ_FIRST)    | W |   | 64 x 23(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 16 x 25(READ_FIRST)    | W |   | 16 x 25(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +------------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -783,13 +783,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:34 ; elapsed = 00:01:35 . Memory (MB): peak = 2394.312 ; gain = 763.281 ; free physical = 5443 ; free virtual = 19483
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 2646.727 ; gain = 767.273 ; free physical = 4602 ; free virtual = 16943
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:48 ; elapsed = 00:01:50 . Memory (MB): peak = 2490.375 ; gain = 859.344 ; free physical = 5353 ; free virtual = 19384
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2747.789 ; gain = 868.336 ; free physical = 4486 ; free virtual = 16827
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -800,8 +800,8 @@ Block RAM: Final Mapping Report
 |Module Name                   | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |chip_core/\soc/core /RAM4096  | RAM_reg                                | 4 K x 32(READ_FIRST)   | W |   | 4 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      | 
-|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 512 x 32(READ_FIRST)   | W |   | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 64 x 23(READ_FIRST)    | W |   | 64 x 23(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|chip_core/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 16 x 25(READ_FIRST)    | W |   | 16 x 25(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 +------------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 
@@ -826,7 +826,7 @@ INFO: [Synth 8-7052] The timing for the instance chip_core/soc/core/RAM4096/RAM_
 INFO: [Synth 8-7052] The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:01:56 . Memory (MB): peak = 2516.383 ; gain = 885.352 ; free physical = 5326 ; free virtual = 19358
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 2775.797 ; gain = 896.344 ; free physical = 4453 ; free virtual = 16794
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -844,37 +844,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:02:03 . Memory (MB): peak = 2593.195 ; gain = 962.164 ; free physical = 5283 ; free virtual = 19314
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 2857.578 ; gain = 978.125 ; free physical = 4392 ; free virtual = 16733
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:03 . Memory (MB): peak = 2593.195 ; gain = 962.164 ; free physical = 5282 ; free virtual = 19314
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 2857.578 ; gain = 978.125 ; free physical = 4392 ; free virtual = 16733
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:02 ; elapsed = 00:02:04 . Memory (MB): peak = 2593.195 ; gain = 962.164 ; free physical = 5276 ; free virtual = 19308
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 2857.578 ; gain = 978.125 ; free physical = 4387 ; free virtual = 16728
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 2593.195 ; gain = 962.164 ; free physical = 5276 ; free virtual = 19308
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 2857.578 ; gain = 978.125 ; free physical = 4387 ; free virtual = 16728
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2600.133 ; gain = 969.102 ; free physical = 5275 ; free virtual = 19308
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 2865.516 ; gain = 986.062 ; free physical = 4379 ; free virtual = 16720
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2600.133 ; gain = 969.102 ; free physical = 5275 ; free virtual = 19308
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 2865.516 ; gain = 986.062 ; free physical = 4379 ; free virtual = 16720
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -913,11 +913,11 @@ Report Cell Usage:
 |1     |BUFG     |     5|
 |2     |CARRY4   |   178|
 |3     |LUT1     |   207|
-|4     |LUT2     |   258|
-|5     |LUT3     |   291|
-|6     |LUT4     |   590|
-|7     |LUT5     |   762|
-|8     |LUT6     |  1940|
+|4     |LUT2     |   259|
+|5     |LUT3     |   289|
+|6     |LUT4     |   584|
+|7     |LUT5     |   764|
+|8     |LUT6     |  1953|
 |9     |MUXF7    |   168|
 |10    |MUXF8    |    50|
 |11    |RAM32M   |     4|
@@ -926,7 +926,7 @@ Report Cell Usage:
 |15    |SRL16E   |    39|
 |16    |FDCE     |   969|
 |17    |FDPE     |   266|
-|18    |FDRE     |  2742|
+|18    |FDRE     |  2740|
 |19    |FDSE     |    56|
 |20    |IBUF     |     4|
 |21    |IOBUF    |    35|
@@ -934,32 +934,32 @@ Report Cell Usage:
 |23    |OBUFT    |     5|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2600.133 ; gain = 969.102 ; free physical = 5275 ; free virtual = 19307
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 2865.516 ; gain = 986.062 ; free physical = 4379 ; free virtual = 16720
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 562 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:57 ; elapsed = 00:02:00 . Memory (MB): peak = 2600.133 ; gain = 836.352 ; free physical = 5267 ; free virtual = 19299
-Synthesis Optimization Complete : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2600.141 ; gain = 969.102 ; free physical = 5267 ; free virtual = 19299
+Synthesis finished with 0 errors, 0 critical warnings and 564 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2865.516 ; gain = 871.289 ; free physical = 4379 ; free virtual = 16720
+Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 2865.523 ; gain = 986.062 ; free physical = 4379 ; free virtual = 16720
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2600.141 ; gain = 0.000 ; free physical = 5431 ; free virtual = 19463
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2865.523 ; gain = 0.000 ; free physical = 4541 ; free virtual = 16883
 INFO: [Netlist 29-17] Analyzing 443 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2656.160 ; gain = 0.000 ; free physical = 5422 ; free virtual = 19453
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2921.543 ; gain = 0.000 ; free physical = 4545 ; free virtual = 16887
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 39 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 35 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
 
-Synth Design complete | Checksum: f12b372a
+Synth Design complete | Checksum: 904e86f1
 INFO: [Common 17-83] Releasing license: Synthesis
-195 Infos, 271 Warnings, 4 Critical Warnings and 0 Errors encountered.
+196 Infos, 271 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:22 ; elapsed = 00:02:18 . Memory (MB): peak = 2656.160 ; gain = 1075.660 ; free physical = 5422 ; free virtual = 19453
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1770.269; main = 1622.654; forked = 269.160
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4058.750; main = 2656.164; forked = 1541.363
+synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 2921.578 ; gain = 1197.273 ; free physical = 4547 ; free virtual = 16889
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2046.811; main = 1844.989; forked = 276.062
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4445.328; main = 2921.547; forked = 1614.527
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2680.172 ; gain = 0.000 ; free physical = 5421 ; free virtual = 19453
-INFO: [Common 17-1381] The checkpoint '/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/caravel.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2945.555 ; gain = 0.000 ; free physical = 4547 ; free virtual = 16889
+INFO: [Common 17-1381] The checkpoint '/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1/caravel.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file caravel_utilization_synth.rpt -pb caravel_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 20 17:59:11 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 11 19:23:17 2025...

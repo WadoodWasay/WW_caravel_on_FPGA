@@ -4,13 +4,13 @@
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-# Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+# Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/usr/share/Xilinx/Vitis/2024.2/bin:/usr/share/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/usr/share/Xilinx/Vivado/2024.2/bin
+  PATH=/tools/Xilinx/2025.1/Vitis/bin:/tools/Xilinx/2025.1/Vivado/ids_lite/ISE/bin/lin64:/tools/Xilinx/2025.1/Vivado/bin
 else
-  PATH=/usr/share/Xilinx/Vitis/2024.2/bin:/usr/share/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/usr/share/Xilinx/Vivado/2024.2/bin:$PATH
+  PATH=/tools/Xilinx/2025.1/Vitis/bin:/tools/Xilinx/2025.1/Vivado/ids_lite/ISE/bin/lin64:/tools/Xilinx/2025.1/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/wadood/gits/WW_caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1'
+HD_PWD='/home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

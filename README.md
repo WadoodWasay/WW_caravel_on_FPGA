@@ -1,12 +1,9 @@
 # Caravel_on_FPGA
-In this repo you will be shown how to implement Caravel on FPGA and use its debug interface to debug a program running on Caravel's management SoC using GDB.
+In this repo, the Caravel harness is implemented on an FPGA board, and variants of the VexRiscv core with varrying cache sizes are tested. 
 ## Hardware Tools used:
-* Cmod Artix 7-35T
-* QSPI SST26VF080A Flash module
-* two micro USB cable
+* Cmod Artix 7-100T
+* one micro USB cable
 * Analog Discovery kit (optional for debugging)
-* Jumper wires for connecting
-* Raspberry pi pico (if you want to program the flash using the housekeeping SPI)
   
 ![image](https://github.com/NouranAbdelaziz/Caravel_on_FPGA/assets/79912650/c9aac42d-5d43-4030-bcca-50d65617d6ba)
 

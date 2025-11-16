@@ -1,7 +1,7 @@
 // Generator : SpinalHDL v1.6.0    git head : 73c8d8e2b86b45646e9d0b2e729291f2b65e6be3
 // Component : VexRiscv
 // Git hash  : c4eca1837ebca20b637a0a61e3a93d9446488459
-// MODIFIED BY WADOOD 11/12/2025 for 64-word instruction cache
+// MODIFIED BY WADOOD 11/14/2025 for 64-word instruction cache
 
 `define EnvCtrlEnum_binary_sequential_type [1:0]
 `define EnvCtrlEnum_binary_sequential_NONE 2'b00
@@ -4429,7 +4429,7 @@ module InstructionCache (
   wire                when_Fetcher_l398;
   // (* ram_style = "block" *) reg [31:0] banks_0 [0:15];
   // (* ram_style = "block" *) reg [27:0] ways_0_tags [0:1];
-  (* ram_style = "block" *) reg [31:0] banks_0 [0:127];
+  (* ram_style = "block" *) reg [31:0] banks_0 [0:63];
   (* ram_style = "block" *) reg [27:0] ways_0_tags [0:7];
 
   assign _zz_ways_0_tags_port = {lineLoader_write_tag_0_payload_data_address,{lineLoader_write_tag_0_payload_data_error,lineLoader_write_tag_0_payload_data_valid}};

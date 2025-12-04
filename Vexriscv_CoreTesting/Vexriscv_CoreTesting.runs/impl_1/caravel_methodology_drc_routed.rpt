@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Wed Nov 12 14:56:36 2025
+| Date         : Wed Dec  3 03:00:48 2025
 | Host         : fedora running 64-bit Fedora Linux 43 (KDE Plasma Desktop Edition)
 | Command      : report_methodology -file caravel_methodology_drc_routed.rpt -pb caravel_methodology_drc_routed.pb -rpx caravel_methodology_drc_routed.rpx
 | Design       : caravel
@@ -23,15 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 1100
+             Checks found: 1106
 +-----------+------------------+--------------------------------------------+--------+
 | Rule      | Severity         | Description                                | Checks |
 +-----------+------------------+--------------------------------------------+--------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                | 1000   |
 | HPDR-1    | Warning          | Port pin direction inconsistency           | 5      |
 | LUTAR-1   | Warning          | LUT drives async reset alert               | 3      |
-| SYNTH-4   | Warning          | Shallow depth for a dedicated block RAM    | 1      |
-| SYNTH-6   | Warning          | Timing of a RAM block might be sub-optimal | 6      |
+| SYNTH-6   | Warning          | Timing of a RAM block might be sub-optimal | 13     |
 | TIMING-18 | Warning          | Missing input or output delay              | 85     |
 +-----------+------------------+--------------------------------------------+--------+
 
@@ -5103,11 +5102,6 @@ chip_core/gpio_control_in_1a_c_7/CLR, chip_core/gpio_control_in_1a_c_8/CLR
  (the first 15 of 411 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-SYNTH-4#1 Warning
-Shallow depth for a dedicated block RAM  
-The instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason: The depth (3 address bits) is shallow. Please use attribute (* ram_style = "distributed" *)  to instruct Vivado to infer distributed LUT RAM.
-Related violations: <none>
-
 SYNTH-6#1 Warning
 Timing of a RAM block might be sub-optimal  
 The timing for the instance chip_core/soc/core/RAM4096/RAM_reg_0, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
@@ -5130,10 +5124,45 @@ Related violations: <none>
 
 SYNTH-6#5 Warning
 Timing of a RAM block might be sub-optimal  
-The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg_0, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
 Related violations: <none>
 
 SYNTH-6#6 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg_1, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg_2, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg_3, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#9 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg_4, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#10 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg_5, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#11 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg_6, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#12 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg_7, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#13 Warning
 Timing of a RAM block might be sub-optimal  
 The timing for the instance chip_core/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
 Related violations: <none>

@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Nov 12 14:55:22 2025
-# Process ID         : 6408
+# Start of session at: Wed Dec  3 02:58:29 2025
+# Process ID         : 11412
 # Current directory  : /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1
 # Command line       : vivado -log caravel.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source caravel.tcl -notrace
 # Log file           : /home/wadood/gits/work/internship/WW_Caravel_on_FPGA/Vexriscv_CoreTesting/Vexriscv_CoreTesting.runs/impl_1/caravel.vdi
@@ -13,12 +13,12 @@
 # Platform           : Fedora
 # Operating System   : Fedora Linux 43 (KDE Plasma Desktop Edition)
 # Processor Detail   : AMD Ryzen 5 5500U with Radeon Graphics
-# CPU Frequency      : 4038.943 MHz
+# CPU Frequency      : 1612.571 MHz
 # CPU Physical cores : 6
 # CPU Logical cores  : 12
 # Host memory        : 15506 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 24096 MB
-# Available Virtual  : 19307 MB
+# Available Virtual  : 18740 MB
 #-----------------------------------------------------------
 source caravel.tcl -notrace

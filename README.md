@@ -10,9 +10,7 @@ In this repo, the Caravel harness is implemented on an FPGA board, and variants 
 
 ## Software Tools used:
 * Xilinx Vivado for synthesizing, implementing, and generating the bit stream of the RTL design
-* Digilent Adept for programming the FPGA with the bit file
-* Digilent Waveforms for using the analog discovery kit logic analyzer
-* Thony (if you want to program the flash using the housekeeping SPI)
+* NeoVIM as my code IDE
   
 ![image](https://github.com/NouranAbdelaziz/Caravel_on_FPGA/assets/79912650/b47b65dd-1cd1-44c1-a9ad-e066a5f25ec7)
 
